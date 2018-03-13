@@ -10,7 +10,6 @@ using VDI.Demo.Friendships;
 using VDI.Demo.MultiTenancy;
 using VDI.Demo.MultiTenancy.Accounting;
 using VDI.Demo.MultiTenancy.Payments;
-using VDI.Demo.PropertySystemDB.OnlineBooking.DemoDB;
 using VDI.Demo.Storage;
 
 namespace VDI.Demo.EntityFrameworkCore
@@ -34,9 +33,7 @@ namespace VDI.Demo.EntityFrameworkCore
         public DbSet<PersistedGrantEntity> PersistedGrants { get; set; }
 
         public virtual DbSet<MS_Application> MS_Application { get; set; }
-
-        public virtual DbSet<MP_UserPersonals> MP_UserPersonals { get; set; }
-
+        
         public DemoDbContext(DbContextOptions<DemoDbContext> options)
             : base(options)
         {

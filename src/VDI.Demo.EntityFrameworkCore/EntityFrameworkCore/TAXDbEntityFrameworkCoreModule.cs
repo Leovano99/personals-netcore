@@ -11,7 +11,6 @@ using VDI.Demo.Migrations.Seed;
 using Abp.Configuration.Startup;
 using Abp.EntityFrameworkCore.Uow;
 using Abp.Dependency;
-using VDI.Demo.Migrations.PropertySystemDb.Seed;
 
 namespace VDI.Demo.EntityFrameworkCore
 {

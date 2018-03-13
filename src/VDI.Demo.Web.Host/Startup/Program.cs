@@ -5,7 +5,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using VDI.Demo.EntityFrameworkCore;
 using VDI.Demo.Migrations.PersonalsNewDb.Seed;
-using VDI.Demo.Migrations.PropertySystemDb.Seed;
 
 namespace VDI.Demo.Web.Startup
 {
@@ -30,9 +29,6 @@ namespace VDI.Demo.Web.Startup
                 {
                     var context = services.GetRequiredService<PersonalsNewDbContext>();
                     SeedHelperPersonal.SeedPersonalDb(context);//<---Do your seeding here
-
-                    var context2 = services.GetRequiredService<PropertySystemDbContext>();
-                    SeedHelperProperty.SeedPropertySystemDb(context2);//<---Do your seeding here
                 }
                 catch (Exception ex)
                 {
