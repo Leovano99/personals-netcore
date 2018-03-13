@@ -7,8 +7,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="Commission\**" />
+    <Compile Remove="Master Plan\**" />
     <EmbeddedResource Remove="Commission\**" />
+    <EmbeddedResource Remove="Master Plan\**" />
     <None Remove="Commission\**" />
+    <None Remove="Master Plan\**" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Abp.AutoMapper" Version="3.3.0" />
@@ -16,10 +19,5 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VDI.Demo.Core.Shared\VDI.Demo.Core.Shared.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Master Plan\Unit\" />
-    <Folder Include="Payment\PaymentLK_PayFor\" />
-    <Folder Include="Pricing\MS_Discounts\Exporter\" />
   </ItemGroup>
 </Project>

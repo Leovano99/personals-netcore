@@ -25,7 +25,6 @@ using VDI.Demo.Friendships;
 using VDI.Demo.Friendships.Cache;
 using VDI.Demo.Friendships.Dto;
 using VDI.Demo.Localization.Dto;
-using VDI.Demo.MasterPlan.Project.MS_Officers.Dto;
 using VDI.Demo.MultiTenancy;
 using VDI.Demo.MultiTenancy.Dto;
 using VDI.Demo.MultiTenancy.HostDashboard.Dto;
@@ -34,7 +33,6 @@ using VDI.Demo.MultiTenancy.Payments.Dto;
 using VDI.Demo.NewCommDB;
 using VDI.Demo.Notifications.Dto;
 using VDI.Demo.Organizations.Dto;
-using VDI.Demo.PropertySystemDB.MasterPlan.Project;
 using VDI.Demo.Sessions.Dto;
 
 namespace VDI.Demo
@@ -129,13 +127,7 @@ namespace VDI.Demo
             configuration.CreateMap<OrganizationUnit, OrganizationUnitDto>();
 
             /* ADD YOUR OWN CUSTOM AUTOMAPPER MAPPINGS HERE */
-
-            //MasterPlan
-            configuration.CreateMap<MS_Officer, CreateMsOfficerInput>();
-            //configuration.CreateMap<TR_SoldUnit, TR_SoldUnitListDto>();
-            //configuration.CreateMap<TR_CommPct, TR_CommPctListDto>();
-            //configuration.CreateMap<TR_SoldUnitRequirement, TR_SoldRequirementListDto>();
-            //configuration.CreateMap<TR_SoldRequirementListDto, TR_SoldUnitRequirement>();
+            
         }
     }
 }

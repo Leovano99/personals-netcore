@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Abp.Authorization.Users;
 using Abp.Extensions;
 using Abp.Timing;
-using VDI.Demo.PropertySystemDB.OnlineBooking.DemoDB;
 
 namespace VDI.Demo.Authorization.Users
 {
@@ -76,7 +75,6 @@ namespace VDI.Demo.Authorization.Users
             SignInToken = Guid.NewGuid().ToString();
             SignInTokenExpireTimeUtc = Clock.Now.AddMinutes(1).ToUniversalTime();
         }
-
-        public ICollection<MP_UserPersonals> MP_UserPersonals { get; set; }
+        
     }
 }

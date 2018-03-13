@@ -23,7 +23,6 @@ using VDI.Demo.Authorization.Users;
 using VDI.Demo.Configuration;
 using VDI.Demo.EntityFrameworkCore;
 using VDI.Demo.Identity;
-using VDI.Demo.Install;
 using VDI.Demo.MultiTenancy;
 using VDI.Demo.Web.Authentication.JwtBearer;
 using PaulMiami.AspNetCore.Mvc.Recaptcha;
@@ -62,19 +61,11 @@ namespace VDI.Demo.Web.Startup
             services.AddDbContext<NewCommDbContext>(options =>
                         options.UseSqlServer(_appConfiguration.GetConnectionString(DemoConsts.ConnectionStringNewCommDbContext)));
 
-            services.AddDbContext<PropertySystemDbContext>(options =>
-                        options.UseSqlServer(_appConfiguration.GetConnectionString(DemoConsts.ConnectionStringPropertySystemDbContext)));
-
             services.AddDbContext<PersonalsNewDbContext>(options =>
                         options.UseSqlServer(_appConfiguration.GetConnectionString(DemoConsts.ConnectionStringPersonalsNewDbContext)));
-
-            services.AddDbContext<AccountingDbContext>(options =>
-                        options.UseSqlServer(_appConfiguration.GetConnectionString(DemoConsts.ConnectionStringAccountingDbContext)));
-
+            
             services.AddDbContext<TAXDbContext>(options =>
                         options.UseSqlServer(_appConfiguration.GetConnectionString(DemoConsts.ConnectionStringTAXDbContext)));
-
-
 
             //MVC
             services.AddMvc(options =>
@@ -191,6 +182,7 @@ namespace VDI.Demo.Web.Startup
             // Enable middleware to serve swagger-ui assets (HTML, JS, CSS etc.)
             app.UseSwaggerUI(options =>
             {
+                options.DocExpansion("none");
                 options.SwaggerEndpoint(_appConfiguration["App:VirtualDirectory"] + "/swagger/v1/swagger.json", "Engine 3 API V1");
             }); //URL: /swagger
         }

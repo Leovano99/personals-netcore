@@ -38,8 +38,6 @@ using VDI.Demo.Identity;
 using VDI.Demo.Notifications;
 using VDI.Demo.PersonalsDB;
 using Abp.Domain.Repositories;
-using VDI.Demo.PropertySystemDB.OnlineBooking.DemoDB;
-using VDI.Demo.OnlineBooking.CustomerMember.Dto;
 using Abp.Domain.Uow;
 using Newtonsoft.Json.Linq;
 
@@ -69,7 +67,6 @@ namespace VDI.Demo.Web.Controllers
         private readonly GoogleAuthenticatorProvider _googleAuthenticatorProvider;
         private readonly IRepository<PERSONALS, string> _personalsRepo;
         private readonly IRepository<PERSONALS_MEMBER, string> _personalsMemberRepo;
-        private readonly IRepository<MP_UserPersonals> _mpUserPersonalsRepo;
 
         public TokenAuthController(
             LogInManager logInManager,
@@ -90,8 +87,7 @@ namespace VDI.Demo.Web.Controllers
             IOptions<IdentityOptions> identityOptions,
             GoogleAuthenticatorProvider googleAuthenticatorProvider,
             IRepository<PERSONALS, string> personalsRepo,
-            IRepository<PERSONALS_MEMBER, string> personalsMemberRepo,
-            IRepository<MP_UserPersonals> mpUserPersonalsRepo
+            IRepository<PERSONALS_MEMBER, string> personalsMemberRepo
             )
         {
             _logInManager = logInManager;
@@ -113,7 +109,6 @@ namespace VDI.Demo.Web.Controllers
             _identityOptions = identityOptions.Value;
             _personalsRepo = personalsRepo;
             _personalsMemberRepo = personalsMemberRepo;
-            _mpUserPersonalsRepo = mpUserPersonalsRepo;
         }
 
         [HttpPost]
@@ -186,44 +181,6 @@ namespace VDI.Demo.Web.Controllers
                 UserId = loginResult.User.Id,
                 ReturnUrl = returnUrl
             };
-        }
-
-        [HttpPost]
-        [UnitOfWork(isTransactional:false)]
-        public async Task<LoginMemberMobileDto> LoginMemberMobile([FromBody] AuthenticateModel model)
-        {
-            //Login
-            var loginResult = await GetLoginResultAsync(
-                model.UserNameOrEmailAddress,
-                model.Password,
-                GetTenancyNameOrNull()
-            );
-
-            //get user personal
-            var getUserPersonal = (from a in _mpUserPersonalsRepo.GetAll()
-                                   where a.userID == loginResult.User.Id
-                                   select a).FirstOrDefault();
-
-            //create token
-            var accessToken = CreateAccessToken(CreateJwtClaims(loginResult.Identity));
-
-            //get member
-            var getMember = (from a in _personalsRepo.GetAll()
-                             join b in _personalsMemberRepo.GetAll() on a.psCode equals b.psCode
-                             where a.psCode == getUserPersonal.psCode
-                             select new LoginMemberMobileDto
-                             {
-                                 AccessToken = accessToken,
-                                 psCode = a.psCode,
-                                 userId = getUserPersonal.userID,
-                                 memberCode = b.memberCode,
-                                 memberName = a.name,
-                                 scmCode = b.scmCode,
-                                 birthDate = a.birthDate
-                             }).FirstOrDefault();
-            
-            
-            return getMember;
         }
 
         [HttpPost]

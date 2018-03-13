@@ -1,21 +1,11 @@
 ﻿using Abp.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using VDI.Demo.PropertySystemDB;
-using VDI.Demo.PropertySystemDB.LippoMaster;
-using VDI.Demo.PropertySystemDB.MasterPlan.Project;
-using VDI.Demo.PropertySystemDB.MasterPlan.Unit;
-using VDI.Demo.PropertySystemDB.OnlineBooking.PPOnline;
-using VDI.Demo.PropertySystemDB.OnlineBooking.ProjectInfo;
-using VDI.Demo.PropertySystemDB.OnlineBooking.PropertySystem;
-using VDI.Demo.PropertySystemDB.Pricing;
 using VDI.Demo.TAXDB;
 
 namespace VDI.Demo.EntityFrameworkCore
 {
     public class TAXDbContext : AbpDbContext
-    {
-        
-
+    {        
         public virtual DbSet<FP_TR_FPHeader> FP_TR_FPHeader { get; set; }
 
         public virtual DbSet<FP_TR_FPDetail> FP_TR_FPDetail { get; set; }
