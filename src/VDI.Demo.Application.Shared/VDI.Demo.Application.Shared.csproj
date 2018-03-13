@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\..\common.props">
+  </Import>
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <RootNamespace>VDI.Demo</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Commission\**" />
+    <EmbeddedResource Remove="Commission\**" />
+    <None Remove="Commission\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Abp.AutoMapper" Version="3.3.0" />
+    <PackageReference Include="Abp.Web.Common" Version="3.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VDI.Demo.Core.Shared\VDI.Demo.Core.Shared.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Master Plan\Unit\" />
+    <Folder Include="Payment\PaymentLK_PayFor\" />
+    <Folder Include="Pricing\MS_Discounts\Exporter\" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\..\common.props">
+  </Import>
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <RootNamespace>VDI.Demo</RootNamespace>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="1.50.4" />
+    <PackageReference Include="EFCore.BulkExtensions" Version="2.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VDI.Demo.Core\VDI.Demo.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="EntityFrameworkCore\NewCommDbMigrator.cs" />
+    <Compile Remove="EntityFrameworkCore\PersonalsDbContext.cs" />
+    <Compile Remove="Migrations\20171214141617_Initial_Create.Designer.cs" />
+    <Compile Remove="Migrations\20180201024016_AddTable_MappingUser.cs" />
+    <Compile Remove="Migrations\20180201025244_AddTable_MappingUser.cs" />
+    <Compile Remove="Migrations\PropertySystemDb\20180116113406_Drop_table_lippomaster_old.cs" />
+    <Compile Remove="Migrations\PropertySystemDb\20180116115155_Add_table_lippomaster.cs" />
+    <Compile Remove="Migrations\PropertySystemDb\20180116121236_Add_table_lippomaster.cs" />
+    <Compile Remove="Migrations\PropertySystemDb\20180116121746_Add_table_lippomaster.cs" />
+    <Compile Remove="Migrations\PropertySystemDb\20180116122711_Add_table_lippomaster.cs" />
+    <Compile Remove="Migrations\PropertySystemDb\20180123042548_addTableLK_PayFor.cs" />
+    <Compile Remove="Migrations\PropertySystemDb\20180201102304_test.cs" />
+    <Compile Remove="Migrations\PropertySystemDb\20180206081250_update_tb_trbookingitemprice.cs" />
+    <Compile Remove="Migrations\PropertySystemDb\20180207072514_add_tb_TRBookingDetailDPHistory.cs" />
+    <Compile Remove="Migrations\PropertySystemDb\20180219044608_rename_table_ms_trans_from.cs" />
+    <Compile Remove="Migrations\PropertySystemDb\20180219044608_rename_table_ms_trans_from.Designer.cs" />
+    <Compile Remove="Migrations\PropertySystemDb\20180220104732_fixing_tr_booking_header.cs" />
+    <Compile Remove="Migrations\PropertySystemDb\20180220105414_fixing_tr_booking_header.cs" />
+    <Compile Remove="Migrations\PropertySystemDb\20180220105414_fixing_tr_booking_header.Designer.cs" />
+    <Compile Remove="Migrations\PropertySystemDb\20180305085917_addfield_5table_setup_product.cs" />
+    <Compile Remove="Migrations\PropertySystemDb\20180305114003_add_table_tr_payment_bulk.cs" />
+    <Compile Remove="Migrations\SecondDb\20171218024105_Initial_Create.Designer.cs" />
+  </ItemGroup>
+</Project>

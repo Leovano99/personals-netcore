@@ -1,0 +1,1681 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localizationDictionary culture="en">
+  <texts>
+    <text name="HomePage" value="Home page" />
+    <text name="AboutUs" value="About us" />
+    <text name="Administration" value="Administration" />
+    <text name="Roles" value="Roles" />
+    <text name="Users" value="Users" />
+    <text name="InvalidFormMessage" value="Your form is invalid. Please check and correct it." />
+    <text name="InvalidUserNameOrPassword" value="Invalid user name or password" />
+    <text name="ThereIsNoTenantDefinedWithName{0}" value="There is no tenant defined with name {0}" />
+    <text name="TenantIsNotActive" value="Tenant {0} is not active." />
+    <text name="UserIsNotActiveAndCanNotLogin" value="User {0} is not active and can not log in." />
+    <text name="PleaseEnterLoginInformation" value="Please enter login information" />
+    <text name="TenancyName" value="Tenancy name" />
+    <text name="UserNameOrEmail" value="User name or email" />
+    <text name="Password" value="Password" />
+    <text name="RememberMe" value="Remember me" />
+    <text name="LogIn" value="Log in" />
+    <text name="ForgotPassword" value="Forgot password?" />
+    <text name="DontYouHaveAnAccount" value="Don't you have an account?" />
+    <text name="CreateAnAccount" value="Create account" />
+    <text name="Pages" value="Pages" />
+    <text name="RoleName" value="Role name" />
+    <text name="EditRole" value="Edit role" />
+    <text name="CreateNewRole" value="Create new role" />
+    <text name="RoleProperties" value="Role properties" />
+    <text name="Permissions" value="Permissions" />
+    <text name="Save" value="Save" />
+    <text name="Cancel" value="Cancel" />
+    <text name="RolesHeaderInfo" value="Use roles to group permissions." />
+    <text name="Static" value="Static" />
+    <text name="Actions" value="Actions" />
+    <text name="SavedSuccessfully" value="Save successfully" />
+    <text name="AreYouSure" value="Are you sure?" />
+    <text name="YesDelete" value="Yes, delete!" />
+    <text name="DeletingUser" value="Deleting user" />
+    <text name="UsersHeaderInfo" value="Manage users and permissions." />
+    <text name="CreateNewUser" value="Create new user" />
+    <text name="UserName" value="User name" />
+    <text name="Surname" value="Surname" />
+    <text name="EmailAddress" value="Email address" />
+    <text name="LastLoginTime" value="Last login time" />
+    <text name="EditUser" value="Edit user" />
+    <text name="UserInformations" value="User informations" />
+    <text name="PasswordRepeat" value="Password (repeat)" />
+    <text name="SuccessfullyDeleted" value="Successfully deleted." />
+    <text name="RoleDeleteWarningMessage" value="Role {0} will be deleted and unassigned from all assigned users." />
+    <text name="UserDeleteWarningMessage" value="User {0} will be deleted." />
+    <text name="Active" value="Active" />
+    <text name="EmailConfirm" value="Email confirm" />
+    <text name="Yes" value="Yes" />
+    <text name="No" value="No" />
+    <text name="MySettings" value="My settings" />
+    <text name="Logout" value="Logout" />
+    <text name="Reset" value="Reset" />
+    <text name="ResetPermissionsTooltip" value="This button immediately resets user specific permission settings and saves changes. The user will only have permissions from assigned roles." />
+    <text name="ResetSuccessfully" value="Reset successfully" />
+    <text name="Tenants" value="Tenants" />
+    <text name="TenantsHeaderInfo" value="Manage your tenants." />
+    <text name="CreateNewTenant" value="Create new tenant" />
+    <text name="TenancyCodeName" value="Tenancy code name" />
+    <text name="TenantName" value="Tenant name" />
+    <text name="TenantDeleteWarningMessage" value="Tenant {0} will be deleted." />
+    <text name="AdminEmailAddress" value="admin email" />
+    <text name="AdminPassword" value="admin password" />
+    <text name="AdminPasswordRepeat" value="admin password (repeat)" />
+    <text name="EditTenant" value="Edit tenant" />
+    <text name="ChangingPermissions" value="Changing permissions" />
+    <text name="EditingUser" value="Editing user" />
+    <text name="CreatingNewUser" value="Creating new user" />
+    <text name="EditingTenant" value="Editing tenant" />
+    <text name="CreatingNewTenant" value="Creating new tenant" />
+    <text name="DeletingTenant" value="Deleting tenant" />
+    <text name="EditingRole" value="Editing role" />
+    <text name="CreatingNewRole" value="Creating new role" />
+    <text name="DeletingRole" value="Deleting role" />
+    <text name="CreationTime" value="Creation time" />
+    <text name="SearchWithThreeDot" value="Search..." />
+    <text name="ResetSpecialPermissions" value="Reset special permissions" />
+    <text name="SavingWithThreeDot" value="Saving..." />
+    <text name="Settings" value="Settings" />
+    <text name="SaveAll" value="Save all" />
+    <text name="SettingsHeaderInfo" value="Show and change application settings." />
+    <text name="EmailSmtp" value="Email (SMTP)" />
+    <text name="DefaultFromAddress" value="Default from (sender) email address" />
+    <text name="DefaultFromDisplayName" value="Default from (sender) display name" />
+    <text name="SmtpHost" value="SMTP host" />
+    <text name="SmtpPort" value="SMTP port" />
+    <text name="UseDefaultCredentials" value="Use default credentials" />
+    <text name="DomainName" value="Domain name" />
+    <text name="UseSsl" value="Use SSL" />
+    <text name="ThisWebSiteRootAddress" value="Web site root address" />
+    <text name="ThisWebSiteRootAddress_Hint" value="It will be used when building links to this web site. It's needed for some tasks like building password reset links. Ex: http://mydomain.com/" />
+    <text name="General" value="General" />
+    <text name="SendPasswordResetLink_Information" value="A password reset link will be sent to your email to reset your password. If you don't get an email within a few minutes, please re-try." />
+    <text name="Send" value="Send" />
+    <text name="PasswordReset" value="Password reset" />
+    <text name="InvalidUserNameOrEmailAddress" value="Invalid user name or email address" />
+    <text name="PasswordResetEmail_Subject" value="Demo password reset" />
+    <text name="PasswordResetEmail_Title" value="Demo password reset." />
+    <text name="PasswordResetEmail_SubTitle" value="This email is sent you to reset and re-create your password." />
+    <text name="PasswordResetEmail_ClickTheLinkBelowToResetYourPassword" value="Please click the link below to reset your password:" />
+    <text name="EmailActivation_Subject" value="Demo account email activation" />
+    <text name="EmailActivation_Title" value="Welcome to Demo." />
+    <text name="EmailActivation_SubTitle" value="This email is sent you to verify your email." />
+    <text name="EmailActivation_ClickTheLinkBelowToVerifyYourEmail" value="Please click the link below to verify your email address:" />
+    <text name="InvalidEmailAddress" value="Invalid email address" />
+    <text name="InvalidPasswordResetCode" value="Invalid password reset code" />
+    <text name="InvalidPasswordResetCode_Detail" value="Please be sure you entered this page by clicking the link sent to your email. If this not solves the problem, you can re-try to request a new password reset link." />
+    <text name="PleaseEnterYourNewPassword" value="Please enter your new password." />
+    <text name="UserEmailIsNotConfirmedAndCanNotLogin" value="Your email address is not confirmed. Please check your email and click the email confirmation link to activate your account. If you did not receive activation email, click the 'email confirmation' to request a new email." />
+    <text name="LoginFailed" value="Login failed!" />
+    <text name="InvalidEmailConfirmationCode" value="Invalid email confirmation code" />
+    <text name="InvalidEmailConfirmationCode_Detail" value="Please be sure you entered this page by clicking the link sent to your email. If this not solves the problem, you can re-try to request a new confirmation code." />
+    <text name="YourEmailIsConfirmedMessage" value="Your email address is successfully confirmed." />
+    <text name="ShouldChangePasswordOnNextLogin" value="Should change password on next login." />
+    <text name="SetRandomPassword" value="Set random password." />
+    <text name="EmailActivation" value="Email activation" />
+    <text name="SendEmailActivationLink_Information" value="A link will be sent to your email to activate your email address. If you don't get an email within a few minutes, please re-try." />
+    <text name="SendActivationEmail" value="Send activation email." />
+    <text name="ChangePassword" value="Change password" />
+    <text name="CurrentPassword" value="Current password" />
+    <text name="NewPassword" value="New password" />
+    <text name="NewPasswordRepeat" value="New password (repeat)" />
+    <text name="YourPasswordHasChangedSuccessfully" value="Your password has changed successfully." />
+    <text name="SelfUserRegistrationIsDisabledMessage" value="You can not register to the system!" />
+    <text name="SelfUserRegistrationIsDisabledMessage_Detail" value="Self user registration is disabled. Please contact to the system administrator to register." />
+    <text name="SuccessfullyRegistered" value="Successfully registered" />
+    <text name="ConfirmationMailSentPleaseClickLinkInTheEmail" value="A confirmation mail sent to {0}. Please click link in the email in order to confirm your mail address." />
+    <text name="YourAccountIsWaitingToBeActivatedByAdmin" value="Your account is waiting to be activated by system admin." />
+    <text name="NameSurname" value="Name surname" />
+    <text name="UserManagement" value="User management" />
+    <text name="AllowUsersToRegisterThemselves" value="Allow users to register to the system." />
+    <text name="AllowUsersToRegisterThemselves_Hint" value="If you disable this, users will only be added by admin using user management page." />
+    <text name="NewRegisteredUsersIsActiveByDefault" value="New registered users are active by default." />
+    <text name="NewRegisteredUsersIsActiveByDefault_Hint" value="If you disable this, new users will not be active (and can not login) until admin manually activate the account." />
+    <text name="Default" value="Default" />
+    <text name="DefaultRole_Description" value="Assign to new users as default." />
+    <text name="StaticRole_Tooltip" value="Static roles can not be deleted." />
+    <text name="EmailConfirmationRequiredForLogin" value="Email confirmation required for login." />
+    <text name="{0}UserCannotBeDeleted" value="{0} user can not be deleted." />
+    <text name="TenantNameCanNotBeEmpty" value="Tenant name can not be empty" />
+    <text name="ExportToExcel" value="Export to excel" />
+    <text name="ChangeProfilePicture" value="Change profile picture" />
+    <text name="TenantName_Regex_Description" value="Tenant name must be at least 2 chars, starts with a letter and continue with letter, number, dash or underscore." />
+    <text name="ProfilePicture_Change_Info" value="You can select a JPG/JPEG/PNG file with a maximum {0}MB size." />
+    <text name="ProfilePicture_Change_Error" value="Your profile picture could not be changed." />
+    <text name="ProfilePicture_Warn_SizeLimit" value="Picture size must be smalled than {0}MB. Please select another file." />
+    <text name="ProfilePicture_Warn_FileType" value="You can only select JPG/JPEG file. Please select another file." />
+    <text name="Dashboard" value="Dashboard" />
+    <text name="DashboardHeaderInfo" value="statistics and reports" />
+    <text name="GoToApplication" value="Go to application" />
+    <text name="TenantInformations" value="Tenant informations" />
+    <text name="AccountSettings" value="Account settings" />
+    <text name="Captha_Hint" value="Please proof that you are not a robot" />
+    <text name="Back" value="Back" />
+    <text name="Submit" value="Submit" />
+    <text name="SignUp" value="Sign up" />
+    <text name="CaptchaCanNotBeEmpty" value="Security code can not be empty." />
+    <text name="IncorrectCaptchaAnswer" value="Security code is not valid." />
+    <text name="FormIsNotValidMessage" value="Form is not valid. Please check and fix errors." />
+    <text name="CanNotChangeAdminUserName" value="Can not change username of the admin." />
+    <text name="Error" value="Error!" />
+    <text name="OopsYouAreLost" value="Oops! You're lost." />
+    <text name="WeCanNotFindThePage" value="We can not find the page you're looking for." />
+    <text name="DashboardDemo_Note_Title" value="Welcome to Engine 3 startup project!" />
+    <text name="DashboardDemo_Note_Info">
+      In this demo, you can use the left menu to test the application.
+      This dashboard page is just for demonstration, but all other pages and functionalities are fully implemented, working and ready for production.
+      You can add/apply your business requirements on this startup project (or remove any functionality you don't need).
+      Thus, you can have a signification time gain to immediately start your own project requirements.
+    </text>
+    <text name="WelcomePage_Title" value="Welcome!" />
+    <text name="WelcomePage_Info" value="Welcome to the application. You can use the menu to start using the application. If you don't see any menu item, probably you don't have permission to see any page. Consider to ask system administration for permissions." />
+    <text name="RequestedFileDoesNotExists" value="Requested file does not exists!" />
+    <text name="MailSent" value="Mail sent" />
+    <text name="PasswordResetMailSentMessage" value="A password reset link sent to your e-mail address. Please check your emails." />
+    <text name="ActivationMailSentMessage" value="An e-mail activation link sent to your e-mail address. Please check your emails." />
+    <text name="UseCaptchaOnRegistration" value="Use security image question (captcha) on registration." />
+    <text name="FormBasedRegistration" value="Form Based Registration" />
+    <text name="LdapSettings" value="LDAP Settings" />
+    <text name="EnableLdapAuthentication" value="Enable LDAP Authentication." />
+    <text name="OtherSettings" value="Other Settings" />
+    <text name="AuditLogs" value="Audit logs" />
+    <text name="Success" value="Success" />
+    <text name="Time" value="Time" />
+    <text name="Service" value="Service" />
+    <text name="Action" value="Action" />
+    <text name="Duration" value="Duration" />
+    <text name="IpAddress" value="IP address" />
+    <text name="Client" value="Client" />
+    <text name="Browser" value="Browser" />
+    <text name="Xms" value="{0} ms" />
+    <text name="Close" value="Close" />
+    <text name="Refresh" value="Refresh" />
+    <text name="ErrorState" value="Error state" />
+    <text name="All" value="All" />
+    <text name="HasError" value="Has error" />
+    <text name="ShowAdvancedFilters" value="Show advanced filters" />
+    <text name="HideAdvancedFilters" value="Hide advanced filters" />
+    <text name="AuditLogDetail" value="Audit log detail" />
+    <text name="Parameters" value="Parameters" />
+    <text name="DateRange" value="Date range" />
+    <text name="ActionInformations" value="Action informations" />
+    <text name="Today" value="Today" />
+    <text name="Yesterday" value="Yesterday" />
+    <text name="Last7Days" value="Last 7 days" />
+    <text name="Last30Days" value="Last 30 days" />
+    <text name="ThisMonth" value="This month" />
+    <text name="LastMonth" value="Last month" />
+    <text name="TenantSelection" value="Tenant Selection" />
+    <text name="TenantSelection_Detail" value="Please select one of the following tenants." />
+    <text name="LoginWith" value="Login with:" />
+    <text name="PasswordChangeDontRememberMessage" value="If you can not remember your password, {0}." />
+    <text name="ClickHere" value="click here" />
+    <text name="Apply" value="Apply" />
+    <text name="CustomRange" value="Custom range" />
+    <text name="DashboardNoteForMpaVersion">
+      <![CDATA[
+      See Demo for Multi-Page Application version with <strong>ASP.NET MVC</strong> and <strong>jQuery</strong>.
+      ]]>
+    </text>
+    <text name="DashboardNoteForSpaVersion">
+      <![CDATA[
+      Notice: There is also a <strong>Single-Page Application</strong> version built using ASP.NET MVC and <strong>AngularJs</strong>.
+      ]]>
+    </text>
+    <text name="SeeDemo" value="See demo" />
+    <text name="Edition" value="Edition" />
+    <text name="Editions" value="Editions" />
+    <text name="EditionsHeaderInfo" value="Manage editions and features of the application" />
+    <text name="CreateNewEdition" value="Create new edition" />
+    <text name="EditEdition" value="Edit edition" />
+    <text name="EditionProperties" value="Edition properties" />
+    <text name="EditionName" value="Edition name" />
+    <text name="Features" value="Features" />
+    <text name="EditionDeleteWarningMessage" value="{0} will be deleted and unassigned from all assigned tenants." />
+    <text name="CreatingNewEdition" value="Creating new edition" />
+    <text name="EditingEdition" value="Editing edition" />
+    <text name="DeletingEdition" value="Deleting edition" />
+    <text name="ChangingFeatures" value="Changing features" />
+    <text name="ResetSpecialFeatures" value="Reset special features" />
+    <text name="ResetFeaturesTooltip" value="This button immediately resets tenant specific feature settings and saves changes. The tenant will only have features from assigned edition." />
+    <text name="NotAssigned" value="Not assigned" />
+    <text name="InvalidFeaturesWarning" value="One or more feature values are not valid!" />
+    <text name="Languages" value="Languages" />
+    <text name="LanguagesHeaderInfo" value="Manage user interface languages." />
+    <text name="CreateNewLanguage" value="Create new language" />
+    <text name="CreatingNewLanguage" value="Creating new language" />
+    <text name="EditingLanguage" value="Editing language" />
+    <text name="DeletingLanguages" value="Deleting language" />
+    <text name="ChangingTexts" value="Changing texts" />
+    <text name="SuccessfullySaved" value="Successfully saved." />
+    <text name="Language" value="Language" />
+    <text name="Flag" value="Flag" />
+    <text name="SetAsDefaultLanguage" value="Set as default language" />
+    <text name="InvlalidLanguageCode" value="Invalid language code." />
+    <text name="EditLanguage" value="Edit language" />
+    <text name="ChangeTexts" value="Change texts" />
+    <text name="TargetValue" value="Target value" />
+    <text name="BaseValue" value="Base value" />
+    <text name="Key" value="Key" />
+    <text name="SaveAndClose" value="Save &amp; Close" />
+    <text name="SaveAndNext" value="Save &amp; Next" />
+    <text name="EditText" value="Edit text" />
+    <text name="LanguageTexts" value="Language texts" />
+    <text name="LanguageTextsHeaderInfo" value="Edit texts for languages." />
+    <text name="EmptyOnes" value="Empty ones" />
+    <text name="Source" value="Source" />
+    <text name="BaseLanguage" value="Base language" />
+    <text name="TargetLanguage" value="Target language" />
+    <text name="Previous" value="Previous" />
+    <text name="LanguageDeleteWarningMessage" value="Are you sure to delete the language {0}?" />
+    <text name="CanNotEditOrDeleteDefaultLanguages" value="Can not edit or delete default languages. You can only edit or delete the languages you added. But you can change texts of all languages." />
+    <text name="LookingForMpaVersion" value="Looking for Multi-Page Application Version?" />
+    <text name="LookingForSpaVersion" value="Looking for Single-Page Application Version?" />
+    <text name="ThisLanguageAlreadyExists" value="This language already exists!" />
+    <text name="OrganizationUnitsHeaderInfo" value="Use organization units to organize users and entities" />
+    <text name="OrganizationTree" value="Organization tree" />
+    <text name="Members" value="Members" />
+    <text name="SelectAnOrganizationUnitToSeeMembers" value="Select an organization unit to see members." />
+    <text name="OrganizationUnitDeleteWarningMessage" value="Are you sure to delete organization unit {0}?" />
+    <text name="AddSubUnit" value="Add sub unit" />
+    <text name="AddMember" value="Add member" />
+    <text name="SuccessfullyAdded" value="Successfully added" />
+    <text name="RemoveUserFromOuWarningMessage" value="Are you sure to remove user {0} from organization unit {1}?" />
+    <text name="SuccessfullyRemoved" value="Successfully removed" />
+    <text name="SelectAnItem" value="Select an item" />
+    <text name="NewOrganizationUnit" value="New organization unit" />
+    <text name="SelectAUser" value="Select a user" />
+    <text name="Select" value="Select" />
+    <text name="UserIsAlreadyInTheOrganizationUnit" value="This user is already in the organization unit!" />
+    <text name="AddRootUnit" value="Add root unit" />
+    <text name="AddUser" value="Add user" />
+    <text name="NoOrganizationUnitDefinedYet" value="No organization unit defined yet." />
+    <text name="OrganizationUnitMoveConfirmMessage" value="Please confirm to move {0} to under {1}." />
+    <text name="Root" value="Root" />
+    <text name="SuccessfullyMoved" value="Successfully moved." />
+    <text name="AddedTime" value="Addition time" />
+    <text name="ManagingMembers" value="Managing members" />
+    <text name="ManagingOrganizationTree" value="Managing organization tree" />
+    <text name="LoginForUsers" value="Login for users" />
+    <text name="LoginAsThisUser" value="Login as this user" />
+    <text name="BackToMyAccount" value="Back to my account" />
+    <text name="LoginForTenants" value="Login for tenants" />
+    <text name="LoginAsThisTenant" value="Login as this tenant" />
+    <text name="AuditLogImpersonatedOperationInfo" value="Note: This operation is performed by another user on behalf of this user." />
+    <text name="CustomData" value="Custom data" />
+    <text name="None" value="None" />
+    <text name="YouCanBackToYourAccount" value="You can back to your account here." />
+    <text name="CascadeImpersonationErrorMessage" value="Can not make cascade impersonation. This is already an impersonated login!" />
+    <text name="FromTenantToHostImpersonationErrorMessage" value="Can not impersonate a host user from a tenant user!" />
+    <text name="DifferentTenantImpersonationErrorMessage" value="Can not impersonate a user of a different tenant!" />
+    <text name="ImpersonationTokenErrorMessage" value="Impersonation token is invalid or expired!" />
+    <text name="NotImpersonatedLoginErrorMessage" value="This is not an impersonated login!" />
+    <text name="YouCannotLinkToSameAccount">You can not link to same account!</text>
+    <text name="ChangePasswordBeforeLinkToAnAccount">You must change your password before linking this account!</text>
+    <text name="LinkedAccounts">Linked accounts</text>
+    <text name="ManageLinkedAccounts">Manage linked accounts</text>
+    <text name="LinkNewAccount">Link new account</text>
+    <text name="SuccessfullyUnlinked">Successfully unlinked</text>
+    <text name="LinkedUserDeleteWarningMessage">Link to user {0} will be deleted.</text>
+    <text name="SwitchToLinkedAccountTokenErrorMessage" value="Impersonation token is invalid or expired!" />
+    <text name="WelcomeToTheApplicationNotificationMessage" value="Welcome to Demo! Notification system is used to inform you for intended events. You can select which type of notifications you want to receive from the notification settings." />
+    <text name="NewUserRegisteredNotificationDefinition" value="On a new user registered to the application." />
+    <text name="NewUserRegisteredNotificationMessage" value="A new user registered to the application. User name: {userName}, Email address: {emailAddress}." />
+    <text name="SeeAllNotifications" value="See all notifications" />
+    <text name="SetAsRead" value="set as read" />
+    <text name="SetAllAsRead" value="Set all as read" />
+    <text name="NotificationSettings" value="Notification settings" />
+    <text name="ReceiveNotifications" value="Receive Notifications" />
+    <text name="ReceiveNotifications_Definition" value="This option can be used to completely enable/disable receiving notifications." />
+    <text name="NotificationTypes" value="Notification Types" />
+    <text name="ReceiveNotifications_DisableInfo" value="You completely disabled receiving notifications. You can enable it and select notification types you want to receive." />
+    <text name="Notifications" value="Notifications" />
+    <text name="ThereIsNoNotification" value="There is no notification." />
+    <text name="Unread" value="Unread" />
+    <text name="YouCanNotDeleteOwnAccount" value="You can not delete own user account!" />
+    <text name="On" value="On" />
+    <text name="Off" value="Off" />
+    <text name="Maintenance">Maintenance</text>
+    <text name="Caches">Caches</text>
+    <text name="CacheSuccessfullyCleared">Cache successfully cleared.</text>
+    <text name="AllCachesSuccessfullyCleared">All caches successfully cleared.</text>
+    <text name="ClearAll">Clear all</text>
+    <text name="Clear">Clear</text>
+    <text name="CachesHeaderInfo">You can clear caches in application on this page.</text>
+    <text name="TestEmailSettingsHeader">Test Email Settings</text>
+    <text name="SendTestEmail">Send Test Email</text>
+    <text name="TestEmail_Subject">Demo test email</text>
+    <text name="TestEmail_Body">This is a test email.</text>
+    <text name="TestEmailSentSuccessfully">Test e-mail sent successfully.</text>
+    <text name="WebSiteLogs">Website Logs</text>
+    <text name="WebSiteLogsHeaderInfo">You can see latest logs in this page or download all logs in a single zip file.</text>
+    <text name="DownloadAll">Download all</text>
+    <text name="TenantManagement">Tenant management</text>
+    <text name="AllowTenantsToRegisterThemselves" value="Allow tenants to register to the system." />
+    <text name="AllowTenantsToRegisterThemselves_Hint" value="If you disable this, tenants will only be added by admin using tenant management page." />
+    <text name="NewRegisteredTenantsIsActiveByDefault" value="New registered tenants are active by default." />
+    <text name="NewRegisteredTenantsIsActiveByDefault_Hint" value="If you disable this, new tenants will not be active (and can not login) until admin manually activate the account." />
+    <text name="TenantSignUp">Tenant SignUp</text>
+    <text name="NewTenantRegisteredNotificationDefinition" value="On a new tenant registered to the application." />
+    <text name="NewTenantRegisteredNotificationMessage" value="A new tenant registered to the application. Tenancy name: {tenancyName}." />
+    <text name="LoginAttempts">Login attempts</text>
+    <text name="Failed">Failed</text>
+    <text name="NewTenant">New tenant</text>
+    <text name="ResizedProfilePicture_Warn_SizeLimit" value="Resized picture size must be smalled than {0}KB. Please resize down and try again." />
+    <text name="RegisterFormUserNameInvalidMessage">Please do not enter an email address for username.</text>
+    <text name="UseHostDatabase" value="Use host database" />
+    <text name="DatabaseConnectionString" value="Database connection string" />
+    <text name="TenantDatabaseConnectionStringChangeWarningMessage" value="Notice: Before changing the database connection string for a tenant, you should move the tenant database to the new location. Changing connection string does not move the tenant database." />
+    <text name="Timezone">Timezone</text>
+    <text name="HasOwnDatabase">Has own database</text>
+    <text name="TimeZoneSettingChangedRefreshPageNotification">Timezone setting changed. Click OK button to refresh page and changes to take effect.</text>
+    <text name="Ok">Ok</text>
+    <text name="Permission">Permission</text>
+    <text name="Role">Role</text>
+    <text name="Security">Security</text>
+    <text name="PasswordComplexity">Password complexity</text>
+    <text name="UseDefaultSettings">Use default settings</text>
+    <text name="PasswordComplexityNotSatisfied">Password complexity is not satisfied.</text>
+    <text name="YouAlreadySentAFriendshipRequestToThisUser">You already added this user.</text>
+    <text name="YouCannotBeFriendWithYourself">You can not be friend with yourself.</text>
+    <text name="NewChatMessageEmail_Title">Message Details</text>
+    <text name="NewChatMessageEmail_SubTitle"></text>
+    <text name="NewChatMessageEmail_Subject">You have a new chat message</text>
+    <text name="Sender">Sender</text>
+    <text name="Message">Message</text>
+    <text name="UserBlocked">User blocked successfully.</text>
+    <text name="UserUnblocked">Block removed from user successfully.</text>
+    <text name="BlockUser">Block user</text>
+    <text name="UnblockUser">Unblock</text>
+    <text name="FriendshipRequestAccepted">Friendship request accepted</text>
+    <text name="UserSendYouAFriendshipRequest">{0} added you as a friend.</text>
+    <text name="Friends">Friends</text>
+    <text name="Others">Others</text>
+    <text name="BlockedUsers">Blocked Users</text>
+    <text name="YouDontHaveAnyFriend">You don't have any friends. Write a username to above input box and click "Add Friend" button.</text>
+    <text name="YouDontHaveAnyBlockedFriend">You don't have any blocked users. In order to block a friend, select a friend and select block from actions dropdown.</text>
+    <text name="ChatUserSearch_Hint">
+      <![CDATA[
+      Write only username for same tenant users, <br>
+      <strong>[tenancyName]\[userName]</strong> for other tenant's users <br><br>
+      for example: <br>
+      .\admin -> for host admin <br>
+      Test\admin -> for test tenant's admin <br>
+      admin -> for your tenant's admin
+      ]]>
+    </text>
+    <text name="AddFriend">Add friend</text>
+    <text name="TypeAMessageHere">Type a message here...</text>
+    <text name="Chat">Chat</text>
+    <text name="ChatFeature">Chat</text>
+    <text name="ChatFeatureIsNotEnabledForSender">Chat is not enabled for you.</text>
+    <text name="ChatFeatureIsNotEnabledForReceiver">Chat is not enabled for tenant.</text>
+    <text name="UserIsBlocked">User is blocked.</text>
+    <text name="ChatIsNotConnectedWarning">Chat is not connected.</text>
+    <text name="Demo_SampleChatMessage">Hi, This is a test message. Please login with my account in a different browser and checkout how chat feature works.</text>
+    <text name="TenantToTenantChatFeatureIsNotEnabledForSender">Chat with other tenants is not enabled for you.</text>
+    <text name="TenantToTenantChatFeatureIsNotEnabledForReceiver">Chat with other tenants is not enabled for tenant.</text>
+    <text name="TenantToHostChatFeatureIsNotEnabledForSender">Chat with host is not enabled for you.</text>
+    <text name="TenantToHostChatFeatureIsNotEnabledForReceiver">Chat with host is not enabled for tenant.</text>
+    <text name="TenantToTenantChatFeature">Chat with other tenants</text>
+    <text name="TenantToHostChatFeature">Chat with host</text>
+    <text name="FilterByPermission">Filter by permission</text>
+    <text name="FilterByRole">Filter by role</text>
+    <text name="FilterOrAddUser">Filter/Add user</text>
+    <text name="HangfireDashboard" value="Hangfire dashboard" />
+    <text name="CouldNotCompleteLoginOperation">Could not complete the login operation.</text>
+    <text name="UnAuthorizedOperation">Unauthorized Operation</text>
+    <text name="YouAreNotAuthorizedToPerformThisOperation">You are not authorized to perform this operation.</text>
+    <text name="TargetUserNotFoundProbablyDeleted">Target user could not be found. It's probably deleted.</text>
+    <text name="UserLockedOutMessage">The user account has been locked out. Please try again later.</text>
+    <text name="SendSecurityCode">Send security code.</text>
+    <text name="SendSecurityCode_Information">You should verify yourself to login. Please select a verification type. A code will be sent based on selected verification type.</text>
+    <text name="SendSecurityCodeErrorMessage">Security code could not be sent!</text>
+    <text name="VerifySecurityCodeNotLoggedInErrorMessage">You should be login first, in order to verify yourself! Probably, your login has been timeout. Please go to the login page and re-try it.</text>
+    <text name="VerificationCode">Verification code</text>
+    <text name="VerifySecurityCode">Verify Security Code</text>
+    <text name="VerifySecurityCode_Information">Please enter the verification code sent to you.</text>
+    <text name="RememberThisBrowser">Remember this browser</text>
+    <text name="InvalidSecurityCode">Invalid security code!</text>
+    <text name="PhoneNumber">Phone number</text>
+    <text name="Unlock">Unlock</text>
+    <text name="UnlockedTheUser">Unlocked the user {0}</text>
+    <text name="UserLockOut">User Lock Out</text>
+    <text name="EnableUserAccountLockingOnFailedLoginAttemts">Enable user account locking on failed login attempts</text>
+    <text name="MaxFailedAccessAttemptsBeforeLockout">Maximum number of failed login attempt count before locking the account</text>
+    <text name="DefaultAccountLockoutDurationAsSeconds">Account locking duration (as seconds)</text>
+    <text name="TwoFactorLogin">Two Factor Login</text>
+    <text name="EnableTwoFactorLogin">Enable two factor user login.</text>
+    <text name="IsEmailVerificationEnabled">Enable email verification.</text>
+    <text name="IsSmsVerificationEnabled">Enable SMS verification.</text>
+    <text name="AllowToRememberBrowserForTwoFactorLogin">Allow to remember browser. If you allows this, users can select to remember browser to skip second time two factor login for the same browser.</text>
+    <text name="CurrentTenant">Current tenant</text>
+    <text name="NotSelected">Not selected</text>
+    <text name="Change">Change</text>
+    <text name="ChangeTenant">Change tenant</text>
+    <text name="UnknownTenantId{0}" value="Unknown tenant id: {0}" />
+    <text name="TenantIdIsNotActive{0}" value="Inactive tenant id: {0}" />
+    <text name="TimeoutPleaseTryAgain">Timeout! Please try again.</text>
+    <text name="RemainingTime">Remaining time</text>
+    <text name="SecondShort{0}">{0} sec</text>
+    <text name="ResetCode">Reset code</text>
+    <text name="IsTwoFactorEnabled">Two factor authentication enabled</text>
+    <text name="IsLockoutEnabled">Lockout enabled</text>
+    <text name="IsLockoutEnabled_Hint">User is locked for a while after a certain amount of failed login attempts.</text>
+    <text name="TenantRegistrationLoginInfo">Click here to login</text>
+    <text name="CouldNotValidateExternalUser">Could not validate external user login</text>
+    <text name="LeaveEmptyToSwitchToHost">Leave empty to switch to the host</text>
+    <text name="PleaseWaitToConfirmYourEmailMessage">Please wait while confirming your email address...</text>
+    <text name="ChatIsConnecting">Chat is connecting...</text>
+    <text name="Note_RefreshPageForPermissionChanges">If you are changing your own permissions, you may need to refresh page (F5) to take effect of permission changes on your own screen!</text>
+    <text name="ApplicationLogo">Application Logo</text>
+    <text name="CustomCSS">Custom CSS</text>
+    <text name="Upload">Upload</text>
+    <text name="Download">Download</text>
+    <text name="UploadLogo_Info">Select a JPG/JPEG/PNG/GIF file with a maximum of 30KB size and 168x33 pixel resolution.</text>
+    <text name="UploadCSS_Info">Select a .css file with a maximum of 1MB size.</text>
+    <text name="Browse">Browse</text>
+    <text name="Appearance">Appearance</text>
+    <text name="ClearedSuccessfully">Cleared successfully</text>
+    <text name="File_Empty_Error">Please select a file!</text>
+    <text name="File_SizeLimit_Error">Size of the file exceeds allowed limits!</text>
+    <text name="File_Invalid_Type_Error">Invalid file type!</text>
+    <text name="MaximumUserCount">Maximum user count</text>
+    <text name="MaximumUserCount_Description">0 = unlimited</text>
+    <text name="MaximumUserCount_Error_Message">Reached to maximum allowed user count!</text>
+    <text name="MaximumUserCount_Error_Detail">This tenant is allowed to have a maximum of {0} users.</text>
+    <text name="UnlockedTenandAdmin">Unlocked admin user for {0}</text>
+    <text name="Email">Email</text>
+    <text name="EmailSecurityCodeSubject">Security Code</text>
+    <text name="EmailSecurityCodeBody">Your security code is: {0}</text>
+    <text name="Sms">Sms</text>
+    <text name="SmsSecurityCodeMessage">Your security code is: {0}</text>
+    <text name="PasswordComplexity_RequireDigit_Hint">Passwords must have at least one digit ('0'-'9').</text>
+    <text name="PasswordComplexity_RequireLowercase_Hint">Passwords must have at least one lowercase ('a'-'z').</text>
+    <text name="PasswordComplexity_RequireNonAlphanumeric_Hint">Passwords must have at least one non alphanumeric character.</text>
+    <text name="PasswordComplexity_RequireUppercase_Hint">Passwords must have at least one uppercase ('A'-'Z').</text>
+    <text name="PasswordComplexity_RequiredLength_Hint">Passwords must be at least {0} characters.</text>
+    <text name="PasswordComplexity_RequireDigit">Require digit</text>
+    <text name="PasswordComplexity_RequireLowercase">Require lowercase</text>
+    <text name="PasswordComplexity_RequireNonAlphanumeric">Require non alphanumeric</text>
+    <text name="PasswordComplexity_RequireUppercase">Require uppercase</text>
+    <text name="PasswordComplexity_RequiredLength">Required length</text>
+    <text name="HostDashboardHeaderInfo">General statistics and recent activities</text>
+    <text name="DashboardSampleStatistics">Sample statistics</text>
+    <text name="DashboardSampleStatisticsHelpText">Progress</text>
+    <text name="NewTenants">New tenants</text>
+    <text name="NewSubscriptionAmount">New subscription amount</text>
+    <text name="Income">Income</text>
+    <text name="IncomeStatistics">Income statistics</text>
+    <text name="ChangeDateRange">Change date range</text>
+    <text name="Daily">Daily</text>
+    <text name="Weekly">Weekly</text>
+    <text name="Monthly">Monthly</text>
+    <text name="DateFormatShort">MM.dd.yyyy</text>
+    <text name="EditionStatistics">Edition statistics</text>
+    <text name="SubscriptionExpiringTenants">Subscription expiring tenants</text>
+    <text name="RemainingDay">Remaining day</text>
+    <text name="SeeAllRecords">See all records</text>
+    <text name="RecentTenants">Recent tenants</text>
+    <text name="RecentTenantsHelpText">Last {1} customers registered in {0} days...</text>
+    <text name="ExpiringTenantsHelpText">First {1} clients expiring in {0} days...</text>
+    <text name="NoData">No data</text>
+    <text name="SubscriptionEndDate">Subscription end date</text>
+    <text name="TenantNameOrTenancyCode">Tenant name / tenancy code</text>
+    <text name="IncomeWithAmount">Income: {0}</text>
+    <text name="Subscription">Subscription</text>
+    <text name="Extend">Extend</text>
+    <text name="Upgrade">Upgrade</text>
+    <text name="PaymentPeriodType">Payment period type</text>
+    <text name="PaymentInfo">Payment info</text>
+    <text name="MonthlyPrice">Monthly price</text>
+    <text name="AnnualPrice">Annual price</text>
+    <text name="StartUsingFree">Start using free</text>
+    <text name="TryIt">Try it</text>
+    <text name="Days">Days</text>
+    <text name="PerMonth">Per month</text>
+    <text name="PerYear">Per year</text>
+    <text name="TestCheckFeature">Test check feature</text>
+    <text name="TestCheckFeature2">Test check feature 2</text>
+    <text name="Unlimited">Unlimited</text>
+    <text name="LatestPaymentAmount">Latest payment amount</text>
+    <text name="Payment">Payment</text>
+    <text name="Start">Start</text>
+    <text name="FreeTrial">Free trial</text>
+    <text name="BuyNow">Buy now</text>
+    <text name="WhatWillDoneAfterSubscriptionExpiry">What will done after subscription expiry</text>
+    <text name="DeactiveTenant">Deactive tenant</text>
+    <text name="AssignToAnotherEdition">Assign to another edition</text>
+    <text name="SubscriptionPrice">Subscription price</text>
+    <text name="Free">Free</text>
+    <text name="Paid">Paid</text>
+    <text name="IsTrialActive">Is trial active</text>
+    <text name="TrialDayCount">Trial day count</text>
+    <text name="WaitAfterSubscriptionExpireDate">Wait after subscription expire date</text>
+    <text name="WaitingDayAfterExpire">Waiting day after expire</text>
+    <text name="DisplayOrder">DisplayOrder</text>
+    <text name="Annual">Annual</text>
+    <text name="SubscriptionStartDate">Subscription start date</text>
+    <text name="Pricing">Pricing</text>
+    <text name="ClientIsRequestingYourPermission">{0} is requesting your permission</text>
+    <text name="ApplicationAccess">Application Access</text>
+    <text name="RememberMyDecision">Remember my decision</text>
+    <text name="Allow">Allow</text>
+    <text name="DoNotAllow">Do not allow</text>
+    <text name="Your user identifier">Your user identifier</text>
+    <text name="Required">Required</text>
+    <text name="User profile">User profile</text>
+    <text name="Your user profile information (first name, last name, etc.)">Your user profile information (first name, last name, etc.)</text>
+    <text name="Your email address">Your email address</text>
+    <text name="Your phone number">Your phone number</text>
+    <text name="Your postal address">Your postal address</text>
+    <text name="AllFunctionalityYouHaveInTheApplication">All functionality you have in the application</text>
+    <text name="Default (all) API">Default (all) API</text>
+    <text name="Offline Access">Offline Access</text>
+    <text name="Access to your applications and resources, even when you are offline">Access to your applications and resources, even when you are offline</text>
+    <text name="Purchase">Purchase</text>
+    <text name="Trial">Trial</text>
+    <text name="IsDisabled">Is disabled</text>
+    <text name="ChartDateFormat">%m/%d/%Y</text>
+    <text name="ThereIsNoLoggedInUser">There is no logged in user.</text>
+    <text name="IsInTrialPeriod">Is in trial period?</text>
+    <text name="FailedSubscriptionTerminations_Email_Subject">Failed Subscription Terminations</text>
+    <text name="FailedSubscriptionTerminations_Email_Body">Subscription termination is failed for following tenants {0} at {1}. You can find detailed error messages in system logs.</text>
+    <text name="SubscriptionExpire_Email_Subject">Your Demo subscription is expired</text>
+    <text name="SubscriptionExpire_Email_Body">Your Demo subscription is expired at {0}.</text>
+    <text name="UnlimitedTimeSubscription">Unlimited time subscription</text>
+    <text name="SubscriptionEndDateUtc">Subscription end date (Utc)</text>
+    <text name="ExpiringEditionMustBeAFreeEdition">Expiring edition must be a free edition</text>
+    <text name="ThisEditionIsUsedAsAnExpiringEdition">This edition is used as an expiring edition for another edition(s). If you want to make this edition paid, you should first remove it from other edition's.</text>
+    <text name="UpgradedTo">Upgraded to {0} edition</text>
+    <text name="ExtendedEdition">Extended {0} edition</text>
+    <text name="TrialSubscriptionNotification">You are in Trial period for {0} edition, {1} to purchase.</text>
+    <text name="SubscriptionExpireNotification">Your subscription will expire in {0} day(s).</text>
+    <text name="TrialExpireNotification">Your trial period will expire in {0} day(s).</text>
+    <text name="CanNotUpgradeSubscriptionSinceTenantHasNoEditionAssigned">Can not upgrade subscription since tenant has no edition assigned.</text>
+    <text name="PaymentCouldNotCompleted">Payment couldn't complete</text>
+    <text name="TenantEditionIsNotAssigned">Tenant edition is not assigned</text>
+    <text name="FreeEditionsCannotHaveTrialVersions">Free editions cannot have trial versions</text>
+    <text name="Total">Total</text>
+    <text name="Extend_Edition_Description">Extend {0} Edition</text>
+    <text name="Upgrade_Edition_Description">Upgrade to {0} Edition</text>
+    <text name="PaymentMightBeExpiredWarning">Your operation might be timed out, please contact with us if you already made the payment.</text>
+    <text name="GoToSubscriptionManagement">Go to subscription</text>
+    <text name="DemoPayPalAccount">Demo PayPal Account</text>
+    <text name="IsEnabled">Is enabled</text>
+    <text name="IsGoogleAuthenticatorEnabled">Enable Google Authenticator</text>
+    <text name="GoogleAuthenticatorReferrerLink">Not sure what this screen means? You may need to check this </text>
+    <text name="ScanQrCodeWithYourMobileApp">Scan this QR code with your mobile app</text>
+    <text name="Profile">Profile</text>
+    <text name="Enable">Enable</text>
+    <text name="GoogleAuthenticatorIsNotEnabled">Google Authenticator is not enabled for your account. You must first enable it in your settings.</text>
+    <text name="SubscriptionExpiringSoon_Email_Subject">Your Demo subscription expiration notice</text>
+    <text name="SubscriptionExpiringSoon_Email_Body">Your Demo subscription will expire at {0}.</text>
+    <text name="SubscriptionExpire_Title">Demo subscription expire</text>
+    <text name="SubscriptionExpire_SubTitle">This email is sent you to notify about your subscription expiration</text>
+    <text name="SubscriptionAssignedToAnother_Email_Body">Your Demo subscription is expired at {1}. Your current edition assigned to {0}.</text>
+    <text name="FailedSubscriptionTerminations_Title">Failed subscription terminations</text>
+    <text name="FailedSubscriptionTerminations_SubTitle">Subscription termination is failed for some tenants</text>
+    <text name="SubscriptionExpiringSoon_Title">Demo subscription expiration notice</text>
+    <text name="SubscriptionExpiringSoon_SubTitle">This email is sent you to notify about your subscription expiration.</text>
+    <text name="AdminRoleCannotRemoveFromAdminUser">Admin role can not remove from admin user</text>
+    <text name="YouCannotRemoveUserRolePermissionsFromAdminRole">You can not remove User/Role permission editing from the admin role</text>
+    <text name="YouCannotRemoveUserRolePermissionsFromAdminUser">You can not remove User/Role permission editing from the admin user</text>
+    <text name="Notification">Notification</text>
+    <text name="TotalRecordsCount">Total: {0}</text>
+    <text name="SubscriptionInformation">Subscription information</text>
+    <text name="PaymentHistory">Payment history</text>
+    <text name="Gateway">Gateway</text>
+    <text name="Amount">Amount</text>
+    <text name="Status">Status</text>
+    <text name="Period">Period</text>
+    <text name="DayCount">Day count</text>
+    <text name="LastModificationTime">Last modification time</text>
+    <text name="PaymentId">Payment id</text>
+    <text name="SubscriptionPaymentGatewayType_Paypal">Paypal</text>
+    <text name="SubscriptionPaymentStatus_Completed">Completed</text>
+    <text name="SubscriptionPaymentStatus_Processing">Processing</text>
+    <text name="SubscriptionPaymentStatus_Failed">Failed</text>
+    <text name="PaymentPeriodType_Annual">Annual</text>
+    <text name="PaymentPeriodType_Monthly">Monthly</text>
+    <text name="ProcessTime">Process time</text>
+    <text name="SmsVerificationEnabled">Phone number verification enabled (via SMS)</text>
+    <text name="SmsVerificationMessage">Your verification code: {0}</text>
+    <text name="Verify">Verify</text>
+    <text name="YourCode">Your Code</text>
+    <text name="VerifyYourCode">Verify Your Code</text>
+    <text name="YourPhoneNumberIsVerified">Your phone number is verified</text>
+    <text name="YourPhoneNumberIsNotVerified">Your phone number is not verified</text>
+    <text name="WrongSmsVerificationCode">Wrong verification code !</text>
+    <text name="SelectUsers">Select users</text>
+    <text name="OrganizationUnits">Organization Units</text>
+    <text name="YouCanManageUsersOrganizationUnitsFromOrganizationUnitsPage">You can manage User's organization units From Organization Units page.</text>
+    <text name="DemoUiComponents">Demo UI Components</text>
+    <text name="DateAndTimePickers">Date and Time Pickers</text>
+    <text name="FileUpload">File Upload</text>
+    <text name="PostedValue">Posted value</text>
+    <text name="SelectDate">Select date</text>
+    <text name="SelectFile">Select file</text>
+    <text name="UploadedFile">Uploaded file</text>
+    <text name="PostedData">Posted data</text>
+    <text name="Remove">Remove</text>
+    <text name="OrganizationUnitNotFoundForThisUser">There is no Organization Unit For this user.</text>
+    <text name="DemoUiComponents_Info">
+      This page shows a few useful UI components those can be used in your application.
+      Components in this page are implemented as full stack (includes the server side).
+    </text>
+    <text name="DemoUiComponents_Info_Metronic_Link_Text">Check Metronic theme for more UI components</text>
+    <text name="Image">Image</text>
+    <text name="File">File</text>
+    <text name="Link">Link</text>
+    <text name="Billing">Billing</text>
+    <text name="LegalName">Legal Name</text>
+    <text name="Tax/VatNo">Tax/VatNo</text>
+    <text name="Invoice">Invoice</text>
+    <text name="TotalAmount">Total Amount</text>
+    <text name="Print">Print</text>
+    <text name="ShowInvoice">Show Invoice</text>
+    <text name="InvoiceInformation">Invoice Information</text>
+    <text name="InvoiceNo">Invoice No</text>
+    <text name="Date">Date</text>
+    <text name="ThisInvoiceIsNotYours">This invoice is not yours !</text>
+    <text name="UiCustomizationHeaderInfo">Change the look of UI</text>
+    <text name="UiCustomization_Layout">Layout</text>
+    <text name="UiCustomization_LayoutType">Layout type</text>
+    <text name="UiCustomization_Fluid">Fluid</text>
+    <text name="UiCustomization_Boxed">Boxed</text>
+    <text name="UiCustomization_PageLoader">Page loader</text>
+    <text name="UiCustomization_Disabled">Disabled</text>
+    <text name="UiCustomization_Default">Default</text>
+    <text name="UiCustomization_SpinnerMessage">Spinner message</text>
+    <text name="UiCustomization_ContentSkin">Content skin</text>
+    <text name="UiCustomization_LightGrey">Light grey</text>
+    <text name="UiCustomization_White">White</text>
+    <text name="UiCustomization_DesktopFixedHeader">Fixed header</text>
+    <text name="UiCustomization_DesktopMinimizeMode">Minimize mode</text>
+    <text name="UiCustomization_None">None</text>
+    <text name="UiCustomization_Hide">Hide</text>
+    <text name="UiCustomization_MobileFixedHeader">Fixed header</text>
+    <text name="UiCustomization_DisplayHeaderMenu">Display header menu</text>
+    <text name="UiCustomization_DropdownSkinDesktop">Skin</text>
+    <text name="UiCustomization_Light">Light</text>
+    <text name="UiCustomization_Dark">Dark</text>
+    <text name="UiCustomization_DisplaySubmenuArrowDesktop">Display submenu arrow</text>
+    <text name="UiCustomization_DropdownSkin">Dropdown skin</text>
+    <text name="UiCustomization_Menu">Menu</text>
+    <text name="UiCustomization_MenuPosition">Position</text>
+    <text name="UiCustomization_Left">Left</text>
+    <text name="UiCustomization_Top">Top</text>
+    <text name="UiCustomization_MenuSkin">Menu skin</text>
+    <text name="UiCustomization_FixedMenu">Fixed menu</text>
+    <text name="UiCustomization_AllowAsideMinimizing">Allow aside minimizing</text>
+    <text name="UiCustomization_DefaultMinimizedAside">Default minimized aside</text>
+    <text name="UiCustomization_AllowAsideHiding">Allow aside hiding</text>
+    <text name="UiCustomization_SubmenuToggle">Submenu toggle</text>
+    <text name="UiCustomization_Dropdown">Dropdown</text>
+    <text name="UiCustomization_Accordion">Accordion</text>
+    <text name="UiCustomization_DropdownSubmenuSkin">Dropdown submenu skin</text>
+    <text name="UiCustomization_Inherit">Inherit</text>
+    <text name="UiCustomization_DropdownSubmenuArrow">Dropdown submenu arrow</text>
+    <text name="UiCustomization_Footer">Footer</text>
+    <text name="UiCustomization_FixedFooter">Fixed footer</text>
+    <text name="UiCustomization_PushFooter">Push footer</text>
+    <text name="UiCustomization_Header">Header bar</text>
+    <text name="VisualSettings">Visual Settings</text>
+    <text name="SaveAsSystemDefault">Save as system default</text>
+    <text name="UseSystemDefaults">Use system defaults</text>
+    <text name="NewNotifications">New notifications</text>
+    <text name="Subscriptions">Subscriptions</text>
+    <text name="UiCustomization_DefaultHiddenAside">Default hidden aside</text>
+    <text name="LoadWithThreeDot">Loading...</text>
+    <text name="NoInternetConnection">You are currently not connected to internet</text>
+    <text name="Warning">Warning</text>
+    <text name="RequestTimedOut">Your request timed out, please try again later.</text>
+    <text name="AnErrorOccurred">An error occurred, please try again later.</text>
+    <text name="AnHttpErrorOccured">There was an error communicating with the server.</text>
+    <text name="ChangePasswordToLogin">You must change your password before logging on!</text>
+    <text name="NoPermission">You do not have any permission. Contact your administrator.</text>
+    <text name="NoCamera">No available camera found!</text>
+    <text name="PickFromGallery">Pick from gallery</text>
+    <text name="TakePhoto">Take a photo</text>
+    <text name="Rotate">Rotate</text>
+    <text name="PasswordsDontMatch">Passwords do not match!</text>
+    <text name="RequiredField">{0} field is required.</text>
+    <text name="StringLengthDoesntMatch">The field {0} must be a minimum length of {1} and a maximum length of {2}.</text>
+    <text name="LessThanMinStringLength">The field {0} must be a minumum length of {1}.</text>
+    <text name="InvalidPhoneNumber">The field {0} is not a valid phone number</text>
+    <text name="InvalidRegularExpression">The field {0} is not valid.</text>
+    <text name="LengthNotInRange">The lenth of field {0} must be between {1} and {2}.</text>
+    <text name="UiCustomization_Mobile">Mobile</text>
+    <text name="UiCustomization_Desktop">Desktop</text>
+    <text name="TwoFactorLoginIsNotSupported">Two factor login is not currenlty supported!</text>
+  
+    <text name="Add">Add</text>    <!--Base localization-->
+    <text name="Edit">Edit</text>
+    <text name="Delete">Delete</text>
+    <text name="Detail">Detail</text>
+    <text name="View">View</text>
+    <text name="ListOf">List of</text>
+    <text name="TableContains">table contains {0} data</text>
+    <text name="MasterFor">Master for manage {0}</text>
+    <text name="MasterToSee">Master to see {0}</text>
+    
+    <text name="MasterPlan">Master Plan</text>
+		<text name="Project">Project</text>         <!--========= Master Plan - Project ============-->
+    <text name="Department">Department</text>
+		<text name="MasterDepartment">Master Department</text>
+		<text name="DepartmentName">Department Name</text>
+		<text name="DepartmentCode">Department Code</text>
+    <text name="SelectDepartment">Select Department</text>
+    <text name="Position">Position</text>
+    <text name="MasterPosition">Master Position</text>
+    <text name="MasterOfficerPosition">Master Officer Position</text>
+		<text name="PositionName">Position Name</text>
+		<text name="PositionCode">Position Code</text>
+    <text name="Officer">Officer</text>
+    <text name="MasterOfficer">Master Officer</text>
+    <text name="OfficerName">Officer Name</text>
+    <text name="Bank">Bank</text>
+    <text name="MasterBank">Master Bank</text>
+		<text name="BankName">Bank Name</text>
+		<text name="BankCode">Bank Code</text>
+		<text name="TypeOfBankOffice">Type Of Bank Office</text>
+		<text name="BankInformation">Bank Information</text>
+    <text name="PleaseSelectBankName">Please Select Bank Name</text>
+		<text name="PleaseSelectTypeOfBank">Please Select Type Of Bank</text>
+    <text name="BankBranch">Bank Branch</text>
+		<text name="MasterBankBranch">Master Bank Branch</text>
+		<text name="BankBranchName">Bank Branch Name</text>
+    <text name="Company">Company</text>
+    <text name="MasterCompany">Master Company</text>
+    <text name="CompanyName">Company Name</text>
+		<text name="CompanyCode">Company Code</text>
+		<text name="CompanyLogo">Company Logo</text>
+		<text name="PleaseSelectCompany">Please Select Company</text>
+		<text name="SelectCompanyName">Select Company Name</text>
+    <text name="MasterAccount">Master Account</text>
+		<text name="AccountName">Account Name</text>
+		<text name="AccountNo">Account No</text>
+    <text name="AccountCode">Account Code</text>
+    <text name="Entity">Entity</text>
+    <text name="MasterEntity">Master Entity</text>
+		<text name="EntityCode">Entity Code</text>
+		<text name="EntityName">Entity Name</text>
+    <text name="MasterProject">Master Project</text>
+		<text name="DefineProject">Define Project</text>
+		<text name="ProjectCode">Project Code</text>
+		<text name="ProjectName">Project Name</text>
+    <text name="ProjectGroupCode">Project Group Code</text>
+		<text name="ProjectGroupName">Project Group Name</text>
+    <text name="FilterByProject">Filter By Project</text>
+    <text name="PenaltyRatePerDay">Penalty Rate Per Day</text>
+    <text name="Category">Category</text>
+    <text name="MasterCategory">Master Category</text>
+		<text name="CategoryName">Category Name</text>
+		<text name="CategoryCode">Category Code</text>
+    <text name="Product">Product</text>
+    <text name="MasterProduct">Master Product</text>
+		<text name="ProductName">Product Name</text>
+		<text name="ProductCode">Product Code</text>
+		<text name="ProductType">Product Type</text>
+    <text name="SettingConnString">Setting Connection</text>
+		<text name="SettingConnStringDMT">Setting Connection DMT</text>
+		<text name="SettingConnStringCorsec">Setting Connection Corsec</text>
+    <text name="DMT">DMT</text>
+		<text name="Corsec">Corsec</text>
+    <text name="Unit">Unit</text>             <!--========= Master Plan - Unit ============-->
+    <text name="Area" value="Area" />
+    <text name="MasterArea" value="Master Area" />
+		<text name="AreaCode" value="Area Code" />
+    <text name="MasterItem">Master Item</text>
+		<text name="ItemName">Item Name</text>
+		<text name="ItemCode">Item Code</text>
+    <text name="Renovation">Renovation</text>
+    <text name="MasterRenovation">Master Renovation</text>
+		<text name="RenovationCode">Renovation Code</text>
+		<text name="RenovationName">Renovation Name</text>
+		<text name="DefaultRenovation">Default Renovation</text>
+    <text name="Facing">Facing</text>
+    <text name="MasterFacing">Master Facing</text>
+    <text name="SetFacing">Set Facing</text>
+    <text name="Zoning">Zoning</text>
+    <text name="MasterZoning">Master Zoning</text>
+		<text name="ChooseThisZoningBelow">Choose this zoning below :</text>
+    <text name="MasterFacade">Master Facade</text>
+    <text name="MasterUnitStatus">Master Unit Status</text>
+		<text name="UnitStatusCode">Unit Status Code</text>
+		<text name="UnitStatusName">Unit Status Name</text>
+    <text name="StatusOfUnit">Status of Unit</text>
+    <text name="UnitStatus">Unit Status</text>
+    <text name="ManageUnitStatus">Manage Unit Status</text>
+    <text name="ManageStatus">Manage Status</text>
+    <text name="GenerateUnit">Generate Unit</text>
+		<text name="GenerateUnitBySystem">Generate Unit by System</text>
+		<text name="GenerateUnitByUploadExcel">Generate Unit by Upload Excel</text>
+    <text name="MasterDetail">Master Detail</text>
+    <text name="CreateMasterDetail">Create Master Detail</text>
+    <text name="EditMasterDetail">Edit Master Detail</text>
+    <text name="DeleteMasterDetail">Delete Master Detail</text>
+    <text name="DetailCode">Detail Code</text>
+		<text name="DetailName">Detail Name</text>
+    <text name="SubtitleModalCreateTerm">Determine term code as new or use existing data.</text>    <!--New localization-->
+    <text name="SelectTermCodeFirst">Please select dropdown term code first !</text>
+    <text name="BfAmountRequired">Booking fee amount required</text>
+    <text name="SomeValueIsEmpty">Some value is empty</text>
+    <text name="FinanceStartDue">Finance Start Due</text>
+    <text name="ThisRow">This row</text>
+    <text name="SelectDiscountName">Select discount name</text>
+    <text name="PleaseFillAll">Please fill all</text>
+    <text name="DiscountNameCannotDuplicate">Discount name can't duplicate</text>
+    <text name="GeneratePriceOfUnit">Generate Price Of Unit</text>
+    <text name="PriceListFileBasedOnProject">Price list file based on Project</text>
+    <text name="CreateNew">Create new {0}</text>
+    <text name="FileUploaded">File uploaded</text>
+    <text name="And">And</text>
+    <text name="CantEmpty">Can't empty</text>
+    <text name="BobotCommissionRequired">Bobot Commission required</text>
+    <text name="DeveloperNameCannotDuplicate">Can't duplicate Developer Name</text>
+    <text name="ManagementFeeRequired">Management Fee required</text>
+    <text name="AreYouSureToCreate">Are you sure to create {0}</text>
+    <text name="CreatedDate">Created Date</text>
+    <text name="PriceListFile">Price List File</text>
+    <text name="UploadUnitByExcel">Upload Unit by Excel</text>
+    <text name="DaysDueInvalid_MoreThanBefore">Day due can't be more than or equal to previous day due</text>
+    <text name="DaysDueInvalid_ContainsZero">Day due can't be 0</text>
+    <text name="DaysDueInvalid_ContainsDecimal">Day due can't contain decimal</text>
+    <text name="DPTotalMustEqual">DP Total Must Equal</text>
+    <text name="CantMoreThan">can't more than</text>
+    <text name="CantLessThan">can't less than</text>
+    <text name="AddSomeValueOrBack">Add some value or back</text>
+    <text name="DiscountsEmpty">Discounts Empty</text>
+    
+    <text name="Personal">Personal</text>             <!--========= Personal ============-->
+    <text name="BirthDate">Birth Date</text>
+    <text name="IDNumber">ID Number</text>
+    <text name="AdvanceSearch">Advance Search</text>
+    <text name="QuickSearch">Quick Search</text>
+    <text name="KeywordWithThreeDot">Keyword...</text>
+    <text name="IDNumberWithThreeDot">ID Number...</text>
+    <text name="MemberCodeWithThreeDot">Member Code...</text>
+    <text name="CustomerPerseorangan">Customer Perseorangan</text>
+    <text name="Institute">Institute</text>
+    <text name="Max3Emails">Max 3 Emails</text>
+    <text name="IsRequired">{0} Is Required</text>
+    <text name="FormatNotValid">Your {0} Format Not Valid</text>
+    <text name="PleaseChoose">Please Choose {0}</text>
+    <text name="Max3Phone">Max 3 Phone</text>
+    <text name="Valid">Valid</text>
+    <text name="Invalid">Invalid</text>
+    <text name="IDType">ID Type</text>
+    <text name="ExpiredDate">Expired Date</text>
+    <text name="CompanyType">Company Type</text>
+    <text name="JobTitle">Job Title</text>
+    <text name="SavedSuccessfullyWithParam">{0} Saved Successfully</text>
+    <text name="SaveContact">Save Contact</text>
+    <text name="AccountNumber">Account Number</text>
+    <text name="MoreThanToday">More Than Today</text>
+    <text name="Must">Must</text>
+    <text name="orMustCheckedNoExpiredDate">or Must Checked No Expired Date</text>
+    <text name="SchemeCode">Scheme Code</text>
+    <text name="Scheme">Scheme</text>
+    <text name="ParentMemberCode">Parent Member Code</text>
+    <text name="ParentMemberName">Parent Member Name</text>
+    <text name="MemberCode">Member Code</text>
+    <text name="MemberEntry">Member Entry</text>
+    <text name="MemberData">Member Data</text>
+    <text name="Activation">Activation</text>
+    <text name="BankData">Bank Data</text>
+    <text name="Generate">Generate</text>
+    <text name="CGMCode">CGM Code</text>
+    <text name="PTName">PT Name</text>
+    <text name="PrincipalName">Principal Name</text>
+    <text name="SpouseName">Spouse Name</text>
+    <text name="Specialist">Specialist</text>
+    <text name="FranchiseGroup">Franchise Group</text>
+    <text name="Institusi">Institusi</text>
+    <text name="VP">VP</text>
+    <text name="SPV 1 (VP)">SPV 1 (VP)</text>
+    <text name="ActiveProcessCommission">Active Process Commission</text>
+    <text name="BankType">Bank Type</text>
+    <text name="BankAccountNo">Bank Account No </text>
+    <text name="PhonesWithParam"> Phones {0} </text>
+    <text name="EmailsWithParam"> Emails {0} </text>
+    <text name="Emails"> Emails</text>
+    <text name="Phones"> Phones</text>
+    <text name="Max5Emails">Max 5 Emails</text>
+    <text name="Max5Phone">Max 5 Phone</text>
+    <text name="MustBeValidWithParam">{0} and {1} Must Be Valid</text>
+    <text name="PaymentType">Payment Type</text>
+    <text name="BuyDate">Buy Date</text>
+    <text name="SavedPersonalInformationSuccessfully">Saved Personal Information Successfully</text>
+    <text name="DocumentTypeUsed">Document Type Used On Another Document</text>
+    <text name="DocumentTypeMustFilled">Document Type Must Be Filled"</text>
+    <text name="UploadMustFilled">Upload File Must Be Filled</text>
+    <text name="AddDocumentFailed">Add Document is Failed</text>
+    <text name="UploadFile">Upload File</text>
+    <text name="DocumentType">Document Type</text>
+    <text name="SaveDocument">Save Document</text>
+    <text name="LastUpdate">Last Update</text>
+    <text name="BirthDateLessThanCurrentDate">Birth Date should be less than current date</text>
+    <text name="UpdateBy">Update By</text>
+    <text name="UpdatedFailedMustFilled">Updated is failed required must be filled</text>
+    <text name="Document">Document</text>
+    <text name="Type">Type</text>
+    <text name="KeyPeople">Key People</text>
+    <text name="KeyPeopleMustFilled">To add Key People, <b>Role, Name</b> and <b>PsCode</b> must filled</text>
+    <text name="SaveKeyPeople">Save Key People</text>
+    <text name="AreYouSureAddNewPersonal">Are You Sure Add New Personal</text>
+    <text name="NoDataExistPleaseMakeNewData">No Data Exist Please Make New Data</text>
+    <text name="Kelurahan">Kelurahan</text>
+    <text name="Kecamatan">Kecamatan</text>
+    <text name="InstituteName">Institute Name</text>
+    <text name="FoundedOn">Founded On</text>
+    <text name="FPTransCode">FP Trans Code</text>
+    <text name="SavePersonalInformation">Save Personal Information</text>
+    <text name="BirthPlace">Birth Place</text>
+    <text name="BloodType">Blood Type</text>
+    <text name="MaritalStatus">Marital Status</text>
+    <text name="FamilyStatus">Family Status</text>
+    <text name="PersonalInformation">Personal Information</text>
+    <text name="PhoneType">Phone Type</text>
+
+    <text name="RegionName">Region Name</text>
+		<text name="City">City</text>
+		<text name="RegionCode">Region Code</text>
+		<text name="Handphone">Handphone</text>
+		<text name="Fax">Fax</text>
+		<text name="AddMasterRegion">Add Master Region</text>
+		<text name="EditMasterRegion">Edit Master Region</text>
+		<text name="DeleteMasterRegion">Delete Master Region</text>
+		<text name="IsManager">IsManager</text>
+		<text name="TerritoryName">Territory Name</text>
+		<text name="TerritoryCode">Territory Code</text>
+		<text name="CityName">City Name</text>
+		<text name="CityCode">City Code</text>
+		<text name="CreateMasterCounty">Create Master County</text>
+		<text name="AddMasterCounty">Add Master County</text>
+		<text name="DeleteMasterCounty">Delete Master County</text>
+		<text name="CountyName">County Name</text>
+		<text name="CountyCode">County Code</text>
+		<text name="EditMasterTerritory">Edit Master Territory</text>
+		<text name="CreateMasterTerritory">Add Master Territory</text>
+		<text name="DeleteMasterTerritory">Delete Master Territory</text>
+		<text name="EditMasterCounty">Edit Master County</text>
+		<text name="EditMasterCity">Edit Master City</text>
+		<text name="AddMasterCity">Add Master City</text>
+		<text name="DeleteMasterCity">Delete Master City</text>
+		<text name="ListOfDivision">Used to store the names of divisions that will be used in Officer Position</text>
+		<text name="PIC">PIC</text>
+		<text name="PICEmail">PIC Email</text>
+		<text name="BranchCode">Branch Code</text>
+		<text name="BranchName">Branch Name</text>
+		<text name="Address">Address</text>
+		<text name="PICBranch">PIC Branch</text>
+    <text name="CompanyInformation">Company Information</text>
+		<text name="Documents">Documents</text>
+		<text name="Step1">Step 1</text>
+		<text name="Step2">Step 2</text>
+		<text name="Country">Country</text>
+		<text name="PostCode">Post Code</text>
+		<text name="Phone">Phone</text>
+		<text name="NPWPNo">NPWP No</text>
+		<text name="NPWPAddress">NPWP Address</text>
+		<text name="PKPNo">PKP No</text>
+		<text name="KPPTTD">KPP TTD</text>
+		<text name="PKPDate">PKP Date</text>
+		<text name="KPPName">KPP Name</text>
+		<text name="NothingSelected">Nothing Selected</text>
+		<text name="TheCityIsNotActive">The City Is Not Active</text>
+		<text name="TheTerritoryIsNotActive">The Territory Is Not Active</text>
+		<text name="PleaseSelectTheTerritory">Please Select The Territory</text>
+		<text name="PleaseSelectTheCity">Please Select The City</text>
+		<text name="Next">Next</text>
+		<text name="PleaseSelectBranch">Please Select Branch</text>
+		<text name="ShortName">Short Name</text>
+		<text name="MasterTowerType">Master Tower Type</text>
+		<text name="SomeFieldIsEmpty">Some Field Is Empty</text>
+		<text name="SetFloor">Set Floor</text>
+		<text name="SetUnit">Set Unit</text>
+		<text name="SetUnitType">Set Unit Type</text>
+		<text name="CreateUnit">Create Unit</text>
+		<text name="Block">Block</text>
+		<text name="TowerName">Tower Name</text>
+		<text name="MaxNumberFloor">Max Number of Floor</text>
+		<text name="UseComma">Use Comma (,) to Separate</text>
+		<text name="ExcludeFloor">Exclude Floor #</text>
+		<text name="ExcludeFloorContain">Exclude Floor Contain #</text>
+		<text name="Discard">Discard The Exclude</text>
+		<text name="Keep">Keep The Exclude</text>
+		<text name="MasterUnit">Master Unit</text>
+		<text name="SetUnitTypeToAllFloor">Set Unit Type to All Floor</text>
+		<text name="TotalUnitTypePerFloor">Total Unit Type Per Floor</text>
+		<text name="UseCommaToSeparate">Use comma (,) to separate</text>
+		<text name="ExcludeUnit">Exclude Unit #</text>
+		<text name="UnitType">Unit Type</text>
+		<text name="TotalUnit">Total Unit</text>
+		<text name="PreviewDiscardExclude">Preview (Keep the Exclude)</text>
+		<text name="Preview">Preview</text>
+		<text name="AddUnitType">Add Unit Type</text>
+		<text name="UnitTypeName">Unit Type Name</text>
+		<text name="LuasM2">Luas (m2)</text>
+		<text name="JumlahKamarMandi">Jumlah Kamar Mandi</text>
+		<text name="JumlahKamarTidur">Jumlah Kamar Tidur</text>
+		<text name="Remarks">Remarks</text>
+		<text name="DueDate">Due Date</text>
+		<text name="Layout">Layout</text>
+		<text name="SetUnitTypeToSelectedFloor">Set Unit Type to Selected Floor</text>
+		<text name="Floor">Floor</text>
+		<text name="SetUnitToAllFloor">Set Unit to All Floor</text>
+		<text name="SetUnitToSelectedFloor">Set Unit to Selected Floor</text>
+		<text name="TotalUnitPerFloor">Total Unit Per Floor</text>
+		<text name="DefaultUnitItem">Default Unit Item</text>
+		<text name="DefaultStatus">Default Status</text>
+		<text name="Tower">Tower</text>
+		<text name="DownloadTemplate">Download Template</text>
+		<text name="UploadTemplate">Upload Template</text>
+		<text name="Continue">Continue</text>
+		<text name="ProjectInformation">Project Information</text>
+		<text name="PICInformation">PIC Information</text>
+		<text name="Mapping">Mapping</text>
+		<text name="Publish">Publish</text>
+		<text name="Region">Region</text>
+		<text name="County">County</text>
+		<text name="Manager">Manager</text>
+		<text name="Staff">Staff</text>
+		<text name="WhatsappNo">Whatsapp No.</text>
+		<text name="TableName">Table Name</text>
+		<text name="ServerName">Server Name</text>
+		<text name="DatabaseName">Database Name</text>
+		<text name="CredentialUser">Credential User</text>
+		<text name="MainIsEmpty">Main Is Empty</text>
+		<text name="YouShouldAddMainInCheckedRow">You Should Add Main In Checked Row</text>
+		<text name="DataNotFound">Data Not Found</text>
+		<text name="CompanyIsNotSelected">Company Is Not Selected</text>
+		<text name="GeneralInformation">General Information</text>
+		<text name="LegalCompany">Legal Company</text>
+		<text name="SWIFTCode">SWIFT Code</text>
+		<text name="PreviewSetUnitType">Preview Set Unit Type</text>
+		<text name="SetCluster">Set Cluster</text>
+		<text name="SetBuilding">Set Building</text>
+		<text name="Highrise">Highrise</text>
+		<text name="Landed">Landed</text>
+		<text name="ClusterName">Cluster Name</text>
+		<text name="SetRoadName">Set Road Name</text>
+		<text name="NameBuildingType">Name Building Type</text>
+		<text name="LuasBangunan(m2)">Luas Bangunan (M2)</text>
+		<text name="LuasTanah(m2)">Luas Tanah (M2)</text>
+		<text name="AddBuildType">Add Build Type</text>
+		<text name="ChangeKeepExclude">Change Keep Exclude</text>
+		<text name="ToEditTheNamingCellPleaseDoubleClickInTheCell">To Edit The Naming Cell Please Double Click In The Cell</text>
+		<text name="PreviewKeepExclude">Preview Keep Exclude</text>
+		<text name="MasterTerm">Master Term</text>
+		<text name="MasterDiscount">Master Discount</text>
+		<text name="MasterFinType">Master FinType</text>
+		<text name="UploadBasePrice">Price/m2</text>
+		<text name="GenBasePriceBySystem">Generate By System</text>
+		<text name="UploadBasePriceByExcel">Upload Excel</text>
+		<text name="BasedPriceUpload">Based Price Upload</text>
+		<text name="ApprovePrice">Approve Price</text>
+		<text name="CalculationBasedPrice">Calculation Price/m2</text>
+		<text name="ErrorUploadBasedPrice">Error Upload Based Price</text>
+		<text name="Term">Term</text>
+		<text name="AddMasterDiscount">Add Master Discount</text>
+		<text name="EditMasterDiscount">Edit Master Discount</text>
+		<text name="DiscountCode">Discount Code</text>
+		<text name="DiscountName">Discount Name</text>
+		<text name="AddMasterTerm">Add Master Term</text>
+		<text name="EditMasterTerm">Edit Master Term</text>
+		<text name="TermCode">Term Code</text>
+		<text name="TermName">Term Name</text>
+		<text name="Installment">Installment</text>
+		<text name="ThisRecordIsActive">This Record Is Active</text>
+		<text name="ThisRecordIsInactive">This Record Is Inactive</text>
+		<text name="Discount">Discount</text>
+		<text name="DefineProjectDesc">Defines related projects</text>
+		<text name="BasedPriceUploadDesc">Uploading excel data based on project definition</text>
+		<text name="ApprovePriceDesc">Final result of based price upload</text>
+		<text name="ViewBasePricePerProject">View Based Price per Project</text>
+		<text name="BuildingChildDeleteWarningMessage" value="Are you sure to delete Road {0} Child?" />
+		<text name="Query">Query</text>
+		<text name="MappingFromCorsec">MappingFromCorsec</text>
+		<text name="PleaseInsertMandatoryField">Please Insert Mandatory Field</text>
+		<text name="CopyFromExistingData">Copy From Existing Data</text>
+		<text name="DefineTermCode">Define Term Code</text>
+		<text name="SetValue">Set Value</text>
+		<text name="SetDiscount">Set Discount</text>
+		<text name="SetDP">Set Down Payment</text>
+		<text name="CreateMasterTerm">Create Master Term</text>
+		<text name="BookingFee">Booking Fee</text>
+		<text name="FinType">FinType</text>
+		<text name="AddMasterFinType">Add Master FinType</text>
+		<text name="EditMasterFinType">Edit Master FinType</text>
+		<text name="FinTypeCode">FinType Code</text>
+		<text name="FinTypeDescription">FinType Description</text>
+		<text name="FinTimes">Fin Times</text>
+		<text name="PercentCommision">Percent Commision</text>
+		<text name="PercentCommisionLC">Percent Commision LC</text>
+		<text name="PercentCommisionTB">Percent Commision TB</text>
+		<text name="MasterMarketingFactor">Master Marketing Factor</text>
+		<text name="PriceperM2">Price/m2</text>price
+		<text name="UploadExcel">Upload Excel</text>
+		<text name="GeneratePrice">Generate Price</text>
+		<text name="PriceListHistory">Price List History</text>
+		<text name="ManagePriceIncreases">Manage Price Increases</text>
+		<text name="Approval">Approval</text>
+		<text name="Calculate">Calculate</text>
+		<text name="ChooseFromMFS">Choose From Marketing Factor Simulation</text>
+		<text name="TowerOrCluster">Tower/ Cluster</text>
+		<text name="CalculateGrossPrice">Calculate Gross Price</text>
+		<text name="UnitNumber">Unit Number</text>
+		<text name="LandGross">Land Gross</text>
+		<text name="BuildGross">Build Gross</text>
+		<text name="RenovGross">Renov Gross</text>
+		<text name="ReadyToCalculate">Ready To Calculate</text>
+		<text name="ViewDetail">View Detail</text>
+		<text name="AllDetail">All Detail</text>
+		<text name="BasedPriceAverage">Based Price Average</text>
+		<text name="GeneratePriceList">Generate Price List</text>
+		<text name="GrossPrice">Gross Price</text>
+		<text name="Mansion">Mansion</text>
+		<text name="SetMarketingFactor">Set Marketing Factor</text>
+		<text name="SetMarketingFactorDesc">Set Marketing Factor based on define project</text>
+		<text name="ViewDetailUnit">View Detail/Unit</text>
+		<text name="ViewDetailUnitDesc">show data Detail/Unit</text>
+		<text name="KPA">KPA</text>
+		<text name="KPR">KPR</text>
+		<text name="AreYouSureToDelete" value="Are you sure to delete {0} ?" />
+		<text name="SetDPForSuccess" value="Set DP For Term {0} Success" />
+		<text name="FieldIsEmpty" value="{0} is empty" />
+		<text name="PleaseInsertSomeField" value="Please Insert Some Field "/>
+		<text name="Percentage/Value(Rp)Discount" value="Percentage / Value(Rp) Discount"/>
+		<text name="RequiredPermissions" value="Required permissions are not granted." />
+		<text name="Disc" value="DISC" />
+		<text name="BuildingPrice/ProductType" value="Building Price/Product Type" />
+		<text name="RenovationPrice/ProductType" value="Renovation Price/Product Type" />
+		<text name="RenovationSet" value="Renovation Set" />
+		<text name="DiscountSet" value="Discount Set" />
+		<text name="BuildingPriceSet" value="Building Price Set" />
+		<text name="Swing" value="(swing)" />
+		<text name="BasedPrice" value="Based Price" />
+		<text name="SetStatus" value="Set Status" />
+		<text name="Value" value="Value" />
+		<text name="BuildingPriceM2" value="Building Price/m2" />
+		<text name="MoreDP" value="More DP" />
+		<text name="MoreDisc" value="More Discount" />
+		<text name="ExtensionGross" value="Extension Gross" />
+		<text name="UnitCode" value="Unit Code" />
+		<text name="CashPrice" value="Cash Price" />
+		<text name="PleaseInsertDaysdueField" value="Please Insert Daysdue Field" />
+		<text name="PleaseInsertPercentageDPField" value="Please Insert PercentageDP Field" />
+		<text name="DataTableIsEmpty" value="Data Table Is Empty" />
+		<text name="BasePrice" value="Base Price" />
+    <text name="MasterColor" value="Master Color" />
+    <text name="CreateMasterColor" value="Create Master Color" />
+    <text name="EditMasterColor" value="Edit Master Color" />
+    <text name="DeleteMasterColor" value="Delete Master Color" />
+		<text name="Commission">Commission</text>
+		<text name="MasterSchema">Master Schema</text>
+		<text name="CreateMasterSchema">Create Master Schema</text>
+		<text name="EditMasterSchema">Edit Master Schema</text>
+		<text name="DeleteMasterSchema">Delete Master Schema</text>
+		<text name="MasterSchemaPerProject">Master Schema PerProject</text>
+		<text name="CreateMasterSchemaPerProject">Create Master Schema PerProject</text>
+		<text name="EditMasterSchemaPerProject">Edit Master Schema PerProject</text>
+		<text name="DeleteMasterSchemaPerProject">Delete Master Schema PerProject</text>
+		<text name="MasterPPHRange">Master PPH Range</text>
+		<text name="CreateMasterPPHRange">Create Master PPH Range</text>
+		<text name="EditMasterPPHRange">Edit Master PPH Range</text>
+		<text name="DeleteMasterPPHRange">Delete Master PPH Range</text>
+		<text name="MasterDeveloperSchema">Master Developer Schema</text>
+		<text name="CreateMasterDeveloperSchema">Create Master Developer Schema</text>
+		<text name="EditMasterDeveloperSchema">Edit Master Developer Schema</text>
+		<text name="DeleteMasterDeveloperSchema">Delete Master Developer Schema</text>
+		<text name="PPHRange">PPH Range</text>
+		<text name="SeePPHRangePerSchema">See PPH Range per Schema</text>
+		<text name="SeePPHRangeInstitusionPerSchema">See PPH Range Institusion per Schema</text>
+		<text name="PPHYear">PPH Year</text>
+		<text name="PPHRangeHighBound">PPh Range High Bound</text>
+		<text name="PPHRangePct">PPh Range Pct</text>
+		<text name="Schema">Schema</text>
+		<text name="SchemaCode">Schema Code</text>
+		<text name="SchemaName">Schema Name</text>
+		<text name="PICName">PIC Name</text>
+		<text name="SetSchema">Set Schema</text>
+		<text name="Upline">Upline</text>
+		<text name="Set">Set</text>
+		<text name="Requirement">Requirement</text>
+		<text name="Member">Member</text>
+		<text name="Point">Point</text>
+		<text name="Percent">Percent</text>
+		<text name="CommissionTypeCode">Commission Type Code</text>
+		<text name="CommissionTypeName">Commission Type Name</text>
+		<text name="AddPphRange">Add PPH Range</text>
+		<text name="EditPphRange">Edit PPH Range</text>
+		<text name="MorePPHRange">More PPH Range</text>
+		<text name="UploadDocument">Upload Document</text>
+		<text name="SchemaPerProject">Schema Per Project</text>
+		<text name="SchemaProjectCode">Schema Project Code</text>
+		<text name="SchemaProjectName">Schema Project Name</text>
+		<text name="SetGroupSchema">Set Group Schema</text>
+		<text name="SetPercentCommission">Set Percent Commission</text>
+		<text name="SetRequirement">Set Requirement</text>
+		<text name="Cluster">Cluster</text>
+		<text name="ValidFrom">Valid From</text>
+		<text name="SchemaCodePerProject">Schema Code Per Project</text>
+		<text name="SchemaNamePerProject">Schema Name Per Project</text>
+		<text name="MoreSchema">More Schema</text>
+		<text name="SetCommissionPerSchema">Set Commission Per Schema</text>
+		<text name="SetCommissionPerGroupProject">Set Commission Per Group Project</text>
+		<text name="CommissionType">Commission Type</text>
+		<text name="StatusCode">Status Code</text>
+		<text name="UplineNo">Upline No</text>
+		<text name="More">More</text>
+		<text name="PercentCommission">Percent Commission</text>sc
+		<text name="RequirementNo">Req No</text>
+		<text name="RequirementName">Requirement Name</text>
+		<text name="PointType">Point Type</text>
+		<text name="NominalRp">Nominal (Rp)</text>
+		<text name="SetPercentCommissionPerSchema">Set Percent Commission Per Schema</text>
+		<text name="MasterBobotCommission">Master Bobot Commission</text>
+		<text name="CreateMasterBobotCommission">Create Master Bobot Commission</text>
+		<text name="EditMasterBobotCommission">Edit Master Bobot Commission</text>
+		<text name="DeleteMasterBobotCommission">Delete Master Bobot Commission</text>
+		<text name="MasterPointPercent">Master Point Percentage</text>
+		<text name="CreateMasterPointPercent">Create Master Point Percentage</text>
+		<text name="EditMasterPointPercent">Edit Master Point Percentage</text>
+		<text name="DeleteMasterPointPercent">Delete Master Point Percentage</text>
+		<text name="MasterPPHRangeInst">Master PPH Range Institusion</text>
+		<text name="CreateMasterPPHRangeInst">Create Master PPH Range Institusion</text>
+		<text name="EditMasterPPHRangeInst">Edit Master PPH Range Institusion</text>
+		<text name="DeleteMasterPPHRangeInst">Delete Master PPH Range Institusion</text>
+		<text name="MasterReward">Master Reward</text>
+		<text name="CreateMasterReward">Create Master Reward</text>
+		<text name="EditMasterReward">Edit Master Reward</text>
+		<text name="DeleteMasterReward">Delete Master Reward</text>
+		<text name="TransactionSoldUnit">Transaction Sold Unit</text>
+		<text name="CreateTransactionSoldUnit">Create Transaction Sold Unit</text>
+		<text name="EditTransactionSoldUnit">Edit Transaction Sold Unit</text>
+		<text name="DeleteTransactionSoldUnit">Delete Transaction Sold Unit</text>
+		<text name="MasterPointPercentage">Master Point Percentage</text>
+		<text name="AddPointPercentage">Add Point Percentage</text>
+		<text name="ListPointPercentage">List of Point Percentage</text>
+		<text name="MemberStatus">Member Status</text>
+		<text name="PointPercent">Point Percent</text>
+		<text name="PointConvertToRp">Point Convert To Rupiah</text>
+		<text name="MorePointPercentage">More Point Percentage</text>
+		<text name="DueDateCommProcess">Due Date Comm Process</text>
+		<text name="Budget">Budget</text>
+		<text name="Developer">Developer</text>
+		<text name="AddBudget">Add Budget</text>
+		<text name="EditBudget">Edit Budget</text>
+		<text name="DueDaysCommProcess">Due Days Comm Process</text>
+		<text name="AreYouSureToDeleteData">Are You Sure To Delete the data ?</text>
+		<text name="DeveloperSchema">Developer Schema</text>
+		<text name="SeeDeveloperSchemaPerSchema">See Developer Schema Per Schema</text>
+		<text name="AddMasterDeveloperSchema">Add Master Developer Schema</text>
+		<text name="PropertyCode">Property Code</text>
+		<text name="PropertyName">Property Name</text>
+		<text name="MoreDeveloper">More Developer</text>
+		<text name="BobotCommission">Bobot Commission</text>
+		<text name="SeeBobotCommissionPerProject">See Bobot Commission Per Project</text>
+		<text name="AddMasterBobotCommission">Add Master Bobot Commission</text>
+		<text name="MoreBobotCommission">More Bobot Commission</text>
+		<text name="PointTypeCode">Point Type Code</text>
+		<text name="PointTypeName">Point Type Name</text>
+		<text name="MorePercentCommission">More Percent Commission</text>
+    <text name="StartPenaltyDay">Start Penalty Day</text>
+    <text name="GrossPriceUpload">Gross Price Upload</text>
+    <text name="GrossPriceUploadDesc">Upload Gross Price by Excel</text>
+    <text name="DiscSet">Disc Set</text>
+    <text name="TransferPriceTemplate">Transfer Price Template</text>
+    <text name="UnitNo">Unit No</text>
+    <text name="RenovCode">Renov Code</text>
+    <text name="TanahPrice">Tanah Price</text>
+    <text name="BangunanPrice">Bangunan Price</text>
+    <text name="BangunanExtTipe1Price">Bangunan Ext Tipe 1 Price</text>
+    <text name="BangunanExtTipe2Price">Bangunan Ext Tipe 2 Price</text>
+    <text name="BangunanRenovasiPrice">Bangunan Renovasi Price</text>
+    <text name="TanahExtTipe1Price">Tanah Ext Tipe 1 Price</text>
+    <text name="RenovasiChicPrice">Renovasi Chic Price</text>
+    <text name="RenovasiDiamondPrice">Renovasi Diamond Price</text>
+    <text name="RenovasiGoldPrice">Renovasi Gold Price</text>
+    <text name="RenovasiPlatinumPrice">Renovasi Platinum Price</text>
+    <text name="ReadyToFitPrice">Ready To Fit Price</text>
+    <text name="RenovasiSilverPrice">Renovasi Silver Price</text>
+    <text name="RenovasiStandardPrice">Renovasi Standard Price</text>
+    <text name="RenovasiTitaniumPrice">Renovasi Titanium Price</text>
+    <text name="RenovasiUltimaPrice">Renovasi Ultima Price</text>
+    <text name="GardenPrice">Garden Price</text>
+    <text name="NoWhatsapp">No. Whatsapp</text>
+    <text name="DPTotal">DP Total</text>
+    <text name="TotalInstallmentDP">Total Installment DP</text>
+    <text name="ApprovePriceGeneratePriceDesc">Result of gross price upload</text>
+    <text name="DiscSetGeneratePriceDesc">Set Discounts</text>
+    <text name="GeneratePriceListDesc">Generate the list of prices</text>
+    <text name="PriceList">Price List</text>
+    <text name="GOLDFinishingOption">GOLD Finishing Option (GO)</text>
+    <text name="TermConditions">TERM AND CONDITIONS :</text>
+    <text name="AllPricesinRp">All Prices in Rp</text>
+    <text name="InterConnectable">Inter Connectable</text>
+    <text name="TypeBR">Type BR</text>
+    <text name="SizeSemiGross">Size Semi Gross (m2)</text>
+    <text name="NetPrice">Net Price (INCLD PPN)</text>
+    <text name="HardCash">Hard Cash (INCLD PPN)</text>
+    <text name="SellingPrice">Selling Price (INCLD PPN)</text>
+    <text name="DownPayment10">Down Payment Incld BF (10%)</text>
+    <text name="DownPayment20">Down Payment Incld BF (20%)</text>
+    <text name="DownPayment30">Down Payment Incld BF (30%)</text>
+    <text name="PlafondKredit">Plafond Kredit</text>
+    <text name="Selisih">Selisih</text>
+    <text name="InstallmentPerMonth">Installment Per Month</text>
+    <text name="OperationalGroup">Operational Group</text>
+    <text name="TaxGroup">Tax Group</text>
+    <text name="PSAS">PSAS</text>
+    <text name="ProductGeneral">Product General</text>
+    <text name="Finance">Finance</text>
+    <text name="BankRelation">Bank Relation</text>
+    <text name="CallCenter">Call Center</text>
+    <text name="BuildingManagement">Building Management</text>
+		<text name="BankAccountName">Bank Account Name</text>
+		<text name="DeveloperCode">Developer Code</text>
+		<text name="DeveloperName">Developer Name</text>
+    <text name="BackToLatest">Back To Latest</text>
+    <text name="BackToLatestConfig">Are you sure {0} back to latest configuration ?</text>
+    <text name="Finish">Finish</text>
+		<text name="TaxCode">Tax Code</text>
+		<text name="TaxCodeNonNPWP">Tax Code Non NPWP</text>
+		<text name="PPhRangeNonNPWPPct">PPh Range Non NPWP Pct</text>
+		<text name="InActive">InActive</text>
+		<text name="PointPrecentage">Point Precentage</text>
+		<text name="PPHPercentage">PPH Percentage</text>
+		<text name="MasterManagementFee">Master Management Fee</text>
+		<text name="CreateMasterManagementFee">Create Master Management Fee</text>
+		<text name="EditMasterManagementFee">Edit Master Management Fee</text>
+		<text name="DeleteMasterManagementFee">Delete Master Management Fee</text>
+		<text name="ManagementFee">Management Fee</text>
+		<text name="SeeManagementFeePerSchema">See Management Fee per Schema</text>
+		<text name="AddManagementFee">Add Management Fee</text>
+		<text name="Bobot%">Bobot %</text>
+		<text name="MoreManagementFee">More Management Fee</text>
+		<text name="ManagementPct">Management Pct</text>
+		<text name="RewardCode">Reward Code</text>
+		<text name="RewardName">Reward Name</text>
+		<text name="Price">Price</text>
+		<text name="EditDealCloser">Edit Deal Closer</text>
+		<text name="CreateEditDealCloser">Create Edit Deal Closer</text>
+		<text name="EditEditDealCloser">Edit Edit Deal Closer</text>
+		<text name="DeleteEditDealCloser">Delete Edit Deal Closer</text>
+		<text name="ErrorCommissionHistory">Error Commission History</text>
+		<text name="CreateErrorCommissionHistory">Create Error Commission History</text>
+		<text name="EditErrorCommissionHistory">Edit Error Commission History</text>
+		<text name="DeleteErrorCommissionHistory">Delete Error Commission History</text>
+		<text name="SeeBookingPerProject">See Booking Per Project</text>
+		<text name="Property">Property</text>
+		<text name="BookingCode">Booking Code</text>
+		<text name="SoldUnit">Sold Unit</text>
+		<text name="SeeSoldUnitPerProject">See Sold Unit Per Project</text>
+		<text name="ManualSoldUnit">Manual Sold Unit</text>
+		<text name="GetData">Get Data</text>
+		<text name="SeeErrorCommissionHistoryBy">See Error Commission History By</text>
+    <text name="Process">Process</text>
+    <text name="Hold">Hold</text>
+    <text name="Adjustment">Adjustment</text>
+    <text name="DefineUnit">Define Unit</text>
+    <text name="PPJBDue">PPJB Due</text>
+    <text name="UnitPrice">Unit Price</text>
+    <text name="PaymentTerm">Payment Term</text>
+    <text name="PointPercentage">Point Percentage</text>
+    <text name="ReqNo">Req No</text>
+    <text name="ReqName">Req Name</text>
+    <text name="MemberName">Member Name</text>
+    <text name="CommPctPaid">CommPctPaid</text>
+    <text name="CommPaid">CommPaid</text>
+    <text name="ActualPctComm">Actual Pct Comm</text>
+    <text name="ActualPaid">Actual Paid</text>
+    <text name="ReqDate">Req Date</text>
+    <text name="ProdDate">Prod Date</text>
+    <text name="Reason">Reason</text>
+    <text name="HargaUnit">Harga Unit</text>
+    <text name="ProcessHoldCommission">Process Hold Commission</text>
+    <text name="UnHold">UnHold</text>
+    <text name="ReasonHoldCommission">Reason Hold Commission</text>
+    <text name="DPClac">DPClac</text>
+    <text name="ChangeSelectedDiscountName">Change Selected Discount Name</text>
+    <text name="DPCalcType">DP Calc Type</text>
+    <text name="PleaseSelectDropDownTermCodeFirst">Please Select DropDown Term Code First !</text>
+    <text name="SetStatusDesc">Set Status Desc</text>
+    <text name="PreviewDesc">Preview Desc</text>
+    <text name="CreateMasterDiscount">Create Master Discount</text>
+    <text name="DeleteMasterDiscount">Delete Master Discount</text>
+    <text name="CreateMasterFinType">Create Master FinType</text>
+    <text name="DeleteMasterFinType">Delete Master FinType</text>
+    <text name="UploadPriceList">Upload Price List</text>
+    <text name="UploadGrossPrice">Upload Gross Price</text>
+    <text name="TermNo">Term No</text>
+    <text name="PriceListUpload">Price List Upload</text>
+    <text name="PriceListUploadDesc">Upload Price List by Excel</text>
+    <text name="MarketingFactor">Marketing Factor</text>
+    <text name="SeeMarketingFactorPerProject">See Marketing Factor Per Project</text>
+    <text name="SeeSimulation">See Simulation</text>
+    <text name="MiddleFloor">Middle Floor</text>
+    <text name="UpperFloor">Upper Floor</text>
+    <text name="LowerFloor">Lower Floor</text>
+    <text name="DefineSchema">Define Schema</text>
+    <text name="CornerView">Corner View</text>
+    <text name="SetUnitNo">Set UnitNo</text>
+    <text name="SetView">Set View</text>
+    <text name="SetCornerView">Set Corner View</text>
+    <text name="SetFloorFloor">Set Floor - Floor</text>
+    <text name="SetXFactor">Set X Factor</text>
+    <text name="FactorSchemaName">Factor Schema Name</text>
+    <text name="MasterCluster">Master Cluster</text>
+    <text name="ClusterCode">Cluster Code</text>
+    <text name="HandoverPeriode">Handover Periode</text>
+    <text name="GracePeriode">Grace Periode</text>
+    <text name="MasterUnitCode">Master Unit Code</text>
+    <text name="UnitName">Unit Name</text>
+    <text name="MappingItem">Mapping Item</text>
+    <text name="MappingItemToCompany">Mapping Item To Company</text>
+    <text name="TotalAmountDPNotSameWithDPTotal">Total Amount DP Not Same With DP Total!</text>
+    
+    <text name="LkAddrType">LK Addr Type</text>
+    <text name="LkBankType">LK Bank Type</text>
+    <text name="LkBlood">LK Blood</text>
+    <text name="LkCountry">LK Country</text>
+    <text name="LkFamilyStatus">LK Family Status</text>
+    <text name="LkGrade">LK Grade</text>
+    <text name="LkIdType">LK Id Type</text>
+    <text name="LkKeyPeople">LK Key People</text>
+    <text name="LkMarStatus">LK Mar Status</text>
+    <text name="LkReligion">LK Religionr</text>
+    <text name="LkSpec">LK Spec</text>
+    <text name="MasterFranchiseGroup">Master Franchise Group</text>
+    <text name="MasterJobTitle">Master Jobb Title</text>
+    <text name="MasterNational">Master National</text>
+    <text name="MasterOccupation">Master Occupation</text>
+    <text name="PersonalMember">Personal Member</text>
+    <text name="TrAddress">TR Address</text>
+    <text name="TrBankAccount">TR Bank Account</text>
+    <text name="TrCompany">TR Company</text>
+    <text name="TrDocument">TR Document</text>
+    <text name="TrEmail">TR Email</text>
+    <text name="TrFamily">TR Family</text>
+    <text name="TrId">TR Id</text>
+    <text name="TrKeyPeople">TR Key People</text>
+    <text name="TrPhone">TR Phone</text>
+    
+    <text name="UploadImage">Upload Image</text>
+    
+    <!--PSAS-->
+    <text name="PBJBDue">PBJB Due</text>
+    <text name="Fintype">Fintype</text>
+    <text name="FinTypeStartDue">Fintype Start Due</text>
+    <text name="UpdateTerm">Update Term</text>
+    <text name="AddDisc">Add Disc</text>
+    <text name="NetNetPrice">Net Net Price</text>
+    <text name="PSASPrice">PSAS Price</text>
+    <text name="MarketingPrice">Marketing Price</text>
+    <text name="MKTPrice">MKT Price</text>
+    <text name="CommissionPrice">Commission Price</text>
+    <text name="CommPrice">Comm Price</text>
+    <text name="EditDiscount">Edit Discount</text>
+    <text name="EditGrossManually">Edit Gross Manually</text>
+    <text name="AddMoreDiscount">Add More Discount</text>
+    <text name="SaveEdit">Save Edit</text>
+    <text name="Transaction-Schedule">Transaction Schedule</text>
+    <text name="TotalNetAmount">Total Net Amount</text>
+    <text name="TotalVATAmount">Total VAT Amount</text>
+    <text name="NewSchedule">New Schedule</text>
+    <text name="RecalculateSchedule">Recalculate Schedule</text>
+    <text name="RecalculateBalance">Recalculate Balance</text>
+    <text name="WriteOff">Write Off</text>
+    <text name="NetAmount">Net Amount</text>
+    <text name="VATAmount">VAT Amount</text>
+    <text name="NetOutstanding">Net Outstanding</text>
+    <text name="VATOutstanding">VAT Outstanding</text>
+    <text name="PaymentAmount">Payment Amount</text>
+    <text name="TotalOutstanding">Total Outstanding</text>
+    <text name="TransactionNo">Transaction No</text>
+    <text name="ClearDate">Clear Date</text>
+    <text name="PayNo">Pay No</text>
+    <text name="PayType">Pay Type</text>
+    <text name="PayOtherType">Pay Other Type</text>
+    <text name="NetPriceMKT">Net Price MKT</text>
+    <text name="NetPriceComm">Net Price Comm</text>
+    <text name="NetnetPrice">Net net Price</text>
+    <text name="UnitInformation">Unit Information</text>
+    <text name="CustomerInformation">Customer Information</text>
+    <text name="PSCode">PS Code</text>
+    <text name="TransactionInfo">Transaction Info</text>
+    <text name="SalesEvent">Sales Event</text>
+    <text name="AsalTransaksi">Asal Transaksi</text>
+    <text name="DealCloserInformation">Deal Closer Information</text>
+    <text name="MemberID">Member ID</text>
+    <text name="BookDate">Book Date</text>
+    <text name="BookedStatus">Booked Status</text>
+    <text name="CancelDate">Cancel Date</text>
+    <text name="CancelInformationReason">Cancel Information Reason</text>
+    <text name="PrintBookingProfile">Print Booking Profile</text>
+    <text name="OtherPayment">Other Payment</text>
+    <text name="TransNo">Trans No</text>
+    <text name="PMTDateClearDate">PMT Date Clear Date</text>
+    <text name="PayForPayTypeOthersType">Pay For Pay Type Others Type</text>
+    <text name="WhatUnitYouWantToWorkWith?">What Unit You Want To Work With ?</text>
+    <text name="ShowThisAccount">Show This Account</text>
+    <text name="ShowThisUnit">Show This Unit</text>
+    <text name="UpdatedSuccessfully">Update successfully</text>
+    <text name="DetailBooking">Detail Booking</text>
+    <text name="RegenerateSchedule">Regenerate Schedule</text>
+    <text name="SettingINS">Setting INS</text>
+    <text name="SettingDP">Setting DP</text>
+    <text name="DueDays">Due Days</text>
+    <text name="CalculationBy">Calculation By</text>
+    
+    <!-- Legal Doc -->
+    <text name="LegalDocument">Legal Document</text>
+    <text name="MasterKuasaDireksi">Master Kuasa Direksi</text>
+    <text name="ViewMasterKuasaDireksi">View Master Kuasa Direksi</text>
+    <text name="CreateMasterKuasaDireksi">Create Master Kuasa Direksi</text>
+    <text name="DeleteMasterKuasaDireksi">Delete Master Kuasa Direksi</text>
+    
+    <text name="MasterTemplate">Master Template</text>
+    <text name="ViewMasterTemplate">View Master Template</text>
+    
+    <text name="MasterMappingTemplate">Master Mapping Template</text>
+    <text name="ViewMappingTemplate">View Mapping Template</text>
+    <text name="CreateMappingTemplate">Create Mapping Template</text>
+    <text name="EditMappingTemplate">Edit Mapping Template</text>
+    <text name="DeleteMappingTemplate">Delete Mapping Template</text>
+    
+    <text name="BookingDocument">Booking Document</text>
+    <text name="ViewBookingDocument">View Booking Document</text>
+    <text name="CreateBookingDocument">Create Booking Document</text>
+    
+    <text name="ListOfKuasaDireksi">List Of Kuasa Direksi</text>
+    <text name="KuasaDireksiCode">Kuasa Direksi Code</text>
+    <text name="DocCode">Doc Code</text>
+    <text name="NewKuasaDireksi">New Kuasa Direksi</text>
+    <text name="CopyExistingData">Copy Existing Data</text>
+    <text name="UploadSKKuasaDireksi">Upload SK Kuasa Direksi</text>
+    <text name="KuasaDireksiName">Kuasa Direksi Name</text>
+    <text name="AddOfficer">Add Officer</text>
+    <text name="AddNonOfficer">Add Non Officer</text>
+    <text name="AddNewKuasaDireksi">Add New Kuasa Direksi</text>
+    <text name="AddNewNonOfficerKuasaDireksi">Add New Non Officer Kuasa Direksi</text>
+    <text name="ListOfMasterTemplate">List Of Master Template</text>
+    <text name="TemplateCode">Template Code</text>
+    <text name="TemplateName">Template Name</text>
+    <text name="DocumentCode">Document Code</text>
+    <text name="ListOfMappingTemplate">List Of Mapping Template</text>
+    <text name="MappingTemplate">Mapping Template</text>
+    <text name="MappingCode">Mapping Code</text>
+    <text name="NewMappingTemplate">New Mapping Template</text>
+    <text name="AddNewMappingTemplate">Add New Mapping Template</text>
+    <text name="TandaTerima">Tanda Terima</text>
+    <text name="BookingDate">Booking Date</text>
+    <text name="DocName">Doc Name</text>
+    <text name="DocNo">Doc No</text>
+    <text name="DocDate">Doc Date</text>
+    <text name="NewLegalDocument">New Legal Document</text>
+    <text name="AddNewLegalDocument">Add New Legal Document</text>
+    <text name="ProcurationType">Procuration Type</text>
+    <text name="KuasaDireksi1">KuasaDireksi 1</text>
+    <text name="KuasaDireksi2">KuasaDireksi 2</text>
+  
+    <!--Payment-->
+    <text name="MasterPayFor">Master Pay For</text>
+    <text name="MasterPayType">Master Pay Type</text>
+    <text name="MasterOthersType">Master Others Type</text>
+    <text name="MasterAllocation">Master Allocation</text>
+    <text name="ViewMaster">View Master</text>
+    <text name="NatureAccountBank">Nature Account Bank</text>
+    <text name="NatureAccountDep">Nature Account Dep</text>
+    <text name="SortNumber">Sort Number</text>
+    <text name="AdjustmentSAD">Adjustment SAD</text>
+    <text name="AddMasterOthersType">Add Master Others Type</text>
+    <text name="AddMasterPayFor">Add Master Pay For</text>
+    <text name="EditPayFor">Edit Master Pay For</text>
+    <text name="AddMasterPayType">Add Master Pay Type</text>
+    <text name="EditMasterPayType">Edit Master Pay Type</text>
+    <text name="ListOfPayType">List Of Pay Type</text>
+    <text name="ListOfOthersType">List Of Others Type</text>
+    <text name="OthersType">Others Type</text>
+    <text name="PayFor">Pay For</text>
+    <text name="EditAllocation">Edit Master Allocation</text>
+    <text name="EditAccount">Edit Master Account</text>
+    <text name="AddMasterAllocation">Add Master Allocation</text>
+    
+    <text name="InputPayment">Input Payment</text>
+    <text name="PaymentDate">Payment Date</text>
+    <text name="PaymentFor">Payment For</text>
+    <text name="UnitInfo">Unit Info</text>
+    <text name="ClientInfo">Client Info</text>
+    <text name="StartBookingDate">Start Booking Date</text>
+    <text name="EndBookingDate">End Booking Date</text>
+    <text name="LookUp">Look Up</text>
+    <text name="PhoneNo">Phone No</text>
+    <text name="SearchByNameOrPhone">Search By Name Or Phone</text>
+    <text name="SinglePayment">Single Payment</text>
+    <text name="BulkPayment">Bulk Payment</text>
+    <text name="Fileyangdiuploadharusdenganformat.xlsatau.xlsx">File yang diupload harus dengan format .xls atau .xlsx
+    </text>
+    <text name="Klik'Download'untukmengunduhtemplatefilePaymentBulk">Klik 'Download' untuk mengunduh template file Payment Bulk
+    </text>
+    <text name="Klik'ChooseFile'untukmemilihfileyangakandiuploadsesuaitemplate">Klik 'ChooseFile' untuk memilih file yang akan diupload sesuai template</text>
+    <text name="Setelahmemilihfileyangakandiupload,sistemakanmenampilkandatayangakandisimpankedatabase">Setelah memilih file yang akan diupload, sistem akan menampilkan data yang akan disimpan ke database</text>
+    <text name="Jikadatadirasasudahbenar,klik'Upload'untukmenyimpandatakedatabase">Jika data dirasa sudah benar, klik 'Upload' untuk menyimpan data ke database</text>
+    <text name="TotalRow(s)WillBeUploadedAutomatically">Total Row(s) Will Be Uploaded Automatically</text>
+    <text name="PayForCode">Pay For Code</text>
+    
+    <text name="BookCode">Book Code</text>
+    <text name="CurrentRenovCode">Current Renov Code</text>
+    <text name="NewRenovCode">New Renov Code</text>
+    <text name="ChangeRenovation">Change Renovation</text>
+    <text name="DiscountDescription">Discount Description</text>
+     
+  </texts>
+</localizationDictionary>

@@ -1,0 +1,275 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\..\common.props">
+  </Import>
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <AssemblyName>VDI.Demo.Application</AssemblyName>
+    <PackageId>VDI.Demo.Application</PackageId>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RootNamespace>VDI.Demo</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Commission\**" />
+    <Compile Remove="MasterPlan\Project\MS_BankBranches\Dto\**" />
+    <Compile Remove="MasterPlan\Project\MS_Banks\Dto\**" />
+    <Compile Remove="MasterPlan\Project\MS_Companies\Dto\**" />
+    <Compile Remove="MasterPlan\Project\MS_Departments\Dto\**" />
+    <Compile Remove="MasterPlan\Project\MS_Entities\Dto\**" />
+    <Compile Remove="MasterPlan\Project\MS_Officers\Dto\**" />
+    <Compile Remove="MasterPlan\Project\MS_Positions\Dto\**" />
+    <Compile Remove="MasterPlan\Project\MS_Projects\Dto\**" />
+    <Compile Remove="MasterPlan\Unit\LK_Facings\Dto\**" />
+    <Compile Remove="MasterPlan\Unit\MS_Areas\Dto\**" />
+    <Compile Remove="MasterPlan\Unit\MS_Categories\Dto\**" />
+    <Compile Remove="MasterPlan\Unit\MS_Cities\Dto\**" />
+    <Compile Remove="MasterPlan\Unit\MS_Clusters\Dto\**" />
+    <Compile Remove="MasterPlan\Unit\MS_Counties\Dto\**" />
+    <Compile Remove="MasterPlan\Unit\MS_Facades\Dto\**" />
+    <Compile Remove="MasterPlan\Unit\MS_Items\Dto\**" />
+    <Compile Remove="MasterPlan\Unit\MS_Products\Dto\**" />
+    <Compile Remove="MasterPlan\Unit\MS_Renovations\Dto\**" />
+    <Compile Remove="MasterPlan\Unit\MS_Territories\Dto\**" />
+    <Compile Remove="MasterPlan\Unit\MS_UnitStatuses\Dto\**" />
+    <Compile Remove="MasterPlan\Unit\MS_Units\Dto\**" />
+    <Compile Remove="MasterPlan\Unit\MS_Zonings\Dto\**" />
+    <Compile Remove="Organizations\obj\**" />
+    <Compile Remove="Personals\LK_AddrTypes\Dto\**" />
+    <Compile Remove="Personals\LK_BankTypes\Dto\**" />
+    <Compile Remove="Personals\LK_Bloods\Dto\**" />
+    <Compile Remove="Personals\LK_Countries\Dto\**" />
+    <Compile Remove="Personals\LK_FamilyStatuses\Dto\**" />
+    <Compile Remove="Personals\LK_Grades\Dto\**" />
+    <Compile Remove="Personals\LK_IDTypes\Dto\**" />
+    <Compile Remove="Personals\LK_KeyPeoples\Dto\**" />
+    <Compile Remove="Personals\LK_MarStatuses\Dto\**" />
+    <Compile Remove="Personals\LK_Religions\Dto\**" />
+    <Compile Remove="Personals\LK_Specs\Dto\**" />
+    <Compile Remove="Personals\MS_Banks\Dto\**" />
+    <Compile Remove="Personals\MS_Documents\Dto\**" />
+    <Compile Remove="Personals\MS_FranchiseGroups\Dto\**" />
+    <Compile Remove="Personals\MS_JobTItles\Dto\**" />
+    <Compile Remove="Personals\MS_Nationals\Dto\**" />
+    <Compile Remove="Personals\MS_Occupations\Dto\**" />
+    <Compile Remove="Personals\Personals\Dto\**" />
+    <Compile Remove="Personals\Personal_Members\Dto\**" />
+    <Compile Remove="Personals\TR_Addresses\Dto\**" />
+    <Compile Remove="Personals\TR_BankAccounts\Dto\**" />
+    <Compile Remove="Personals\TR_Companies\Dto\**" />
+    <Compile Remove="Personals\TR_Documents\Dto\**" />
+    <Compile Remove="Personals\TR_Emails\Dto\**" />
+    <Compile Remove="Personals\TR_Families\Dto\**" />
+    <Compile Remove="Personals\TR_IDs\Dto\**" />
+    <Compile Remove="Personals\TR_KeyPeoples\Dto\**" />
+    <Compile Remove="Personals\TR_Phones\Dto\**" />
+    <Compile Remove="Pricing\GeneratePrice\Dto\**" />
+    <Compile Remove="Pricing\MarketingFactor\Dto\**" />
+    <Compile Remove="Pricing\MarketingFactor\Exporter\**" />
+    <Compile Remove="Pricing\MS_Discounts\Dto\**" />
+    <Compile Remove="Pricing\MS_FinType\Dto\**" />
+    <Compile Remove="Pricing\MS_Terms\Dto\**" />
+    <Compile Remove="Pricing\TR_BasePrices\Dto\**" />
+    <EmbeddedResource Remove="Commission\**" />
+    <EmbeddedResource Remove="MasterPlan\Project\MS_BankBranches\Dto\**" />
+    <EmbeddedResource Remove="MasterPlan\Project\MS_Banks\Dto\**" />
+    <EmbeddedResource Remove="MasterPlan\Project\MS_Companies\Dto\**" />
+    <EmbeddedResource Remove="MasterPlan\Project\MS_Departments\Dto\**" />
+    <EmbeddedResource Remove="MasterPlan\Project\MS_Entities\Dto\**" />
+    <EmbeddedResource Remove="MasterPlan\Project\MS_Officers\Dto\**" />
+    <EmbeddedResource Remove="MasterPlan\Project\MS_Positions\Dto\**" />
+    <EmbeddedResource Remove="MasterPlan\Project\MS_Projects\Dto\**" />
+    <EmbeddedResource Remove="MasterPlan\Unit\LK_Facings\Dto\**" />
+    <EmbeddedResource Remove="MasterPlan\Unit\MS_Areas\Dto\**" />
+    <EmbeddedResource Remove="MasterPlan\Unit\MS_Categories\Dto\**" />
+    <EmbeddedResource Remove="MasterPlan\Unit\MS_Cities\Dto\**" />
+    <EmbeddedResource Remove="MasterPlan\Unit\MS_Clusters\Dto\**" />
+    <EmbeddedResource Remove="MasterPlan\Unit\MS_Counties\Dto\**" />
+    <EmbeddedResource Remove="MasterPlan\Unit\MS_Facades\Dto\**" />
+    <EmbeddedResource Remove="MasterPlan\Unit\MS_Items\Dto\**" />
+    <EmbeddedResource Remove="MasterPlan\Unit\MS_Products\Dto\**" />
+    <EmbeddedResource Remove="MasterPlan\Unit\MS_Renovations\Dto\**" />
+    <EmbeddedResource Remove="MasterPlan\Unit\MS_Territories\Dto\**" />
+    <EmbeddedResource Remove="MasterPlan\Unit\MS_UnitStatuses\Dto\**" />
+    <EmbeddedResource Remove="MasterPlan\Unit\MS_Units\Dto\**" />
+    <EmbeddedResource Remove="MasterPlan\Unit\MS_Zonings\Dto\**" />
+    <EmbeddedResource Remove="Organizations\obj\**" />
+    <EmbeddedResource Remove="Personals\LK_AddrTypes\Dto\**" />
+    <EmbeddedResource Remove="Personals\LK_BankTypes\Dto\**" />
+    <EmbeddedResource Remove="Personals\LK_Bloods\Dto\**" />
+    <EmbeddedResource Remove="Personals\LK_Countries\Dto\**" />
+    <EmbeddedResource Remove="Personals\LK_FamilyStatuses\Dto\**" />
+    <EmbeddedResource Remove="Personals\LK_Grades\Dto\**" />
+    <EmbeddedResource Remove="Personals\LK_IDTypes\Dto\**" />
+    <EmbeddedResource Remove="Personals\LK_KeyPeoples\Dto\**" />
+    <EmbeddedResource Remove="Personals\LK_MarStatuses\Dto\**" />
+    <EmbeddedResource Remove="Personals\LK_Religions\Dto\**" />
+    <EmbeddedResource Remove="Personals\LK_Specs\Dto\**" />
+    <EmbeddedResource Remove="Personals\MS_Banks\Dto\**" />
+    <EmbeddedResource Remove="Personals\MS_Documents\Dto\**" />
+    <EmbeddedResource Remove="Personals\MS_FranchiseGroups\Dto\**" />
+    <EmbeddedResource Remove="Personals\MS_JobTItles\Dto\**" />
+    <EmbeddedResource Remove="Personals\MS_Nationals\Dto\**" />
+    <EmbeddedResource Remove="Personals\MS_Occupations\Dto\**" />
+    <EmbeddedResource Remove="Personals\Personals\Dto\**" />
+    <EmbeddedResource Remove="Personals\Personal_Members\Dto\**" />
+    <EmbeddedResource Remove="Personals\TR_Addresses\Dto\**" />
+    <EmbeddedResource Remove="Personals\TR_BankAccounts\Dto\**" />
+    <EmbeddedResource Remove="Personals\TR_Companies\Dto\**" />
+    <EmbeddedResource Remove="Personals\TR_Documents\Dto\**" />
+    <EmbeddedResource Remove="Personals\TR_Emails\Dto\**" />
+    <EmbeddedResource Remove="Personals\TR_Families\Dto\**" />
+    <EmbeddedResource Remove="Personals\TR_IDs\Dto\**" />
+    <EmbeddedResource Remove="Personals\TR_KeyPeoples\Dto\**" />
+    <EmbeddedResource Remove="Personals\TR_Phones\Dto\**" />
+    <EmbeddedResource Remove="Pricing\GeneratePrice\Dto\**" />
+    <EmbeddedResource Remove="Pricing\MarketingFactor\Dto\**" />
+    <EmbeddedResource Remove="Pricing\MarketingFactor\Exporter\**" />
+    <EmbeddedResource Remove="Pricing\MS_Discounts\Dto\**" />
+    <EmbeddedResource Remove="Pricing\MS_FinType\Dto\**" />
+    <EmbeddedResource Remove="Pricing\MS_Terms\Dto\**" />
+    <EmbeddedResource Remove="Pricing\TR_BasePrices\Dto\**" />
+    <None Remove="Commission\**" />
+    <None Remove="MasterPlan\Project\MS_BankBranches\Dto\**" />
+    <None Remove="MasterPlan\Project\MS_Banks\Dto\**" />
+    <None Remove="MasterPlan\Project\MS_Companies\Dto\**" />
+    <None Remove="MasterPlan\Project\MS_Departments\Dto\**" />
+    <None Remove="MasterPlan\Project\MS_Entities\Dto\**" />
+    <None Remove="MasterPlan\Project\MS_Officers\Dto\**" />
+    <None Remove="MasterPlan\Project\MS_Positions\Dto\**" />
+    <None Remove="MasterPlan\Project\MS_Projects\Dto\**" />
+    <None Remove="MasterPlan\Unit\LK_Facings\Dto\**" />
+    <None Remove="MasterPlan\Unit\MS_Areas\Dto\**" />
+    <None Remove="MasterPlan\Unit\MS_Categories\Dto\**" />
+    <None Remove="MasterPlan\Unit\MS_Cities\Dto\**" />
+    <None Remove="MasterPlan\Unit\MS_Clusters\Dto\**" />
+    <None Remove="MasterPlan\Unit\MS_Counties\Dto\**" />
+    <None Remove="MasterPlan\Unit\MS_Facades\Dto\**" />
+    <None Remove="MasterPlan\Unit\MS_Items\Dto\**" />
+    <None Remove="MasterPlan\Unit\MS_Products\Dto\**" />
+    <None Remove="MasterPlan\Unit\MS_Renovations\Dto\**" />
+    <None Remove="MasterPlan\Unit\MS_Territories\Dto\**" />
+    <None Remove="MasterPlan\Unit\MS_UnitStatuses\Dto\**" />
+    <None Remove="MasterPlan\Unit\MS_Units\Dto\**" />
+    <None Remove="MasterPlan\Unit\MS_Zonings\Dto\**" />
+    <None Remove="Organizations\obj\**" />
+    <None Remove="Personals\LK_AddrTypes\Dto\**" />
+    <None Remove="Personals\LK_BankTypes\Dto\**" />
+    <None Remove="Personals\LK_Bloods\Dto\**" />
+    <None Remove="Personals\LK_Countries\Dto\**" />
+    <None Remove="Personals\LK_FamilyStatuses\Dto\**" />
+    <None Remove="Personals\LK_Grades\Dto\**" />
+    <None Remove="Personals\LK_IDTypes\Dto\**" />
+    <None Remove="Personals\LK_KeyPeoples\Dto\**" />
+    <None Remove="Personals\LK_MarStatuses\Dto\**" />
+    <None Remove="Personals\LK_Religions\Dto\**" />
+    <None Remove="Personals\LK_Specs\Dto\**" />
+    <None Remove="Personals\MS_Banks\Dto\**" />
+    <None Remove="Personals\MS_Documents\Dto\**" />
+    <None Remove="Personals\MS_FranchiseGroups\Dto\**" />
+    <None Remove="Personals\MS_JobTItles\Dto\**" />
+    <None Remove="Personals\MS_Nationals\Dto\**" />
+    <None Remove="Personals\MS_Occupations\Dto\**" />
+    <None Remove="Personals\Personals\Dto\**" />
+    <None Remove="Personals\Personal_Members\Dto\**" />
+    <None Remove="Personals\TR_Addresses\Dto\**" />
+    <None Remove="Personals\TR_BankAccounts\Dto\**" />
+    <None Remove="Personals\TR_Companies\Dto\**" />
+    <None Remove="Personals\TR_Documents\Dto\**" />
+    <None Remove="Personals\TR_Emails\Dto\**" />
+    <None Remove="Personals\TR_Families\Dto\**" />
+    <None Remove="Personals\TR_IDs\Dto\**" />
+    <None Remove="Personals\TR_KeyPeoples\Dto\**" />
+    <None Remove="Personals\TR_Phones\Dto\**" />
+    <None Remove="Pricing\GeneratePrice\Dto\**" />
+    <None Remove="Pricing\MarketingFactor\Dto\**" />
+    <None Remove="Pricing\MarketingFactor\Exporter\**" />
+    <None Remove="Pricing\MS_Discounts\Dto\**" />
+    <None Remove="Pricing\MS_FinType\Dto\**" />
+    <None Remove="Pricing\MS_Terms\Dto\**" />
+    <None Remove="Pricing\TR_BasePrices\Dto\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="MasterPlan\Project\MS_BankBranches\IMsBankBranchAppService.cs" />
+    <Compile Remove="MasterPlan\Project\MS_Banks\IMsBankAppService.cs" />
+    <Compile Remove="MasterPlan\Project\MS_Companies\IMsCompanyAppService.cs" />
+    <Compile Remove="MasterPlan\Project\MS_Departments\IMsDepartmentAppService.cs" />
+    <Compile Remove="MasterPlan\Project\MS_Entities\IMsEntityAppService.cs" />
+    <Compile Remove="MasterPlan\Project\MS_Officers\IMsOfficerAppService.cs" />
+    <Compile Remove="MasterPlan\Project\MS_Positions\IMsPositionAppService.cs" />
+    <Compile Remove="MasterPlan\Project\MS_Projects\IMsProjectAppService.cs" />
+    <Compile Remove="MasterPlan\Unit\LK_Facings\ILkFacingAppService.cs" />
+    <Compile Remove="MasterPlan\Unit\MS_Areas\IMsAreaAppService.cs" />
+    <Compile Remove="MasterPlan\Unit\MS_Categories\IMsCategoryAppService.cs" />
+    <Compile Remove="MasterPlan\Unit\MS_Cities\IMsCityAppService.cs" />
+    <Compile Remove="MasterPlan\Unit\MS_Clusters\IMsClusterAppService.cs" />
+    <Compile Remove="MasterPlan\Unit\MS_Counties\IMsCountyAppService.cs" />
+    <Compile Remove="MasterPlan\Unit\MS_Facades\IMsFacadeAppService.cs" />
+    <Compile Remove="MasterPlan\Unit\MS_Items\IMsItemAppService.cs" />
+    <Compile Remove="MasterPlan\Unit\MS_Products\IMsProductAppService.cs" />
+    <Compile Remove="MasterPlan\Unit\MS_Renovations\IMsRenovationAppService.cs" />
+    <Compile Remove="MasterPlan\Unit\MS_Territories\IMsTerritoryAppService.cs" />
+    <Compile Remove="MasterPlan\Unit\MS_UnitStatuses\IMsUnitStatusAppService.cs" />
+    <Compile Remove="MasterPlan\Unit\MS_Units\IMsUnitAppService.cs" />
+    <Compile Remove="MasterPlan\Unit\MS_Zonings\IMsZoningAppService.cs" />
+    <Compile Remove="Pricing\GeneratePrice\IGeneratePriceAppService.cs" />
+    <Compile Remove="Pricing\MarketingFactor\IMarketingFactorAppService.cs" />
+    <Compile Remove="Pricing\MS_Discounts\IMsDiscountAppService.cs" />
+    <Compile Remove="Pricing\MS_FinType\IMsFinTypeAppService.cs" />
+    <Compile Remove="Pricing\MS_Terms\IMsTermAppService.cs" />
+    <Compile Remove="MasterPlan\Unit\MS_Categories\EmptyClass.cs" />
+    <Compile Remove="MasterPlan\Unit\MS_Items\public interface IMsItemAppService : IApplicationService.cs" />
+    <Compile Remove="Pricing\TR_BasePrices\ITrBasePriceAppService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="MasterPlan\Unit\MS_Items\public interface IMsItemAppService " />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Pricing\MarketingFactor\Exporter\IMarketingFactorExporter.cs" />
+    <Compile Include="Pricing\MarketingFactor\Exporter\MarketingFactorExporter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="1.50.4" />
+    <PackageReference Include="EPPlus.Core" Version="1.5.4" />
+    <PackageReference Include="iTextSharp.LGPLv2.Core.Fix" Version="1.4.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VDI.Demo.Application.Shared\VDI.Demo.Application.Shared.csproj" />
+    <ProjectReference Include="..\VDI.Demo.Core\VDI.Demo.Core.csproj" />
+    <ProjectReference Include="..\VDI.Demo.EntityFrameworkCore\VDI.Demo.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Mvc.Core">
+      <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.mvc.core\2.0.1\lib\netstandard2.0\Microsoft.AspNetCore.Mvc.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MasterPlan\Project\MS_Projects\" />
+    <Folder Include="Payment\PaymentLK_OthersType\" />
+    <Folder Include="Payment\PaymentLK_PayFor\" />
+    <Folder Include="Payment\PaymentMS_Account\" />
+    <Folder Include="Payment\PaymentLK_PayType\" />
+    <Folder Include="Personals\Personals\Dto\" />
+    <Folder Include="Personals\Personal_Members\Dto\" />
+    <Folder Include="Personals\TR_Addresses\" />
+    <Folder Include="Pricing\MS_Discounts\Exporter\" />
+    <Folder Include="MasterPlan\Unit\LK_Facings\" />
+    <Folder Include="MasterPlan\Unit\MS_Areas\" />
+    <Folder Include="MasterPlan\Unit\MS_Categories\" />
+    <Folder Include="MasterPlan\Unit\MS_Cities\" />
+    <Folder Include="MasterPlan\Unit\MS_Clusters\" />
+    <Folder Include="MasterPlan\Unit\MS_Counties\" />
+    <Folder Include="MasterPlan\Unit\MS_Facades\" />
+    <Folder Include="MasterPlan\Unit\MS_Items\" />
+    <Folder Include="MasterPlan\Unit\MS_Products\" />
+    <Folder Include="MasterPlan\Unit\MS_Renovations\" />
+    <Folder Include="MasterPlan\Unit\MS_Units\" />
+    <Folder Include="MasterPlan\Unit\MS_UnitStatuses\" />
+    <Folder Include="MasterPlan\Unit\MS_Zonings\" />
+  </ItemGroup>
+</Project>
