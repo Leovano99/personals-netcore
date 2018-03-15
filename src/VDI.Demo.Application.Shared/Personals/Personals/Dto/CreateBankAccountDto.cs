@@ -12,5 +12,8 @@ namespace VDI.Demo.Personals.Personals.Dto
         public string BankCode { get; set; }
         public string AccountNo { get; set; }
         public string AccountName { get; set; }
+        public bool isAutoDebit { get; set; }
+        public bool isMain { get; set; }
+        public string BankBranchName { get; set; }
     }
 }

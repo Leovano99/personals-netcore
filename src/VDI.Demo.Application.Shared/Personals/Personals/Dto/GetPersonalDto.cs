@@ -25,6 +25,8 @@ namespace VDI.Demo.Personals.Personals.Dto
         public bool isActive { get; set; }
         public string remarks { get; set; }
         public bool isInstitute { get; set; }
+        public string idNo { get; set; }
+        public bool isKeyPeople { get; set; }
         public string registeredBy { get; set; }
         public string registerTime { get; set; }
         public long? registerId { get; set; }

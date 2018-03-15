@@ -213,6 +213,7 @@ namespace VDI.Demo.Personals.Personals
         }
 
         #region function create : createPersonal, createKeyPeople, createBankAccount, createCompany, createDocument, createIDNumber, createFamily, createMember
+        /*
         public async Task CreatePersonal(CreatePersonalDto input)
         {
             Logger.Info("CreatePersonal() - Started.");
@@ -285,6 +286,117 @@ namespace VDI.Demo.Personals.Personals
 
             Logger.Info("CreatePersonal() - Finished.");
         }
+        */
+        public async Task CreatePersonal(CreatePersonalDto input)
+        {
+            Logger.Info("CreatePersonal() - Started.");
+
+            PERSONALS personal = new PERSONALS()
+            {
+                entityCode = entityCode,
+                psCode = input.psCode,
+                parentPSCode = "-",
+                name = input.name,
+                sex = input.sex,
+                birthDate = input.birthDate,
+                birthPlace = String.IsNullOrEmpty(input.birthPlace) ? "-" : input.birthPlace,
+                marCode = String.IsNullOrEmpty(input.marCode) ? "0" : input.marCode,
+                relCode = String.IsNullOrEmpty(input.relCode) ? "0" : input.relCode,
+                bloodCode = String.IsNullOrEmpty(input.bloodCode) ? "0" : input.bloodCode,
+                occID = String.IsNullOrEmpty(input.occID) ? "001" : input.occID,
+                nationID = input.nationID,
+                familyStatus = String.IsNullOrEmpty(input.familyStatus) ? "0" : input.familyStatus,
+                NPWP = input.npwp,
+                FPTransCode = String.IsNullOrEmpty(input.FPTransCode) ? "0" : input.FPTransCode,
+                grade = String.IsNullOrEmpty(input.grade) ? "0" : input.grade,
+                isActive = input.isActive,
+                remarks = input.remarks,
+                mailGroup = "-",
+                isInstitute = input.isInstitute
+            };
+
+            try
+            {
+                Logger.DebugFormat("CreatePersonal() - Start insert Personal. Parameters sent:{0}" +
+                        "entityCode = {1}{0}" +
+                        "psCode = {2}{0}" +
+                        "parentPSCode = {3}{0}" +
+                        "name = {4}{0}" +
+                        "sex = {5}{0}" +
+                        "birthDate = {6}{0}" +
+                        "birthPlace = {7}{0}" +
+                        "marCode = {8}{0}" +
+                        "relCode = {9}{0}" +
+                        "bloodCode = {10}{0}" +
+                        "occID = {11}{0}" +
+                        "nationID = {12}{0}" +
+                        "familyStatus = {13}{0}" +
+                        "NPWP = {14}{0}" +
+                        "FPTransCode = {15}{0}" +
+                        "grade = {16}{0}" +
+                        "isActive = {17}{0}" +
+                        "remarks = {18}{0}" +
+                        "mailGroup = {19}{0}" +
+                        "isInstitute = {20}{0}"
+                        , Environment.NewLine, entityCode, input.psCode, "-", input.name
+                        , input.sex, input.birthDate, input.birthPlace, input.marCode, input.relCode, input.bloodCode
+                        , input.occID, input.nationID, input.familyStatus, input.npwp, input.FPTransCode, input.grade
+                        , input.isActive, input.remarks, "-", input.isInstitute);
+
+                await _personalRepo.InsertAsync(personal);
+
+                if (input.isInstitute)
+                {
+                    var data = new List<CreateIDNumberDto>();
+                    if (input.isKeyPeople)
+                    {
+                        // to do insert KTP Id Number
+                        var dataIDNumber = new CreateIDNumberDto
+                        {
+                            entityCode = entityCode,
+                            psCode = input.psCode,
+                            refID = 1,
+                            idNo = input.idNo,
+                            idType = "1", // Kartu Tanda Penduduk
+                            expiredDate = null
+                        };
+
+                        data.Add(dataIDNumber);
+                        await CreateIDNumber(data);
+                    }
+                    else
+                    {
+                        // to do insert TDP Id Number
+                        var dataIDNumber = new CreateIDNumberDto
+                        {
+                            entityCode = entityCode,
+                            psCode = input.psCode,
+                            refID = 1,
+                            idNo = input.idNo,
+                            idType = "7", // Tanda Daftar Perusahaan
+                            expiredDate = null
+                        };
+
+                        data.Add(dataIDNumber);
+                        await CreateIDNumber(data);
+                    }
+                }
+
+                Logger.DebugFormat("CreatePersonal() - Ended insert Personal.");
+            }
+            catch (DataException ex)
+            {
+                Logger.ErrorFormat("CreatePersonal() - ERROR DataException. Result = {0}", ex.Message);
+                throw new UserFriendlyException("Db Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Logger.ErrorFormat("CreatePersonal() - ERROR Exception. Result = {0}", ex.Message);
+                throw new UserFriendlyException("Error: " + ex.Message);
+            }
+
+            Logger.Info("CreatePersonal() - Finished.");
+        }
 
         public async Task CreateKeyPeople(List<CreateKeyPeopleDto> inputs)
         {
@@ -330,8 +442,9 @@ namespace VDI.Demo.Personals.Personals
             }
             Logger.Info("CreateKeyPeople() - Finished.");
         }
-
-        public async Task CreateBankAccount(List<CreateBankAccountDto> inputs)
+        
+        /*
+        public async Task CreateBankAccount0(List<CreateBankAccountDto> inputs)
         {
             Logger.Info("CreateBankAccount() - Started.");
             foreach (var input in inputs)
@@ -366,6 +479,71 @@ namespace VDI.Demo.Personals.Personals
                                 "AccountName = {6}{0}"
                                 , Environment.NewLine, entityCode, input.psCode, input.refID
                                 , input.BankCode, input.AccountNo, input.AccountName);
+                        await _bankAccountRepo.InsertAsync(bankAccount);
+                        Logger.DebugFormat("CreateBankAccount() - Ended insert Bank Account.");
+                    }
+                    catch (DataException ex)
+                    {
+                        Logger.ErrorFormat("CreateBankAccount() - ERROR DataException. Result = {0}", ex.Message);
+                        throw new UserFriendlyException("Db Error: " + ex.Message);
+                    }
+                    catch (Exception ex)
+                    {
+                        Logger.ErrorFormat("CreateBankAccount() - ERROR Exception. Result = {0}", ex.Message);
+                        throw new UserFriendlyException("Error: " + ex.Message);
+                    }
+                }
+                else
+                {
+                    Logger.ErrorFormat("UpdateBankAccount() - ERROR Result = {0}.", "The bank name or code is already exist in this bank type!");
+                    throw new UserFriendlyException("The bank name or code is already exist in this bank type!");
+                }
+            }
+            Logger.Info("CreateBankAccount() - Finished.");
+        }
+        */
+
+        public async Task CreateBankAccount(List<CreateBankAccountDto> inputs)
+        {
+            Logger.Info("CreateBankAccount() - Started.");
+            foreach (var input in inputs)
+            {
+                var checkBankNameNo = (from ba in _bankAccountRepo.GetAll()
+                                       where ba.entityCode == "1"
+                                       && ba.psCode == input.psCode
+                                       && ba.BankCode == input.BankCode
+                                       && (ba.AccountNo == input.AccountNo && (ba.AccountName == input.AccountName || ba.AccountNo == input.AccountNo))
+                                       select ba).Any();
+
+                if (!checkBankNameNo)
+                {
+                    TR_BankAccount bankAccount = new TR_BankAccount()
+                    {
+                        entityCode = entityCode,
+                        psCode = input.psCode,
+                        refID = input.refID,
+                        BankCode = input.BankCode,
+                        AccountNo = input.AccountNo,
+                        AccountName = input.AccountName,
+                        isAutoDebit = input.isAutoDebit,
+                        isMain = false,
+                        BankBranchName = input.BankBranchName
+                    };
+
+                    try
+                    {
+                        Logger.DebugFormat("CreateBankAccount() - Start insert Bank Account. Parameters sent:{0}" +
+                                "entityCode = {1}{0}" +
+                                "psCode = {2}{0}" +
+                                "refID = {3}{0}" +
+                                "BankCode = {4}{0}" +
+                                "AccountNo = {5}{0}" +
+                                "AccountName = {6}{0}" +
+                                "isAutoDebit = {7}{0}" +
+                                "isMain = {8}{0}" +
+                                "BankBranchName = {9}{0}"
+                                , Environment.NewLine, entityCode, input.psCode, input.refID
+                                , input.BankCode, input.AccountNo, input.AccountName, input.isAutoDebit, input.isMain, input.BankBranchName);
                         await _bankAccountRepo.InsertAsync(bankAccount);
                         Logger.DebugFormat("CreateBankAccount() - Ended insert Bank Account.");
                     }
@@ -602,14 +780,7 @@ namespace VDI.Demo.Personals.Personals
                 CreateMemberDataDto memberData = input.memberData;
                 CreateMemberActivationDto memberActivation = input.memberActivation;
                 CreateMemberBankDataDto memberBankData = input.memberBankData;
-
-                var getUnavailableMemberScmCode = (from x in _contextPers.PERSONALS_MEMBER
-                                                   where x.entityCode == entityCode &&
-                                                   x.psCode == memberData.psCode &&
-                                                   x.scmCode == memberData.scmCode &&
-                                                   x.isActive == true
-                                                   select x).Any();
-
+                
                 PERSONALS_MEMBER member = new PERSONALS_MEMBER()
                 {
                     entityCode = entityCode,
@@ -647,66 +818,61 @@ namespace VDI.Demo.Personals.Personals
                     bankAccNo = String.IsNullOrEmpty(memberBankData.bankAccNo) ? "0" : memberBankData.bankAccNo,
                     bankAccName = String.IsNullOrEmpty(memberBankData.bankAccName) ? "-" : memberBankData.bankAccName,
                     bankBranchName = String.IsNullOrEmpty(memberBankData.bankBranchName) ? "-" : memberBankData.bankBranchName,
+                    bankAccountRefID = memberBankData.bankAccountRefID,
                     CreationTime = DateTime.Now
                 };
 
                 try
                 {
                     Logger.DebugFormat("CreateMember() - Start insert Member. Parameters sent:{0}" +
-                                  "entityCode       = {1}{0}" +
-                                  "psCode           = {2}{0}" +
-                                  "scmCode          = {3}{0}" +
-                                  "memberCode       = {4}{0}" +
-                                  "parentMemberCode = {5}{0}" +
-                                  "specCode         = {6}{0}" +
-                                  "CDCode           = {7}{0}" +
-                                  "ACDCode          = {8}{0}" +
-                                  "PTName           = {9}{0}" +
-                                  "PrincName        = {10}{0}" +
-                                  "mothName         = {11}{0}" +
-                                  "spouName         = {12}{0}" +
-                                  "regDate          = {13}{0}" +
-                                  "joinDate         = {14}{0}" +
-                                  "remarks1         = {15}{0}" +
-                                  "remarks2         = {16}{0}" +
-                                  "remarks3         = {17}{0}" +
-                                  "isCD             = {18}{0}" +
-                                  "isACD            = {19}{0}" +
-                                  "isInstitusi      = {20}{0}" +
-                                  "isPKP            = {21}{0}" +
-                                  "franchiseGroup   = {22}{0}" +
-                                  "isActiveEmail    = {23}{0}" +
-                                  "userName         = {24}{0}" +
-                                  "memberStatusCode = {25}{0}" +
-                                  "isMember         = {26}{0}" +
-                                  "isActive         = {27}{0}" +
-                                  "password         = {28}{0}" +
-                                  "bankType         = {29}{0}" +
-                                  "bankCode         = {30}{0}" +
-                                  "bankAccNo        = {31}{0}" +
-                                  "bankAccName      = {32}{0}" +
-                                  "bankBranchName   = {33}{0}"
-                                  , Environment.NewLine, entityCode, memberData.psCode, memberData.scmCode
-                                  , memberData.memberCode, memberData.parentMemberCode, memberData.specCode, memberData.CDCode
-                                  , memberData.ACDCode, memberData.PTName, memberData.PrincName, "-"
-                                  , memberData.spouName, DateTime.Today, DateTime.Today, memberData.remarks1
-                                  , "-", "-", memberData.isCD, memberData.isACD
-                                  , memberData.isInstitusi, memberData.isPKP, memberData.franchiseGroup, false
-                                  , "-", memberActivation.memberStatusCode, memberActivation.isMember, memberActivation.isActive
-                                  , memberActivation.password, memberBankData.bankType, memberBankData.bankCode
-                                  , memberBankData.bankAccNo, memberBankData.bankAccName, memberBankData.bankBranchName);
+                            "entityCode       = {1}{0}" +
+                            "psCode           = {2}{0}" +
+                            "scmCode          = {3}{0}" +
+                            "memberCode       = {4}{0}" +
+                            "parentMemberCode = {5}{0}" +
+                            "specCode         = {6}{0}" +
+                            "CDCode           = {7}{0}" +
+                            "ACDCode          = {8}{0}" +
+                            "PTName           = {9}{0}" +
+                            "PrincName        = {10}{0}" +
+                            "mothName         = {11}{0}" +
+                            "spouName         = {12}{0}" +
+                            "regDate          = {13}{0}" +
+                            "joinDate         = {14}{0}" +
+                            "remarks1         = {15}{0}" +
+                            "remarks2         = {16}{0}" +
+                            "remarks3         = {17}{0}" +
+                            "isCD             = {18}{0}" +
+                            "isACD            = {19}{0}" +
+                            "isInstitusi      = {20}{0}" +
+                            "isPKP            = {21}{0}" +
+                            "franchiseGroup   = {22}{0}" +
+                            "isActiveEmail    = {23}{0}" +
+                            "userName         = {24}{0}" +
+                            "memberStatusCode = {25}{0}" +
+                            "isMember         = {26}{0}" +
+                            "isActive         = {27}{0}" +
+                            "password         = {28}{0}" +
+                            "bankType         = {29}{0}" +
+                            "bankCode         = {30}{0}" +
+                            "bankAccNo        = {31}{0}" +
+                            "bankAccName      = {32}{0}" +
+                            "bankBranchName   = {33}{0}" +
+                            "bankAccountRefID = {33}{0}"
+                            , Environment.NewLine, entityCode, memberData.psCode, memberData.scmCode
+                            , memberData.memberCode, memberData.parentMemberCode, memberData.specCode, memberData.CDCode
+                            , memberData.ACDCode, memberData.PTName, memberData.PrincName, "-"
+                            , memberData.spouName, DateTime.Today, DateTime.Today, memberData.remarks1
+                            , "-", "-", memberData.isCD, memberData.isACD
+                            , memberData.isInstitusi, memberData.isPKP, memberData.franchiseGroup, false
+                            , "-", memberActivation.memberStatusCode, memberActivation.isMember, memberActivation.isActive
+                            , memberActivation.password, memberBankData.bankType, memberBankData.bankCode
+                            , memberBankData.bankAccNo, memberBankData.bankAccName, memberBankData.bankBranchName, memberBankData.bankAccountRefID);
 
                     _contextPers.PERSONALS_MEMBER.Add(member);
                     _contextPers.SaveChanges();
 
-                    if (!getUnavailableMemberScmCode)
-                    {
-                        obj.Add("message", "Member Successfully Saved");
-                    }
-                    else
-                    {
-                        obj.Add("message", "You add members with same Scheme code. Inactivated other members and Activate this members");
-                    }
+                    obj.Add("message", "Member Successfully Saved");
                     Logger.DebugFormat("CreateMember() - Ended insert Member.");
                 }
                 catch (DataException ex)
@@ -1162,9 +1328,10 @@ namespace VDI.Demo.Personals.Personals
                                    from z in nat.DefaultIfEmpty()
                                    join a in _lkCountryRepo.GetAll() on x.nationID equals a.urut.ToString() into con
                                    from a in con.DefaultIfEmpty()
+
                                    where x.psCode.Equals(psCode)
                                    select new
-                                   {
+                                   {                                      
                                        psCode = x.psCode,
                                        name = x.name,
                                        sex = x.sex,
@@ -1184,13 +1351,14 @@ namespace VDI.Demo.Personals.Personals
                                        isActive = x.isActive,
                                        remarks = x.remarks,
                                        isInstitute = x.isInstitute,
+                                       idNo = "1",
+                                       isKeyPeople = false,
                                        updatedBy = x.LastModifierUserId,
                                        updateTime = x.LastModificationTime,
                                        registeredBy = x.CreatorUserId,
                                        registerTime = x.CreationTime,
                                        urutCountry = a == null ? 0 : a.urut,
                                        country = a == null ? null : a.country
-
                                    }).ToList();
 
                 result = getPersonal.Select(x => new GetPersonalDto
@@ -1329,6 +1497,9 @@ namespace VDI.Demo.Personals.Personals
                               BankName = y.bankName == null ? null : y.bankName,
                               AccountNo = x.AccountNo == null ? null : x.AccountNo,
                               AccountName = x.AccountName == null ? null : x.AccountName,
+                              isAutoDebit = x.isAutoDebit,
+                              isMain = x.isMain,
+                              BankBranchName = x.BankBranchName,
                               LastModificationTime = x.LastModificationTime == null ? (x.CreationTime == null ? null : x.CreationTime.ToString("dd/MM/yyyy")) : Setting_variabel.ToString(x.LastModificationTime, "dd/MM/yyyy"),
                               LastModifierUserId = x.LastModifierUserId == null ? (x.CreatorUserId == null ? null : GetIdName(x.CreatorUserId)) : GetIdName(x.LastModifierUserId),
                               CreationTime = x.CreationTime == null ? null : x.CreationTime.ToString("dd/MM/yyyy"),
@@ -1681,6 +1852,7 @@ namespace VDI.Demo.Personals.Personals
                                   bankAccNo = x.query_personalMemberRepo.bankAccNo,
                                   bankAccName = x.query_personalMemberRepo.bankAccName,
                                   bankBranchName = x.query_personalMemberRepo.bankBranchName,
+                                  bankAccountRefID = x.query_personalMemberRepo.bankAccountRefID,
 
                                   createdTime = x.query_personalMemberRepo.CreationTime,
                                   creatorUserId = x.query_personalMemberRepo.CreatorUserId,
@@ -1736,7 +1908,8 @@ namespace VDI.Demo.Personals.Personals
                         bankCode = data.bankCode == null ? null : data.bankCode,
                         bankAccNo = data.bankAccNo == null ? null : data.bankAccNo,
                         bankAccName = data.bankAccName == null ? null : data.bankAccName,
-                        bankBranchName = data.bankBranchName == null ? null : data.bankBranchName
+                        bankBranchName = data.bankBranchName == null ? null : data.bankBranchName,
+                        bankAccountRefID = data.bankAccountRefID
                     };
 
                     var member = new GetMemberDto()
@@ -1907,6 +2080,7 @@ namespace VDI.Demo.Personals.Personals
         #endregion
 
         #region function Create Or Update Contact : CreateOrUpdatePhone, CreateOrUpdateEmail, CreateOrUpdateAddress        
+
         public async Task CreateOrUpdatePhone(List<CreatePhoneDto> inputs)
         {
             Logger.Info("CreateOrUpdatePhone() - Started.");
@@ -1950,6 +2124,16 @@ namespace VDI.Demo.Personals.Personals
                             "remarks = {6}{0}"
                             , Environment.NewLine, entityCode, input.psCode, input.refID
                             , input.phoneType, input.number, input.remarks);
+
+                        var checkAvailablePhone = (from x in _phoneRepo.GetAll()
+                                                   where x.number == input.number
+                                                   select x).Any();
+
+                        if (checkAvailablePhone)
+                        {
+                            throw new UserFriendlyException(input.number + "is exist!");
+                        }
+
                         await _phoneRepo.InsertAsync(phone);
                         Logger.DebugFormat("CreateOrUpdatePhone() - Ended insert Phone.");
                     }
@@ -1977,6 +2161,16 @@ namespace VDI.Demo.Personals.Personals
                             "remarks = {6}{0}"
                             , Environment.NewLine, entityCode, input.psCode, input.refID
                             , input.phoneType, input.number, input.remarks);
+
+                        var checkAvailablePhone = (from x in _phoneRepo.GetAll()
+                                                   where x.psCode != input.psCode && x.refID != input.refID && x.number == input.number
+                                                   select x).Any();
+
+                        if (checkAvailablePhone)
+                        {
+                            throw new UserFriendlyException(input.number + "is exist!");
+                        }
+
                         await _phoneRepo.UpdateAsync(phone);
                         Logger.DebugFormat("CreateOrUpdatePhone() - Ended update Phone.");
                     }
@@ -2036,6 +2230,16 @@ namespace VDI.Demo.Personals.Personals
                                 "email = {4}{0}"
                                 , Environment.NewLine, entityCode, input.psCode, input.refID
                                 , input.email);
+
+                            var checkAvailableEmail = (from x in _emailRepo.GetAll()
+                                                       where x.email == input.email
+                                                       select x).Any();
+
+                            if (checkAvailableEmail)
+                            {
+                                throw new UserFriendlyException(input.email + "is exist!");
+                            }
+
                             await _emailRepo.InsertAsync(email);
                             Logger.DebugFormat("CreateOrUpdateEmail() - Ended insert Email.");
                         }
@@ -2061,6 +2265,16 @@ namespace VDI.Demo.Personals.Personals
                                 "email = {4}{0}"
                                 , Environment.NewLine, entityCode, input.psCode, input.refID
                                 , input.email);
+
+                            var checkAvailableEmail = (from x in _emailRepo.GetAll()
+                                                       where x.psCode != input.psCode && x.refID != input.refID && x.email == input.email
+                                                       select x).Any();
+
+                            if (checkAvailableEmail)
+                            {
+                                throw new UserFriendlyException(input.email + "is exist!");
+                            }
+
                             await _emailRepo.UpdateAsync(email);
                             Logger.DebugFormat("CreateOrUpdateEmail() - Ended update Email.");
                         }
@@ -2115,6 +2329,15 @@ namespace VDI.Demo.Personals.Personals
                                 , Environment.NewLine, entityCode, input.psCode, input.refID
                                 , input.email);
 
+                            var checkAvailableEmail = (from x in _trEmailInvalidRepo.GetAll()
+                                                       where x.email == input.email
+                                                       select x).Any();
+
+                            if (checkAvailableEmail)
+                            {
+                                throw new UserFriendlyException(input.email + "is exist!");
+                            }
+
                             await _trEmailInvalidRepo.InsertAsync(email);
 
                             Logger.DebugFormat("CreateOrUpdateEmail() - Ended insert Email Invalid.");
@@ -2165,6 +2388,7 @@ namespace VDI.Demo.Personals.Personals
                                 "email = {4}{0}"
                                 , Environment.NewLine, entityCode, input.psCode, input.refID
                                 , input.email);
+
                             await _trEmailInvalidRepo.UpdateAsync(email);
                             Logger.DebugFormat("CreateOrUpdateEmail() - Ended update Email Invalid.");
                         }

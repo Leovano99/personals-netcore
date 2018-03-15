@@ -11,5 +11,6 @@ namespace VDI.Demo.Personals.Personals.Dto
         public string bankAccNo { get; set; }
         public string bankAccName { get; set; }
         public string bankBranchName { get; set; }
+        public long? bankAccountRefID { get; set; }
     }
 }

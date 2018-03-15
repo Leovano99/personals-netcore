@@ -140,6 +140,8 @@ namespace VDI.Demo.PersonalsDB
 
         public int? id_role { get; set; }
 
+        public long? bankAccountRefID { get; set; }
+
         [Column("modifTime")]
         public override DateTime? LastModificationTime { get; set; }
 

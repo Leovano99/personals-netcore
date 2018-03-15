@@ -48,6 +48,13 @@ namespace VDI.Demo.PersonalsDB
 
         [StringLength(200)]
         public string AccountName { get; set; }
+        
+        [StringLength(50)]
+        public string BankBranchName { get; set; }
+        
+        public bool isAutoDebit { get; set; } = false;
+
+        public bool isMain { get; set; } = false;
 
         [Column("modifTime")]
         public override DateTime? LastModificationTime { get; set; }
