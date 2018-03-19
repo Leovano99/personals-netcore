@@ -166,7 +166,7 @@ namespace VDI.Demo.Personals.Personals
                                   idType = y.idType,
                                   memberCode = xx.memberCode
                               })
-                              .WhereIf(!input.keyword.IsNullOrWhiteSpace(), item => item.psCode.Equals(input.keyword) || item.name.Equals(input.keyword))
+                              .WhereIf(!input.keyword.IsNullOrWhiteSpace(), item => item.psCode.Equals(input.keyword) || item.name.Contains(input.keyword))
                               .WhereIf(!input.idNumber.IsNullOrWhiteSpace(), item => item.idType == "1" || item.idType == "2" && item.idNo == input.idNumber)
                               .WhereIf(!input.memberCode.IsNullOrWhiteSpace(), item => item.memberCode.Equals(input.memberCode))
                               .WhereIf(input.birthDate != null, item => item.birthDate == inputBirthDate)
