@@ -149,10 +149,10 @@ namespace VDI.Demo.Personals.Personal_Members
                 var update = getSetMember.MapTo<PERSONALS_MEMBER>();
 
                 #region member data
-                update.parentMemberCode = String.IsNullOrEmpty(input.memberData.parentMemberCode) ? "-" : input.memberData.parentMemberCode;
-                update.PTName = String.IsNullOrEmpty(input.memberData.PTName) ? "-" : input.memberData.PTName;
-                update.PrincName = String.IsNullOrEmpty(input.memberData.PrincName) ? "-" : input.memberData.PrincName;
-                update.spouName = String.IsNullOrEmpty(input.memberData.spouName) ? "-" : input.memberData.spouName;
+                update.parentMemberCode = String.IsNullOrEmpty(input.memberData.parentMemberCode) ? null : input.memberData.parentMemberCode;
+                update.PTName = String.IsNullOrEmpty(input.memberData.PTName) ? null : input.memberData.PTName;
+                update.PrincName = String.IsNullOrEmpty(input.memberData.PrincName) ? null : input.memberData.PrincName;
+                update.spouName = String.IsNullOrEmpty(input.memberData.spouName) ? null : input.memberData.spouName;
                 update.specCode = String.IsNullOrEmpty(input.memberData.specCode) ? "0" : input.memberData.specCode;
                 update.franchiseGroup = String.IsNullOrEmpty(input.memberData.franchiseGroup) ? "-" : input.memberData.franchiseGroup;
                 update.isInstitusi = input.memberData.isInstitusi;
@@ -161,14 +161,14 @@ namespace VDI.Demo.Personals.Personal_Members
                 update.CDCode = String.IsNullOrEmpty(input.memberData.CDCode) ? "-" : input.memberData.CDCode;
                 update.isACD = input.memberData.isACD;
                 update.ACDCode = String.IsNullOrEmpty(input.memberData.ACDCode) ? "-" : input.memberData.ACDCode;
-                update.remarks1 = input.memberData.remarks1 == null ? "-" : input.memberData.remarks1;
+                update.remarks1 = input.memberData.remarks1 == null ? null : input.memberData.remarks1;
                 #endregion
 
                 #region activation
                 update.memberStatusCode = String.IsNullOrEmpty(input.memberActivation.memberStatusCode) ? "-" : input.memberActivation.memberStatusCode;
                 update.isActive = input.memberActivation.isActive;
                 update.isMember = input.memberActivation.isMember;
-                update.password = String.IsNullOrEmpty(input.memberActivation.password) ? "-" : input.memberActivation.password;
+                update.password = String.IsNullOrEmpty(input.memberActivation.password) ? null : input.memberActivation.password;
                 #endregion
 
                 #region bank data
