@@ -95,20 +95,16 @@ namespace VDI.Demo.PersonalsDB
         [Required]
         [StringLength(20)]
         public string userName { get; set; }
-
-        [Required]
+        
         [StringLength(20)]
         public string password { get; set; }
-
-        [Required]
+        
         [StringLength(200)]
         public string remarks1 { get; set; }
-
-        [Required]
+        
         [StringLength(200)]
         public string remarks2 { get; set; }
-
-        [Required]
+        
         [StringLength(200)]
         public string remarks3 { get; set; }
 
