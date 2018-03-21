@@ -40,8 +40,7 @@ namespace VDI.Demo.PersonalsDB
         [Column(Order = 3)]
         [StringLength(12)]
         public string memberCode { get; set; }
-
-        [Required]
+        
         [StringLength(20)]
         public string parentMemberCode { get; set; }
 
@@ -76,20 +75,16 @@ namespace VDI.Demo.PersonalsDB
         [Required]
         [StringLength(12)]
         public string ACDCode { get; set; }
-
-        [Required]
+        
         [StringLength(50)]
         public string PTName { get; set; }
-
-        [Required]
+        
         [StringLength(50)]
         public string PrincName { get; set; }
-
-        [Required]
+        
         [StringLength(50)]
         public string mothName { get; set; }
-
-        [Required]
+        
         [StringLength(50)]
         public string spouName { get; set; }
 

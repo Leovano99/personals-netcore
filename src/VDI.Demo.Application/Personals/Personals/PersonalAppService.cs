@@ -166,7 +166,7 @@ namespace VDI.Demo.Personals.Personals
                                   idType = y.idType,
                                   memberCode = xx.memberCode
                               })
-                              .WhereIf(!input.keyword.IsNullOrWhiteSpace(), item => item.psCode.Equals(input.keyword) || item.name.Equals(input.keyword))
+                              .WhereIf(!input.keyword.IsNullOrWhiteSpace(), item => item.psCode.Equals(input.keyword) || item.name.Contains(input.keyword))
                               .WhereIf(!input.idNumber.IsNullOrWhiteSpace(), item => item.idType == "1" || item.idType == "2" && item.idNo == input.idNumber)
                               .WhereIf(!input.memberCode.IsNullOrWhiteSpace(), item => item.memberCode.Equals(input.memberCode))
                               .WhereIf(input.birthDate != null, item => item.birthDate == inputBirthDate)
@@ -295,11 +295,11 @@ namespace VDI.Demo.Personals.Personals
             {
                 entityCode = entityCode,
                 psCode = input.psCode,
-                parentPSCode = "-",
+                parentPSCode = "",
                 name = input.name,
                 sex = input.sex,
                 birthDate = input.birthDate,
-                birthPlace = String.IsNullOrEmpty(input.birthPlace) ? "-" : input.birthPlace,
+                birthPlace = String.IsNullOrEmpty(input.birthPlace) ? "" : input.birthPlace,
                 marCode = String.IsNullOrEmpty(input.marCode) ? "0" : input.marCode,
                 relCode = String.IsNullOrEmpty(input.relCode) ? "0" : input.relCode,
                 bloodCode = String.IsNullOrEmpty(input.bloodCode) ? "0" : input.bloodCode,
@@ -311,7 +311,6 @@ namespace VDI.Demo.Personals.Personals
                 grade = String.IsNullOrEmpty(input.grade) ? "0" : input.grade,
                 isActive = input.isActive,
                 remarks = input.remarks,
-                mailGroup = "-",
                 isInstitute = input.isInstitute
             };
 
@@ -338,10 +337,10 @@ namespace VDI.Demo.Personals.Personals
                         "remarks = {18}{0}" +
                         "mailGroup = {19}{0}" +
                         "isInstitute = {20}{0}"
-                        , Environment.NewLine, entityCode, input.psCode, "-", input.name
+                        , Environment.NewLine, entityCode, input.psCode, "", input.name
                         , input.sex, input.birthDate, input.birthPlace, input.marCode, input.relCode, input.bloodCode
                         , input.occID, input.nationID, input.familyStatus, input.npwp, input.FPTransCode, input.grade
-                        , input.isActive, input.remarks, "-", input.isInstitute);
+                        , input.isActive, input.remarks, "", input.isInstitute);
 
                 await _personalRepo.InsertAsync(personal);
 
@@ -780,7 +779,7 @@ namespace VDI.Demo.Personals.Personals
                 CreateMemberDataDto memberData = input.memberData;
                 CreateMemberActivationDto memberActivation = input.memberActivation;
                 CreateMemberBankDataDto memberBankData = input.memberBankData;
-                
+
                 PERSONALS_MEMBER member = new PERSONALS_MEMBER()
                 {
                     entityCode = entityCode,
@@ -791,33 +790,28 @@ namespace VDI.Demo.Personals.Personals
                     specCode = String.IsNullOrEmpty(memberData.specCode) ? "0" : memberData.specCode,
                     CDCode = String.IsNullOrEmpty(memberData.CDCode) ? "-" : memberData.CDCode,
                     ACDCode = String.IsNullOrEmpty(memberData.ACDCode) ? "-" : memberData.ACDCode,
-                    PTName = String.IsNullOrEmpty(memberData.PTName) ? "-" : memberData.PTName,
-                    PrincName = String.IsNullOrEmpty(memberData.PrincName) ? "-" : memberData.PrincName,
-                    mothName = "-", //unused
-                    spouName = String.IsNullOrEmpty(memberData.spouName) ? "-" : memberData.spouName,
+                    PTName = String.IsNullOrEmpty(memberData.PTName) ? null : memberData.PTName,
+                    PrincName = String.IsNullOrEmpty(memberData.PrincName) ? null : memberData.PrincName,
+                    spouName = String.IsNullOrEmpty(memberData.spouName) ? null : memberData.spouName,
                     regDate = DateTime.Today, //unused
                     joinDate = DateTime.Today, //unused
                     remarks1 = memberData.remarks1 == null ? "-" : memberData.remarks1,
-                    remarks2 = "-", //unused
-                    remarks3 = "-", //unused
                     isCD = memberData.isCD,
                     isACD = memberData.isACD,
                     isInstitusi = memberData.isInstitusi,
                     isPKP = memberData.isPKP,
                     franchiseGroup = memberData.franchiseGroup,
                     isActiveEmail = false, //unused
-
-                    userName = "-", //unused
                     memberStatusCode = String.IsNullOrEmpty(memberActivation.memberStatusCode) ? "-" : memberActivation.memberStatusCode,
                     isMember = memberActivation.isMember,
                     isActive = memberActivation.isActive,
-                    password = String.IsNullOrEmpty(memberActivation.password) ? "-" : memberActivation.password,
+                    password = String.IsNullOrEmpty(memberActivation.password) ? null : memberActivation.password,
 
                     bankType = String.IsNullOrEmpty(memberBankData.bankType) ? "0" : memberBankData.bankType,
                     bankCode = memberBankData.bankCode,
-                    bankAccNo = String.IsNullOrEmpty(memberBankData.bankAccNo) ? "0" : memberBankData.bankAccNo,
-                    bankAccName = String.IsNullOrEmpty(memberBankData.bankAccName) ? "-" : memberBankData.bankAccName,
-                    bankBranchName = String.IsNullOrEmpty(memberBankData.bankBranchName) ? "-" : memberBankData.bankBranchName,
+                    bankAccNo = String.IsNullOrEmpty(memberBankData.bankAccNo) ? null : memberBankData.bankAccNo,
+                    bankAccName = String.IsNullOrEmpty(memberBankData.bankAccName) ? null : memberBankData.bankAccName,
+                    bankBranchName = String.IsNullOrEmpty(memberBankData.bankBranchName) ? null : memberBankData.bankBranchName,
                     bankAccountRefID = memberBankData.bankAccountRefID,
                     CreationTime = DateTime.Now
                 };
@@ -825,49 +819,49 @@ namespace VDI.Demo.Personals.Personals
                 try
                 {
                     Logger.DebugFormat("CreateMember() - Start insert Member. Parameters sent:{0}" +
-                            "entityCode       = {1}{0}" +
-                            "psCode           = {2}{0}" +
-                            "scmCode          = {3}{0}" +
-                            "memberCode       = {4}{0}" +
-                            "parentMemberCode = {5}{0}" +
-                            "specCode         = {6}{0}" +
-                            "CDCode           = {7}{0}" +
-                            "ACDCode          = {8}{0}" +
-                            "PTName           = {9}{0}" +
-                            "PrincName        = {10}{0}" +
-                            "mothName         = {11}{0}" +
-                            "spouName         = {12}{0}" +
-                            "regDate          = {13}{0}" +
-                            "joinDate         = {14}{0}" +
-                            "remarks1         = {15}{0}" +
-                            "remarks2         = {16}{0}" +
-                            "remarks3         = {17}{0}" +
-                            "isCD             = {18}{0}" +
-                            "isACD            = {19}{0}" +
-                            "isInstitusi      = {20}{0}" +
-                            "isPKP            = {21}{0}" +
-                            "franchiseGroup   = {22}{0}" +
-                            "isActiveEmail    = {23}{0}" +
-                            "userName         = {24}{0}" +
-                            "memberStatusCode = {25}{0}" +
-                            "isMember         = {26}{0}" +
-                            "isActive         = {27}{0}" +
-                            "password         = {28}{0}" +
-                            "bankType         = {29}{0}" +
-                            "bankCode         = {30}{0}" +
-                            "bankAccNo        = {31}{0}" +
-                            "bankAccName      = {32}{0}" +
-                            "bankBranchName   = {33}{0}" +
-                            "bankAccountRefID = {33}{0}"
-                            , Environment.NewLine, entityCode, memberData.psCode, memberData.scmCode
-                            , memberData.memberCode, memberData.parentMemberCode, memberData.specCode, memberData.CDCode
-                            , memberData.ACDCode, memberData.PTName, memberData.PrincName, "-"
-                            , memberData.spouName, DateTime.Today, DateTime.Today, memberData.remarks1
-                            , "-", "-", memberData.isCD, memberData.isACD
-                            , memberData.isInstitusi, memberData.isPKP, memberData.franchiseGroup, false
-                            , "-", memberActivation.memberStatusCode, memberActivation.isMember, memberActivation.isActive
-                            , memberActivation.password, memberBankData.bankType, memberBankData.bankCode
-                            , memberBankData.bankAccNo, memberBankData.bankAccName, memberBankData.bankBranchName, memberBankData.bankAccountRefID);
+                           "entityCode       = {1}{0}" +
+                           "psCode           = {2}{0}" +
+                           "scmCode          = {3}{0}" +
+                           "memberCode       = {4}{0}" +
+                           "parentMemberCode = {5}{0}" +
+                           "specCode         = {6}{0}" +
+                           "CDCode           = {7}{0}" +
+                           "ACDCode          = {8}{0}" +
+                           "PTName           = {9}{0}" +
+                           "PrincName        = {10}{0}" +
+                           "mothName         = {11}{0}" +
+                           "spouName         = {12}{0}" +
+                           "regDate          = {13}{0}" +
+                           "joinDate         = {14}{0}" +
+                           "remarks1         = {15}{0}" +
+                           "remarks2         = {16}{0}" +
+                           "remarks3         = {17}{0}" +
+                           "isCD             = {18}{0}" +
+                           "isACD            = {19}{0}" +
+                           "isInstitusi      = {20}{0}" +
+                           "isPKP            = {21}{0}" +
+                           "franchiseGroup   = {22}{0}" +
+                           "isActiveEmail    = {23}{0}" +
+                           "userName         = {24}{0}" +
+                           "memberStatusCode = {25}{0}" +
+                           "isMember         = {26}{0}" +
+                           "isActive         = {27}{0}" +
+                           "password         = {28}{0}" +
+                           "bankType         = {29}{0}" +
+                           "bankCode         = {30}{0}" +
+                           "bankAccNo        = {31}{0}" +
+                           "bankAccName      = {32}{0}" +
+                           "bankBranchName   = {33}{0}" +
+                           "bankAccountRefID = {33}{0}"
+                           , Environment.NewLine, entityCode, memberData.psCode, memberData.scmCode
+                           , memberData.memberCode, memberData.parentMemberCode, memberData.specCode, memberData.CDCode
+                           , memberData.ACDCode, memberData.PTName, memberData.PrincName, ""
+                           , memberData.spouName, DateTime.Today, DateTime.Today, memberData.remarks1
+                           , "", "", memberData.isCD, memberData.isACD
+                           , memberData.isInstitusi, memberData.isPKP, memberData.franchiseGroup, false
+                           , "", memberActivation.memberStatusCode, memberActivation.isMember, memberActivation.isActive
+                           , memberActivation.password, memberBankData.bankType, memberBankData.bankCode
+                           , memberBankData.bankAccNo, memberBankData.bankAccName, memberBankData.bankBranchName, memberBankData.bankAccountRefID);
 
                     _contextPers.PERSONALS_MEMBER.Add(member);
                     _contextPers.SaveChanges();
@@ -1497,9 +1491,9 @@ namespace VDI.Demo.Personals.Personals
                               BankName = y.bankName == null ? null : y.bankName,
                               AccountNo = x.AccountNo == null ? null : x.AccountNo,
                               AccountName = x.AccountName == null ? null : x.AccountName,
-                              isAutoDebit = x.isAutoDebit,
-                              isMain = x.isMain,
-                              BankBranchName = x.BankBranchName,
+                              isAutoDebit = x.isAutoDebit == null ? null : x.isAutoDebit,
+                              isMain = x.isMain == null ? null : x.isMain,
+                              BankBranchName = x.BankBranchName == null ? null : x.BankBranchName,
                               LastModificationTime = x.LastModificationTime == null ? (x.CreationTime == null ? null : x.CreationTime.ToString("dd/MM/yyyy")) : Setting_variabel.ToString(x.LastModificationTime, "dd/MM/yyyy"),
                               LastModifierUserId = x.LastModifierUserId == null ? (x.CreatorUserId == null ? null : GetIdName(x.CreatorUserId)) : GetIdName(x.LastModifierUserId),
                               CreationTime = x.CreationTime == null ? null : x.CreationTime.ToString("dd/MM/yyyy"),

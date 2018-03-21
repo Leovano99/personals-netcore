@@ -29,8 +29,7 @@ namespace VDI.Demo.PersonalsDB
         [Column(Order = 1)]
         [StringLength(8)]
         public string psCode { get; set; }
-
-        [Required]
+        
         [StringLength(8)]
         public string parentPSCode { get; set; }
 
@@ -43,8 +42,7 @@ namespace VDI.Demo.PersonalsDB
         public string sex { get; set; }
 
         public DateTime? birthDate { get; set; }
-
-        [Required]
+        
         [StringLength(30)]
         public string birthPlace { get; set; }
 
@@ -70,8 +68,7 @@ namespace VDI.Demo.PersonalsDB
         [Required]
         [StringLength(1)]
         public string familyStatus { get; set; }
-
-        [Required]
+        
         [StringLength(30)]
         public string NPWP { get; set; }
 
@@ -87,8 +84,7 @@ namespace VDI.Demo.PersonalsDB
 
         [StringLength(500)]
         public string remarks { get; set; }
-
-        [Required]
+        
         [StringLength(10)]
         public string mailGroup { get; set; }
 
