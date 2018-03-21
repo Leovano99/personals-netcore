@@ -982,6 +982,7 @@
     <text name="FamilyStatus">Family Status</text>
     <text name="PersonalInformation">Personal Information</text>
     <text name="PhoneType">Phone Type</text>
+    <text name="FillNPWPCompletely">Please fill NPWP completely</text>
 
     <text name="RegionName">Region Name</text>
 		<text name="City">City</text>
