@@ -28,6 +28,8 @@
     <Compile Remove="Migrations\20171214141617_Initial_Create.Designer.cs" />
     <Compile Remove="Migrations\20180201024016_AddTable_MappingUser.cs" />
     <Compile Remove="Migrations\20180201025244_AddTable_MappingUser.cs" />
+    <Compile Remove="Migrations\PersonalsNewDb\20180320084959_UpdateTablePersonal-v1.cs" />
+    <Compile Remove="Migrations\PersonalsNewDb\20180320085357_UpdateTablePersonal-v1.cs" />
     <Compile Remove="Migrations\SecondDb\20171218024105_Initial_Create.Designer.cs" />
   </ItemGroup>
 </Project>

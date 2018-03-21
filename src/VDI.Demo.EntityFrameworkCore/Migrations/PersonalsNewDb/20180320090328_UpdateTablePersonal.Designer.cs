@@ -11,9 +11,10 @@ using VDI.Demo.EntityFrameworkCore;
 namespace VDI.Demo.Migrations.PersonalsNewDb
 {
     [DbContext(typeof(PersonalsNewDbContext))]
-    partial class PersonalsNewDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180320090328_UpdateTablePersonal")]
+    partial class UpdateTablePersonal
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
