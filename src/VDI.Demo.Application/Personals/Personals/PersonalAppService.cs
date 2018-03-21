@@ -1583,9 +1583,8 @@ namespace VDI.Demo.Personals.Personals
                 psCode = x.psCode,
                 documentType = x.documentType,
                 documentTypeName = x.documentTypeName,
-                //documentBinary = x.documentBinary != null ? x.documentBinary.Contains("http") ? x.documentBinary : uriHost + x.documentBinary : null,
                 documentBinary = (x != null && x.documentBinary != null) ? getAbsoluteUriWithoutTail() + GetURLWithoutHost(x.documentBinary) : null, //TODO link + ip host
-                filename = x.documentBinary.Substring(x.documentBinary.LastIndexOf(@"/") + 1),
+                filename = (x != null && x.documentBinary != null) ? GetFileNameFromUrl(x.documentBinary) : null,
                 LastModificationTime = x.LastModificationTime == null ? (x.CreationTime == null ? null : x.CreationTime.ToString("dd/MM/yyyy")) : Setting_variabel.ToString(x.LastModificationTime, "dd/MM/yyyy"),
                 LastModifierUserId = x.LastModifierUserId == null ? (x.CreatorUserId == null ? null : GetIdName(x.CreatorUserId)) : GetIdName(x.LastModifierUserId),
                 CreationTime = x.CreationTime == null ? null : x.CreationTime.ToString("dd/MM/yyyy"),
@@ -2609,9 +2608,25 @@ namespace VDI.Demo.Personals.Personals
             }
         }
 
+        private string GetFileNameFromUrl(string path)
+        {            
+            if (string.IsNullOrEmpty(path))
+                return path;
+            path = path.Replace(@"\", "/");
+            path = path.Substring(path.LastIndexOf(@"/") + 1);
+            return path;
+        }
+
         private string GetURLWithoutHost(string path)
-        {
+        {            
             string finalpath = path;
+            if (string.IsNullOrEmpty(path))
+                return finalpath;
+
+            path = path.Replace(@"\","/");
+            if (!path[0].Equals('/'))
+                path = "/" + path;
+
             try
             {
                 Regex RegexObj = new Regex("[\\w\\W]*([\\/]Assets[\\w\\W\\s]*)");

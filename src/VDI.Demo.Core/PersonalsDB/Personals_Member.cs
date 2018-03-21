@@ -91,8 +91,7 @@ namespace VDI.Demo.PersonalsDB
         public DateTime regDate { get; set; }
 
         public DateTime joinDate { get; set; }
-
-        [Required]
+        
         [StringLength(20)]
         public string userName { get; set; }
         
