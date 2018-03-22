@@ -983,6 +983,17 @@
     <text name="PersonalInformation">Personal Information</text>
     <text name="PhoneType">Phone Type</text>
     <text name="FillNPWPCompletely">Please fill NPWP completely</text>
+    <text name="YouDontHavePermissionToCreatePersonal">You don't have permission to create personal</text>
+    <text name="BankAccount">Bank Account</text>
+    <text name="CorresAddress">Corres Address</text>
+    <text name="BillingAddress">Billing Address</text>
+    <text name="LaunchingSystem">Launching System</text>
+    <text name="PriorityPass">Priority Pass</text>
+    <text name="BookingHeader">Booking Header</text>
+    <text name="RegisterBy">Register By</text>
+    <text name="SystemName">System Name</text>
+    <text name="YouDontHavePermissionToEditPersonal">You don't have permission to edit personal</text>
+    <text name="SaveCompany">Save Company</text>
 
     <text name="RegionName">Region Name</text>
 		<text name="City">City</text>
