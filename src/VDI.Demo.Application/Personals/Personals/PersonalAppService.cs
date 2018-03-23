@@ -343,10 +343,25 @@ namespace VDI.Demo.Personals.Personals
                         , input.isActive, input.remarks, "", input.isInstitute);
 
                 await _personalRepo.InsertAsync(personal);
-
+                var data = new List<CreateIDNumberDto>();
                 if (input.isInstitute)
+                {                    
+                    // to do insert TDP Id Number
+                    var dataIDNumber = new CreateIDNumberDto
+                    {
+                        entityCode = entityCode,
+                        psCode = input.psCode,
+                        refID = 1,
+                        idNo = input.idNo,
+                        idType = "7", // Tanda Daftar Perusahaan
+                        expiredDate = null
+                    };
+
+                    data.Add(dataIDNumber);
+                    await CreateIDNumber(data);                    
+                }
+                else
                 {
-                    var data = new List<CreateIDNumberDto>();
                     if (input.isKeyPeople)
                     {
                         // to do insert KTP Id Number
@@ -357,22 +372,6 @@ namespace VDI.Demo.Personals.Personals
                             refID = 1,
                             idNo = input.idNo,
                             idType = "1", // Kartu Tanda Penduduk
-                            expiredDate = null
-                        };
-
-                        data.Add(dataIDNumber);
-                        await CreateIDNumber(data);
-                    }
-                    else
-                    {
-                        // to do insert TDP Id Number
-                        var dataIDNumber = new CreateIDNumberDto
-                        {
-                            entityCode = entityCode,
-                            psCode = input.psCode,
-                            refID = 1,
-                            idNo = input.idNo,
-                            idType = "7", // Tanda Daftar Perusahaan
                             expiredDate = null
                         };
 
@@ -409,7 +408,7 @@ namespace VDI.Demo.Personals.Personals
                     keyPeopleId = input.keyPeopleId,
                     keyPeopleName = input.keyPeopleName,
                     keyPeoplePSCode = input.keyPeoplePSCode,
-                    isAcive = true
+                    isActive = true
                 };
 
                 try
@@ -420,7 +419,7 @@ namespace VDI.Demo.Personals.Personals
                             "keyPeopleId = {3}{0}" +
                             "keyPeopleName = {4}{0}" +
                             "keyPeoplePSCode = {5}{0}" +
-                            "isAcive = {6}{0}"
+                            "isActive = {6}{0}"
                             , Environment.NewLine, input.psCode, input.refID
                             , input.keyPeopleId, input.keyPeopleName, input.keyPeoplePSCode, true);
 
@@ -1406,7 +1405,7 @@ namespace VDI.Demo.Personals.Personals
                                  keyPeopleDesc = y.keyPeopleDesc,
                                  keyPeopleName = x.keyPeopleName,
                                  keyPeoplePSCode = x.keyPeoplePSCode,
-                                 isAcive = x.isAcive,
+                                 isAcive = x.isActive,
                                  LastModificationTime = x.LastModificationTime,
                                  LastModifierUserId = x.LastModifierUserId,
                                  CreationTime = x.CreationTime,

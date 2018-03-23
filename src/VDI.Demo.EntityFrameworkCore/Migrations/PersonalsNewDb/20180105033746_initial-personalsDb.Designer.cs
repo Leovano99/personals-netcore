@@ -1627,7 +1627,7 @@ namespace VDI.Demo.Migrations.PersonalsNewDb
                     b.Property<long?>("LastModifierUserId")
                         .HasColumnName("modifUN");
 
-                    b.Property<bool>("isAcive");
+                    b.Property<bool>("isActive");
 
                     b.Property<int>("keyPeopleId");
 

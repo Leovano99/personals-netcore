@@ -28,7 +28,7 @@ namespace VDI.Demo.PersonalsDB
         [StringLength(8)]
         public string keyPeoplePSCode { get; set; }
 
-        public bool isAcive { get; set; }
+        public bool isActive { get; set; }
 
         [Column("modifTime")]
         public override DateTime? LastModificationTime { get; set; }
