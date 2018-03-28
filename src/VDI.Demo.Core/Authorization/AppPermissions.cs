@@ -308,8 +308,6 @@
         public const string Pages_Tenant_Personal_PersonalMember = "Pages.Tenant.Personal.PersonalMember";
         public const string Pages_Tenant_Personal_PersonalMember_Edit = "Pages.Tenant.Personal.PersonalMember.Edit";
         public const string Pages_Tenant_Personal_PersonalMember_Delete = "Pages.Tenant.Personal.PersonalMember.Delete";
-        public const string Pages_Tenant_Personal_Personal = "Pages.Tenant.Personal.Personal";
-        public const string Pages_Tenant_Personal_Personal_Edit = "Pages.Tenant.Personal.Personal.Edit";
         public const string Pages_Tenant_Personal_TrAddress = "Pages.Tenant.Personal.TrAddress";
         public const string Pages_Tenant_Personal_TrAddress_Create = "Pages.Tenant.Personal.TrAddress.Create";
         public const string Pages_Tenant_Personal_TrAddress_Edit = "Pages.Tenant.Personal.TrAddress.Edit";

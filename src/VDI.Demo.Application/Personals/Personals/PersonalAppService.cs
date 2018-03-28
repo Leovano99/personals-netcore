@@ -32,7 +32,7 @@ using VDI.Demo.EntityFrameworkCore;
 
 namespace VDI.Demo.Personals.Personals
 {
-    [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Personal)]
+    [AbpAuthorize(AppPermissions.Pages_Tenant_Personal)]
     public class PersonalAppService : DemoAppServiceBase, IPersonalAppService
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
