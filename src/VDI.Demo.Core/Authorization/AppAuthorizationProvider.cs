@@ -347,11 +347,7 @@ namespace VDI.Demo.Authorization
             var personalMember = personals.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_PersonalMember, L("PersonalMember"), multiTenancySides: MultiTenancySides.Tenant);
             personalMember.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_PersonalMember_Edit, L("EditPersonalMember"), multiTenancySides: MultiTenancySides.Tenant);
             personalMember.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_PersonalMember_Delete, L("DeletePersonalMember"), multiTenancySides: MultiTenancySides.Tenant);
-
-            var personal = personals.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Personal, L("Personal"), multiTenancySides: MultiTenancySides.Tenant);
-            personal.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Personal_Edit, L("EditPersonal"), multiTenancySides: MultiTenancySides.Tenant);
-
-
+            
             var TrAddress = personals.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_TrAddress, L("TrAddress"), multiTenancySides: MultiTenancySides.Tenant);
             TrAddress.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_TrAddress_Create, L("CreateTrAddress"), multiTenancySides: MultiTenancySides.Tenant);
             TrAddress.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_TrAddress_Edit, L("EditTrAddress"), multiTenancySides: MultiTenancySides.Tenant);
