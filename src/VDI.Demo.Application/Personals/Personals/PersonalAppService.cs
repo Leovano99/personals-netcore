@@ -2077,6 +2077,14 @@ namespace VDI.Demo.Personals.Personals
         {
             Logger.Info("CreateOrUpdatePhone() - Started.");
 
+            Logger.Info("Check duplicate phone number - Started.");
+            var isDuplicatePhone = inputs.GroupBy(n => n.number).Any(c => c.Count() > 1);
+            if (isDuplicatePhone)
+            {
+                throw new UserFriendlyException("Duplicate Phone Number");
+            }
+            Logger.Info("Check duplicate phone number - End.");
+
             foreach (var input in inputs)
             {
                 Logger.DebugFormat("CreateOrUpdatePhone() - Start get data to know insert or update Phone. Parameters sent:{0}" +
@@ -2185,6 +2193,15 @@ namespace VDI.Demo.Personals.Personals
         public async Task CreateOrUpdateEmail(List<CreateEmailDto> inputs)
         {
             Logger.Info("CreateOrUpdateEmail() - Started.");
+
+            Logger.Info("Check duplicate email - Started.");
+            var isDuplicateEmail = inputs.GroupBy(n => n.email).Any(c => c.Count() > 1);
+            if (isDuplicateEmail)
+            {
+                throw new UserFriendlyException("Duplicate email data.");
+            }
+            Logger.Info("Check duplicate email - End.");
+
             foreach (var input in inputs)
             {
                 if (input.isValid)
