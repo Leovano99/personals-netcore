@@ -2531,10 +2531,12 @@ namespace VDI.Demo.Personals.Personals
 
         #region function helper : generatePsCode, UploadImage
 
-        public string generatePsCode()
+        public JObject generatePsCode()
         {
+            JObject obj = new JObject();
             string psCode = null;
             bool checkAvailablePsCode = false;
+
             try
             {
                 do
@@ -2561,7 +2563,9 @@ namespace VDI.Demo.Personals.Personals
             {
                 SendConsole("" + e.Message + " " + e.StackTrace);
             }
-            return psCode;
+            obj.Add("pscode", psCode);
+
+            return obj;
         }
 
         #region msschema
