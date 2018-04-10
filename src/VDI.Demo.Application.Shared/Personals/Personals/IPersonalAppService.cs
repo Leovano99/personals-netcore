@@ -14,7 +14,7 @@ namespace VDI.Demo.Personals.Personals
         Task<PagedResultDto<GetPersonalsByKeywordList>> GetPersonalsByKeyword(GetPersonalsByKeywordInputDto input);
         List<GetPersonalsByKeywordList> GetPersonalsByAdvanceSearch(GetPersonalsByAdvanceSearchInputDto input);
 
-        string generatePsCode();
+        JObject generatePsCode();
 
         Task CreateKeyPeople(List<CreateKeyPeopleDto> inputs);
         Task CreatePersonal(CreatePersonalDto input);
