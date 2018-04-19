@@ -27,10 +27,10 @@ namespace VDI.Demo.Migrations.PersonalsNewDb.Seed
             List<LK_Blood> InitialBlood = new List<LK_Blood>();
             List<String> listBlood = new List<string>()
             {
-                "0,-" ,
-                "1,A"  ,
-                "2,B"  ,
-                "3,AB" ,
+                "0,-",
+                "1,A",
+                "2,B",
+                "3,AB",
                 "4,O"
             };
             foreach (var item in listBlood)

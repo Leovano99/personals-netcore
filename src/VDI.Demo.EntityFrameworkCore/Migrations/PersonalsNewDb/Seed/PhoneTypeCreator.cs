@@ -26,16 +26,12 @@ namespace VDI.Demo.Migrations.PersonalsNewDb.Seed
             List<LK_PhoneType> InitialPhoneType = new List<LK_PhoneType>();
             List<String> listPhoneType = new List<string>()
             {
-               "1,Home Phone  ,   Residential Phone",
-                "2,Business Phone  ,   Mobile Phone",
-                "3,Hand Phone  ,   Mobile Phone",
-                "4,Fax ,   NULL",
-                "5,Bill Phone  ,   Residential Phone",
-                "6,Hand Phone 2    ,   Mobile Phone",
-                "7,Hand Phone 3    ,   Mobile Phone",
-                "8,HP Subscription ,   Mobile Phone",
-                "9,CDMA Phone  ,   Mobile Phone",
-                "A,Home Phone 2    , Residential Phone"
+                "1,Home Phone,Residential Phone",
+                "2,Business Phone,Mobile Phone",
+                "3,Hand Phone,Mobile Phone",
+                "4,Fax,NULL",
+                "5,Bill Phone,Residential Phone",
+                "6,Invalid Phone Number,Mobile Phone"
             };
             foreach (var item in listPhoneType)
             {

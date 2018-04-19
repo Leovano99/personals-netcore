@@ -26,8 +26,6 @@ namespace VDI.Demo.Migrations.PersonalsNewDb.Seed
             new BankTypeCreator(_context).Create();
             new FamilyStatus(_context).Create();
             new GradeCreator(_context).Create();
-
-
             new IdTypeCreator(_context).Create();
             new KeyPeopleCreator(_context).Create();
             new MarStatusCreator(_context).Create();
@@ -36,7 +34,7 @@ namespace VDI.Demo.Migrations.PersonalsNewDb.Seed
             new NationCreator(_context).Create();
             new OccupationCreator(_context).Create();
             //new DefaultSettingsCreator(_context).Create();
-            //new CityCreator(_context).Create();
+            new CityCreator(_context).Create();
 
             _context.SaveChanges();
         }
