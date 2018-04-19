@@ -968,8 +968,10 @@
     <text name="KeyPeople">Key People</text>
     <text name="KeyPeopleMustFilled">To add Key People, <b>Role, Name</b> and <b>PsCode</b> must filled</text>
     <text name="SaveKeyPeople">Save Key People</text>
-    <text name="AreYouSureAddNewPersonal">Are You Sure Add New Personal</text>
-    <text name="NoDataExistPleaseMakeNewData">No Data Exist Please Make New Data</text>
+    <text name="AreYouSureAddNewPersonal">Are You Sure Add New Personal?</text>
+    <text name="NoDataExistPleaseMakeNewData">
+      <![CDATA[No Data Exist!<br>Please Make New Data]]>
+    </text>
     <text name="Kelurahan">Kelurahan</text>
     <text name="Kecamatan">Kecamatan</text>
     <text name="InstituteName">Institute Name</text>
@@ -994,6 +996,8 @@
     <text name="SystemName">System Name</text>
     <text name="YouDontHavePermissionToEditPersonal">You don't have permission to edit personal</text>
     <text name="SaveCompany">Save Company</text>
+    <text name="AutoDebit">Auto Debit</text>
+    <text name="ActiveMember">Auto Member</text>
 
     <text name="RegionName">Region Name</text>
 		<text name="City">City</text>
