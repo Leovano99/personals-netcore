@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Activation Member</title>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 12pt;
+            align-content: center;
+        }
+
+        a.button {
+            background-color: red;
+            border: solid;
+            text-decoration: none;
+            color: white;
+            width: 500px;
+            height: 60px;
+            padding: 10px;
+            border-radius: 30px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div style='border-style: solid; border-width: 2px; width: 900px' align='center'>
+            <p style='margin-bottom:0px;' align='center'><img src="{{LogoLippo}}" alt="LogoLippo"></p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p>Dear {{personalName}},</p>
+            <p>Selamat! Anda telah terdaftar sebagai member.</p>
+            <p>Member Code  : {{memberCode}}</p>
+            <p>Email        : {{email}}</p>
+            <p>Untuk memulai, silahkan aktivasi accound anda.</p>
+            <br>
+            <br>
+            <a class='button' href="http://svr-dev:8006/account/member-activation">ACTIVATE MY ACCOUNT</a>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div style='border-style: solid; border-width: 2px; width: 900px;' align='center'>
+            <p>You're receiving this email because you opted in or registered to be a Sales Member at Lippo Homes.</p>
+            <p>PT Lippo Karawaci Tbk | 2018 Boulevard Gajah Mada Level 4</p>
+            <p>Lippo Cyber Park, Karawaci, Tangerang 15811, Banten, Indonesia</p>
+            <a href="https://www.lippohomes.com">https://www.lippohomes.com/</p>
+        </div>
+    </center>
+</body>
+</html>

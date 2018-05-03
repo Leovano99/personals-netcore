@@ -14,5 +14,6 @@ namespace VDI.Demo.Personals.Personals.Dto
         public bool isInstitute { get; set; }
         public string idNo { get; set; }
         public string memberCode { get; set; }
+        public string email { get; set; }
     }
 }

@@ -29,6 +29,8 @@ using System.Text.RegularExpressions;
 using Visionet_Backend_NetCore.Komunikasi;
 using Newtonsoft.Json;
 using VDI.Demo.EntityFrameworkCore;
+using System.Net.Mail;
+using Microsoft.AspNetCore.Hosting;
 
 namespace VDI.Demo.Personals.Personals
 {
@@ -67,6 +69,7 @@ namespace VDI.Demo.Personals.Personals
         private readonly IRepository<PERSONALS_MEMBER, string> _personalMemberRepo;
         private readonly DemoDbContext _contextDemo;
         private readonly PersonalsNewDbContext _contextPers;
+        private readonly IHostingEnvironment _hostingEnvironment;
 
         #region constructor
         public PersonalAppService
@@ -101,7 +104,8 @@ namespace VDI.Demo.Personals.Personals
                 IRepository<MS_Schema, string> msSchemaRepo,
                 IRepository<PERSONALS_MEMBER, string> personalMemberRepo,
                 DemoDbContext contextDemo,
-                PersonalsNewDbContext contextPers
+                PersonalsNewDbContext contextPers,
+                IHostingEnvironment hostingEnvironment
             )
         {
             _httpContextAccessor = httpContextAccessor;
@@ -136,6 +140,7 @@ namespace VDI.Demo.Personals.Personals
             _personalMemberRepo = personalMemberRepo;
             _contextDemo = contextDemo;
             _contextPers = contextPers;
+            _hostingEnvironment = hostingEnvironment;
         }
         #endregion
 
@@ -155,26 +160,31 @@ namespace VDI.Demo.Personals.Personals
                               join xx in _personalsMemberRepo.GetAll() on x.psCode equals xx.psCode into h
                               from xx in h.DefaultIfEmpty()
                               join y in _idRepo.GetAll() on x.psCode equals y.psCode into g
-                              from y in g.DefaultIfEmpty()
+                              from yy in g.DefaultIfEmpty()
+                              join z in _emailRepo.GetAll() on x.psCode equals z.psCode into m
+                              from zz in m.DefaultIfEmpty()
                               select new
                               {
                                   psCode = x.psCode,
                                   name = x.name,
                                   birthDate = x.birthDate == null ? null : x.birthDate,
+                                  email = zz.email,
                                   isInstitute = x.isInstitute,
-                                  idNo = y.idNo,
-                                  idType = y.idType,
+                                  idNo = yy.idNo,
+                                  idType = yy.idType,
                                   memberCode = xx.memberCode
                               })
                               .WhereIf(!input.keyword.IsNullOrWhiteSpace(), item => item.psCode.Equals(input.keyword) || item.name.Contains(input.keyword))
                               .WhereIf(!input.idNumber.IsNullOrWhiteSpace(), item => item.idType == "1" || item.idType == "2" && item.idNo == input.idNumber)
                               .WhereIf(!input.memberCode.IsNullOrWhiteSpace(), item => item.memberCode.Equals(input.memberCode))
                               .WhereIf(input.birthDate != null, item => item.birthDate == inputBirthDate)
+                              .WhereIf(!input.email.IsNullOrWhiteSpace(), item => item.email.Equals(input.email))
                               .GroupBy(y => new
                               {
                                   y.psCode,
                                   y.name,
                                   y.birthDate,
+                                  y.email,
                                   y.isInstitute
                               })
                               .Select(x => new GetPersonalsByKeywordList
@@ -182,7 +192,8 @@ namespace VDI.Demo.Personals.Personals
                                   birthDate = x.Key.birthDate.ToString(),
                                   psCode = x.Key.psCode,
                                   isInstitute = x.Key.isInstitute,
-                                  name = x.Key.name
+                                  name = x.Key.name,
+                                  email = x.Key.email
                               }).ToList();
 
             return getAllData;
@@ -1273,36 +1284,57 @@ namespace VDI.Demo.Personals.Personals
 
         private string GetUserNameByUserIdTabPersonal(string psCode, string remarks, string type)
         {
-            string user = null;
-            var getPersonal = (from p in _contextPers.PERSONAL
-                               where p.psCode == psCode
-                               select p
-                        );
+            string query = null;
+            //string user = null;
+
+            //var getPersonal = (from p in _contextPers.PERSONAL
+            //                   where p.psCode == psCode
+            //                   select p
+            //            );
+
             if (type == "creation")
             {
-                user = (from p in getPersonal.ToList()
-                        join u1 in _contextDemo.Users on p.CreatorUserId equals u1.Id into user1
-                        from us1_ in user1.DefaultIfEmpty()
-                        where p.psCode == psCode
-                        select new
-                        {
-                            User = (us1_ == null || us1_.Name == null) ? null : (p.remarks == remarks ? us1_.Name : null)
-                        }
-                        ).Select(x => x.User).FirstOrDefault();
+                query = @"SELECT
+                        CASE WHEN a.remarks = @remarks THEN b.Name
+                        ELSE c.Name 
+                        END as name
+                        FROM E3Personals..PERSONALS a
+                        LEFT JOIN E3PropertySystemCore..Users b on a.inputUN = b.Id
+                        LEFT JOIN E3PersonalsCore..Users c on a.inputUN = c.Id
+                        WHERE a.psCode = @psCode";
+
+                //user = (from p in getPersonal.ToList()
+                //        join u1 in _contextDemo.Users on p.CreatorUserId equals u1.Id into user1
+                //        from us1_ in user1.DefaultIfEmpty()
+                //        where p.psCode == psCode
+                //        select new
+                //        {
+                //            User = (us1_ == null || us1_.Name == null) ? null : (p.remarks == remarks ? us1_.Name : null)
+                //        }
+                //        ).Select(x => x.User).FirstOrDefault();
             }
             else
             {
-                user = (from p in getPersonal.ToList()
-                        join u1 in _contextDemo.Users on p.LastModifierUserId equals u1.Id into user1
-                        from us1_ in user1.DefaultIfEmpty()
-                        where p.psCode == psCode
-                        select new
-                        {
-                            User = (us1_ == null || us1_.Name == null) ? null : (p.remarks == remarks ? us1_.Name : null)
-                        }
-                        ).Select(x => x.User).FirstOrDefault();
-            }
+                query = @"SELECT
+                        CASE WHEN a.remarks = @remarks THEN b.Name
+                        ELSE c.Name 
+                        END as name
+                        FROM E3Personals..PERSONALS a
+                        LEFT JOIN E3PropertySystemCore..Users b on a.modifUN = b.Id
+                        LEFT JOIN E3PersonalsCore..Users c on a.modifUN = c.Id
+                        WHERE a.psCode = @psCode";
 
+                //user = (from p in getPersonal.ToList()
+                //        join u1 in _contextDemo.Users on p.LastModifierUserId equals u1.Id into user1
+                //        from us1_ in user1.DefaultIfEmpty()
+                //        where p.psCode == psCode
+                //        select new
+                //        {
+                //            User = (us1_ == null || us1_.Name == null) ? null : (p.remarks == remarks ? us1_.Name : null)
+                //        }
+                //        ).Select(x => x.User).FirstOrDefault();
+            }
+            var user = _sqlExecuter.GetFromPersonals<string>(query, new { psCode = psCode, remarks = remarks }).FirstOrDefault();
             return user;
         }
 
@@ -2724,6 +2756,54 @@ namespace VDI.Demo.Personals.Personals
                 Setting_variabel.Komunikasi_TCPListener.StopListener();
         }
         #endregion
+
+        public string sendEmailActivationMember(string psCode, string memberCode)
+        {
+            var getEmailAddress = (from x in _personalRepo.GetAll()
+                                   where x.psCode == psCode
+                                   join y in _emailRepo.GetAll() on x.psCode equals y.psCode
+                                   select new
+                                   {
+                                       personalName = x.name,
+                                       email = y.email,
+                                   }).FirstOrDefault();
+
+
+
+            var webRoot = _hostingEnvironment.WebRootPath;
+            var file = System.IO.Path.Combine(webRoot, "EmailTemplate/AktivasiMember.html");
+            string body = string.Empty;
+            using (StreamReader reader = new StreamReader(file))
+            {
+                body = reader.ReadToEnd();
+            }
+            //body = body.Replace("{logoLippo}", input.projectImage);
+            body = body.Replace("{personalName}", getEmailAddress.personalName);
+            body = body.Replace("{memberCode}", memberCode);
+            body = body.Replace("{email}", getEmailAddress.email);
+
+            using (MailMessage mailMessage = new MailMessage())
+            {
+
+                mailMessage.From = new MailAddress("denykalpar@gmail.com");
+                mailMessage.Subject = "Aktivasi Email";
+                mailMessage.Body = body; //Ini body
+                mailMessage.IsBodyHtml = true;
+                mailMessage.To.Add(new MailAddress(getEmailAddress.email));
+                SmtpClient smtp = new SmtpClient();
+                smtp.Host = "smtp.gmail.com";
+                smtp.EnableSsl = true;
+                System.Net.NetworkCredential NetworkCred = new System.Net.NetworkCredential();
+                NetworkCred.UserName = "denykalpar@gmail.com";
+                NetworkCred.Password = "ikhlas13";
+                smtp.UseDefaultCredentials = false;
+                smtp.Credentials = NetworkCred;
+                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                smtp.Port = 587;
+                smtp.Send(mailMessage);
+            }
+            return "Success";
+        }
 
     }
 }

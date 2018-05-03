@@ -10,5 +10,6 @@ namespace VDI.Demo.Personals.Personals.Dto
         public string idNumber { get; set; }
         public string memberCode { get; set; }
         public string birthDate { get; set; }
+        public string email { get; set; }
     }
 }
