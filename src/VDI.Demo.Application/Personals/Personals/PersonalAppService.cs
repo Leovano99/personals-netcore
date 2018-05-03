@@ -34,7 +34,7 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace VDI.Demo.Personals.Personals
 {
-    [AbpAuthorize(AppPermissions.Pages_Tenant_Personal)]
+    //[AbpAuthorize(AppPermissions.Pages_Tenant_Personal)]
     public class PersonalAppService : DemoAppServiceBase, IPersonalAppService
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
@@ -2765,7 +2765,7 @@ namespace VDI.Demo.Personals.Personals
                                    select new
                                    {
                                        personalName = x.name,
-                                       email = y.email,
+                                       personalEmail = y.email,
                                    }).FirstOrDefault();
 
 
@@ -2778,18 +2778,18 @@ namespace VDI.Demo.Personals.Personals
                 body = reader.ReadToEnd();
             }
             //body = body.Replace("{logoLippo}", input.projectImage);
-            body = body.Replace("{personalName}", getEmailAddress.personalName);
-            body = body.Replace("{memberCode}", memberCode);
-            body = body.Replace("{email}", getEmailAddress.email);
+            body = body.Replace("{{personalName}}", getEmailAddress.personalName);
+            body = body.Replace("{{memberCode}}", memberCode);
+            body = body.Replace("{{email}}", getEmailAddress.personalEmail);
 
             using (MailMessage mailMessage = new MailMessage())
             {
 
                 mailMessage.From = new MailAddress("denykalpar@gmail.com");
-                mailMessage.Subject = "Aktivasi Email";
+                mailMessage.Subject = "Aktivasi Account Member";
                 mailMessage.Body = body; //Ini body
                 mailMessage.IsBodyHtml = true;
-                mailMessage.To.Add(new MailAddress(getEmailAddress.email));
+                mailMessage.To.Add(new MailAddress(getEmailAddress.personalEmail));
                 SmtpClient smtp = new SmtpClient();
                 smtp.Host = "smtp.gmail.com";
                 smtp.EnableSsl = true;
