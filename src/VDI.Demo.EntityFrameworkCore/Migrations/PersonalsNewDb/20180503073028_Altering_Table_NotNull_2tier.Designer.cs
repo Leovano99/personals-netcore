@@ -11,9 +11,10 @@ using VDI.Demo.EntityFrameworkCore;
 namespace VDI.Demo.Migrations.PersonalsNewDb
 {
     [DbContext(typeof(PersonalsNewDbContext))]
-    partial class PersonalsNewDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180503073028_Altering_Table_NotNull_2tier")]
+    partial class Altering_Table_NotNull_2tier
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -472,17 +473,11 @@ namespace VDI.Demo.Migrations.PersonalsNewDb
                         .IsRequired()
                         .HasMaxLength(100);
 
-                    b.Property<string>("provinceCode")
-                        .IsRequired()
-                        .HasMaxLength(5);
-
                     b.HasKey("entityCode", "cityCode");
 
                     b.HasAlternateKey("cityCode", "entityCode");
 
                     b.HasIndex("country");
-
-                    b.HasIndex("provinceCode");
 
                     b.ToTable("MS_City");
                 });
@@ -771,8 +766,10 @@ namespace VDI.Demo.Migrations.PersonalsNewDb
             modelBuilder.Entity("VDI.Demo.PersonalsDB.MS_Province", b =>
                 {
                     b.Property<string>("provinceCode")
-                        .ValueGeneratedOnAdd()
                         .HasMaxLength(5);
+
+                    b.Property<string>("provinceName")
+                        .HasMaxLength(50);
 
                     b.Property<DateTime>("CreationTime")
                         .HasColumnName("inputTime");
@@ -789,10 +786,7 @@ namespace VDI.Demo.Migrations.PersonalsNewDb
                     b.Property<string>("ppatkProvinceCode")
                         .HasMaxLength(3);
 
-                    b.Property<string>("provinceName")
-                        .HasMaxLength(50);
-
-                    b.HasKey("provinceCode");
+                    b.HasKey("provinceCode", "provinceName");
 
                     b.ToTable("MS_Province");
                 });
@@ -1727,11 +1721,6 @@ namespace VDI.Demo.Migrations.PersonalsNewDb
                     b.HasOne("VDI.Demo.PersonalsDB.LK_Country", "LK_Country")
                         .WithMany("MS_City")
                         .HasForeignKey("country")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("VDI.Demo.PersonalsDB.MS_Province", "MS_Province")
-                        .WithMany("MS_City")
-                        .HasForeignKey("provinceCode")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

@@ -39,6 +39,10 @@ namespace VDI.Demo.PersonalsDB
         [StringLength(100)]
         public string country { get; set; }
 
+        [Required]
+        [StringLength(5)]
+        public string provinceCode { get; set; }
+
         [StringLength(10)]
         public string cityAbbreviation { get; set; }
 
@@ -56,6 +60,8 @@ namespace VDI.Demo.PersonalsDB
 
         public virtual LK_Country LK_Country { get; set; }
 
+        public virtual MS_Province MS_Province { get; set; }
+        
         //public virtual ICollection<MS_PostCode> MS_PostCode { get; set; }
     }
 }
