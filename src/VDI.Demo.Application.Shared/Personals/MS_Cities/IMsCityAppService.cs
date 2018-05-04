@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using Abp.Application.Services;
-using VDI.Demo.Personals.MS_City.Dto;
+using VDI.Demo.Personals.MS_Cities.Dto;
 
-namespace VDI.Demo.Personals.MS_City
+namespace VDI.Demo.Personals.MS_Cities
 {
     public interface IMsCityAppService : IApplicationService
     {
