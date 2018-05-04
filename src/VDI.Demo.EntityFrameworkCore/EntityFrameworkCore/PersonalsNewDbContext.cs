@@ -94,7 +94,7 @@ namespace VDI.Demo.EntityFrameworkCore
                 .HasKey(c => new { c.entityCode, c.cityCode, c.postCode });
 
             modelBuilder.Entity<MS_Province>()
-                .HasKey(c => new { c.provinceCode, c.provinceName });
+                .HasKey(c => new { c.provinceCode });
 
             modelBuilder.Entity<MS_Regency>()
                 .HasKey(c => new { c.regencyCode, c.regencyName });

@@ -30,6 +30,12 @@
     <Compile Remove="Migrations\20180201025244_AddTable_MappingUser.cs" />
     <Compile Remove="Migrations\PersonalsNewDb\20180320084959_UpdateTablePersonal-v1.cs" />
     <Compile Remove="Migrations\PersonalsNewDb\20180320085357_UpdateTablePersonal-v1.cs" />
+    <Compile Remove="Migrations\PersonalsNewDb\20180503073712_Add_FK_MsProvince_ProvinceCode_Di_MsCity.cs" />
+    <Compile Remove="Migrations\PersonalsNewDb\20180504030036_Add_ProvinceCode_MS_City.cs" />
+    <Compile Remove="Migrations\PersonalsNewDb\20180504034425_Update_Composite_Only_ProvinceCode_MS_Province.cs" />
+    <Compile Remove="Migrations\PersonalsNewDb\20180504034647_Add_FK_ProvinceCode_MS_City.cs" />
+    <Compile Remove="Migrations\PersonalsNewDb\20180504034954_Update_Composite_Only_ProvinceCode_MS_Province.cs" />
+    <Compile Remove="Migrations\PersonalsNewDb\20180504035322_Update_Composite_Only_ProvinceCode_MS_Province.cs" />
     <Compile Remove="Migrations\SecondDb\20171218024105_Initial_Create.Designer.cs" />
   </ItemGroup>
 </Project>

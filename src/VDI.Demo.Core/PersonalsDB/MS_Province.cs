@@ -15,8 +15,7 @@ namespace VDI.Demo.PersonalsDB
         {
             get
             {
-                return provinceCode +
-                  "-" + provinceName;
+                return provinceCode;
             }
             set { /* nothing */ }
         }
@@ -25,8 +24,7 @@ namespace VDI.Demo.PersonalsDB
         [Column(Order = 0)]
         [StringLength(5)]
         public string provinceCode { get; set; }
-
-        [Key]
+        
         [Column(Order = 1)]
         [StringLength(50)]
         public string provinceName { get; set; }
@@ -46,6 +44,6 @@ namespace VDI.Demo.PersonalsDB
         [Column("inputUN")]
         public override long? CreatorUserId { get; set; }
 
-        public ICollection<MS_City> MS_City { get; set; }
+        public virtual ICollection<MS_City> MS_City { get; set; }
     }
 }

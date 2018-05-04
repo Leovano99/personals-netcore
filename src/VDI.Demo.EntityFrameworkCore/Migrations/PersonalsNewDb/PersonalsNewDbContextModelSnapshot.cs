@@ -461,10 +461,6 @@ namespace VDI.Demo.Migrations.PersonalsNewDb
                     b.Property<long?>("LastModifierUserId")
                         .HasColumnName("modifUN");
 
-                    b.Property<string>("MS_ProvinceprovinceCode");
-
-                    b.Property<string>("MS_ProvinceprovinceName");
-
                     b.Property<string>("cityAbbreviation")
                         .HasMaxLength(10);
 
@@ -486,7 +482,7 @@ namespace VDI.Demo.Migrations.PersonalsNewDb
 
                     b.HasIndex("country");
 
-                    b.HasIndex("MS_ProvinceprovinceCode", "MS_ProvinceprovinceName");
+                    b.HasIndex("provinceCode");
 
                     b.ToTable("MS_City");
                 });
@@ -775,10 +771,8 @@ namespace VDI.Demo.Migrations.PersonalsNewDb
             modelBuilder.Entity("VDI.Demo.PersonalsDB.MS_Province", b =>
                 {
                     b.Property<string>("provinceCode")
+                        .ValueGeneratedOnAdd()
                         .HasMaxLength(5);
-
-                    b.Property<string>("provinceName")
-                        .HasMaxLength(50);
 
                     b.Property<DateTime>("CreationTime")
                         .HasColumnName("inputTime");
@@ -795,7 +789,10 @@ namespace VDI.Demo.Migrations.PersonalsNewDb
                     b.Property<string>("ppatkProvinceCode")
                         .HasMaxLength(3);
 
-                    b.HasKey("provinceCode", "provinceName");
+                    b.Property<string>("provinceName")
+                        .HasMaxLength(50);
+
+                    b.HasKey("provinceCode");
 
                     b.ToTable("MS_Province");
                 });
@@ -1734,7 +1731,8 @@ namespace VDI.Demo.Migrations.PersonalsNewDb
 
                     b.HasOne("VDI.Demo.PersonalsDB.MS_Province", "MS_Province")
                         .WithMany("MS_City")
-                        .HasForeignKey("MS_ProvinceprovinceCode", "MS_ProvinceprovinceName");
+                        .HasForeignKey("provinceCode")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("VDI.Demo.PersonalsDB.MS_PostCode", b =>
