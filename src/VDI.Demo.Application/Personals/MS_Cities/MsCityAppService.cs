@@ -22,7 +22,19 @@ namespace VDI.Demo.Personals.MS_Cities
 
         public List<GetCityListDto> GetCityListByProvinceCode(string provinceCode)
         {
-            throw new NotImplementedException();
+            List<GetCityListDto> cityList = new List<GetCityListDto>();
+
+            var getCityList = (from x in _msCityRepo.GetAll()
+                               where x.provinceCode == provinceCode
+                               select new GetCityListDto
+                               {
+                                   cityCode = x.cityAbbreviation,
+                                   cityName = x.cityName,
+                                   cityAbbreviation = x.cityAbbreviation
+                               }).ToList();
+
+            cityList.AddRange(getCityList);
+            return cityList;
         }
     }
 }

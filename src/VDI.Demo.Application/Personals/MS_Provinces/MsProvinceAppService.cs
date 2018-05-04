@@ -14,6 +14,7 @@ namespace VDI.Demo.Personals.MS_Provinces
     public class MsProvinceAppService : DemoAppServiceBase, IMsProvinceAppService
     {
         private readonly IRepository<MS_Province, string> _msProvinceRepo;
+   
 
         public MsProvinceAppService(IRepository<MS_Province, string> msProvinceRepo)
         {
