@@ -27,10 +27,6 @@
     <None Remove="wwwroot\TemplateEmail\**" />
   </ItemGroup>
   <ItemGroup>
-    <Content Remove="EmailTemplate\AfterReservedTemplate.html" />
-    <Content Remove="EmailTemplate\BookingSuccess.html" />
-    <Content Remove="EmailTemplate\Reminder2Jam.html" />
-    <Content Remove="EmailTemplate\UnitExpired.html" />
     <Content Remove="wwwroot\EmailTemplate\AfterReservedTemplate.html" />
     <Content Remove="wwwroot\EmailTemplate\BookingSuccess.html" />
     <Content Remove="wwwroot\EmailTemplate\Reminder2Jam.html" />
