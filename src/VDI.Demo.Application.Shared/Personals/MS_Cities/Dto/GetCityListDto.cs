@@ -8,5 +8,6 @@ namespace VDI.Demo.Personals.MS_Cities.Dto
     {
         public string cityCode { get; set; }
         public string cityName { get; set; }
+        public string cityAbbreviation { get; set; }
     }
 }
