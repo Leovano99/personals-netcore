@@ -8,6 +8,6 @@ namespace VDI.Demo.Personals.MS_Cities
 {
     public interface IMsCityAppService : IApplicationService
     {
-        List<GetCityListDto> GetCityListByProvinceCode(string provinceCode);
+        List<GetCityListDto> GetCityListByProvinceCode(string provinceCode, string country);
     }
 }

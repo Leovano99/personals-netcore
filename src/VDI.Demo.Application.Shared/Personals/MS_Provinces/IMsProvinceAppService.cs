@@ -8,6 +8,6 @@ namespace VDI.Demo.Personals.MS_Provinces
 {
     public interface IMsProvinceAppService : IApplicationService
     {
-        List<GetMsProvinceListDto> GetMsProvinceDropdown();
+        List<GetMsProvinceListDto> GetMsProvinceDropdown(string country);
     }
 }

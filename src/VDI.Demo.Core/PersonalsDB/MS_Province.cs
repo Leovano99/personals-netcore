@@ -32,6 +32,10 @@ namespace VDI.Demo.PersonalsDB
         [StringLength(3)]
         public string ppatkProvinceCode { get; set; }
 
+        [Required]
+        [StringLength(100)]
+        public string country { get; set; }
+
         [Column("modifTime")]
         public override DateTime? LastModificationTime { get; set; }
 

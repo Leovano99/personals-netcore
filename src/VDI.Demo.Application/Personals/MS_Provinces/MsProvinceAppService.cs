@@ -21,9 +21,10 @@ namespace VDI.Demo.Personals.MS_Provinces
             _msProvinceRepo = msProvinceRepo;
         }
 
-        public List<GetMsProvinceListDto> GetMsProvinceDropdown()
+        public List<GetMsProvinceListDto> GetMsProvinceDropdown(string country)
         {
             var result = (from x in _msProvinceRepo.GetAll()
+                          where x.country == country
                           select new GetMsProvinceListDto
                           {
                               provinceCode = x.provinceCode,

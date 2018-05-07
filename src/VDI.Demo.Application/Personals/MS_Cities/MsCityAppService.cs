@@ -20,20 +20,32 @@ namespace VDI.Demo.Personals.MS_Cities
             _msCityRepo = msCityRepo;
         }
 
-        public List<GetCityListDto> GetCityListByProvinceCode(string provinceCode)
+        public List<GetCityListDto> GetCityListByProvinceCode(string provinceCode, string country)
         {
             List<GetCityListDto> cityList = new List<GetCityListDto>();
-
-            var getCityList = (from x in _msCityRepo.GetAll()
-                               where x.provinceCode == provinceCode
-                               select new GetCityListDto
-                               {
-                                   cityCode = x.cityAbbreviation,
-                                   cityName = x.cityName,
-                                   cityAbbreviation = x.cityAbbreviation
-                               }).ToList();
-
-            cityList.AddRange(getCityList);
+          
+            if(provinceCode != null)
+            {
+                cityList = (from x in _msCityRepo.GetAll()
+                            where x.provinceCode == provinceCode
+                            select new GetCityListDto
+                            {                              
+                                cityCode = x.cityCode,
+                                cityName = x.cityName,
+                                cityAbbreviation = x.cityAbbreviation
+                            }).ToList();              
+            }
+            else
+            {
+                cityList = (from x in _msCityRepo.GetAll()
+                            where x.country == country
+                            select new GetCityListDto
+                            {
+                                cityCode = x.cityCode,
+                                cityName = x.cityName,
+                                cityAbbreviation = x.cityAbbreviation
+                            }).ToList();
+            }
             return cityList;
         }
     }
