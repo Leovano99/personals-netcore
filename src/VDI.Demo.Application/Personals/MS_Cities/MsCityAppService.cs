@@ -16,9 +16,11 @@ namespace VDI.Demo.Personals.MS_Cities
         private readonly IRepository<MS_City, string> _msCityRepo;
         private readonly IRepository<MS_Province, string> _msProvinceRepo;
 
-        public MsCityAppService(IRepository<MS_City, string> msCityRepo)
+        public MsCityAppService(IRepository<MS_City, string> msCityRepo,
+            IRepository<MS_Province, string> msProvinceRepo)
         {
             _msCityRepo = msCityRepo;
+            _msProvinceRepo = msProvinceRepo;
         }
 
         public List<GetCityListDto> GetCityListByProvinceCode(string provinceName, string country)
