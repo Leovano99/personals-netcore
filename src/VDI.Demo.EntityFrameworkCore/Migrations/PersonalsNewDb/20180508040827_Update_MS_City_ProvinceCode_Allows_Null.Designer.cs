@@ -11,9 +11,10 @@ using VDI.Demo.EntityFrameworkCore;
 namespace VDI.Demo.Migrations.PersonalsNewDb
 {
     [DbContext(typeof(PersonalsNewDbContext))]
-    partial class PersonalsNewDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180508040827_Update_MS_City_ProvinceCode_Allows_Null")]
+    partial class Update_MS_City_ProvinceCode_Allows_Null
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

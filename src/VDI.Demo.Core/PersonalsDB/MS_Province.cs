@@ -48,6 +48,6 @@ namespace VDI.Demo.PersonalsDB
         [Column("inputUN")]
         public override long? CreatorUserId { get; set; }
 
-        public virtual ICollection<MS_City> MS_City { get; set; }
+        //public virtual ICollection<MS_City> MS_City { get; set; }
     }
 }
