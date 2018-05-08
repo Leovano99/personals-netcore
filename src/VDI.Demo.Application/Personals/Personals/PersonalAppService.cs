@@ -632,7 +632,7 @@ namespace VDI.Demo.Personals.Personals
             Logger.Info("CreateDocument() - Started.");
             foreach (var input in inputs)
             {
-                string uploadDocumentPath = UploadFile(input.documentBinary);
+                //string uploadDocumentPath = UploadFile(input.documentBinary);
 
                 TR_Document document = new TR_Document()
                 {
@@ -640,7 +640,7 @@ namespace VDI.Demo.Personals.Personals
                     psCode = input.psCode,
                     documentType = input.documentType,
                     documentRef = 1,
-                    documentBinary = uploadDocumentPath,
+                    documentBinary = input.documentBinary,
                     documentPicType = "-"
                 };
                 try
@@ -653,7 +653,7 @@ namespace VDI.Demo.Personals.Personals
                             "documentBinary = {5}{0}" +
                             "documentPicType = {6}{0}"
                             , Environment.NewLine, entityCode, input.psCode, input.documentType
-                            , 1, uploadDocumentPath, "-");
+                            , 1, input.documentBinary, "-");
                     await _documentRepo.InsertAsync(document);
                     Logger.DebugFormat("CreateDocument() - Ended insert Document.");
                 }

@@ -36,6 +36,7 @@
     <Compile Remove="Migrations\PersonalsNewDb\20180504034647_Add_FK_ProvinceCode_MS_City.cs" />
     <Compile Remove="Migrations\PersonalsNewDb\20180504034954_Update_Composite_Only_ProvinceCode_MS_Province.cs" />
     <Compile Remove="Migrations\PersonalsNewDb\20180504035322_Update_Composite_Only_ProvinceCode_MS_Province.cs" />
+    <Compile Remove="Migrations\PersonalsNewDb\20180508040602_Update_MS_City_ProvinceCode_Allows_Null.cs" />
     <Compile Remove="Migrations\SecondDb\20171218024105_Initial_Create.Designer.cs" />
   </ItemGroup>
 </Project>

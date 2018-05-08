@@ -63,9 +63,9 @@ namespace VDI.Demo.Personals.TR_Documents
                     DeleteFile(fileToDelete);
                 }
 
-                var imageUrl = UploadFile(input.documentBinaryNew);
-                GetURLWithoutHost(imageUrl, out imageUrl);
-                update.documentBinary = imageUrl;
+                //var imageUrl = UploadFile(input.documentBinaryNew);
+                //GetURLWithoutHost(imageUrl, out imageUrl);
+                update.documentBinary = input.documentBinaryNew;
 
             }
             else if (input.documentBinary == "existing")

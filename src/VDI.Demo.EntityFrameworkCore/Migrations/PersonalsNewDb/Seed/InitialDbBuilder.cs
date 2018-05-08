@@ -34,7 +34,7 @@ namespace VDI.Demo.Migrations.PersonalsNewDb.Seed
             new NationCreator(_context).Create();
             new OccupationCreator(_context).Create();
             //new DefaultSettingsCreator(_context).Create();
-            new CityCreator(_context).Create();
+            //new CityCreator(_context).Create();
 
             _context.SaveChanges();
         }
