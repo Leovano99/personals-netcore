@@ -36,4 +36,6 @@ namespace VDI.Demo.Personals.LK_Countries
             return new ListResultDto<GetAllCountryListDto>(getAllData);
         }
     }
+
+
 }

@@ -47,6 +47,7 @@ namespace VDI.Demo.Personals.Personals
         ListResultDto<GetAllMsSchemaDropdownList> GetAllMsSchemaDropdown();
         GetAvailableMemberSchemaByScmCodeAndPsCode GetAvailableMemberSchemaByScmCodeAndPsCode(GetAvailableMemberSchemaByScmCodeAndPsCode input);
 
-       string sendEmailActivationMember(string psCode, string memberCode);
+        string sendEmailActivationMember(string psCode, string memberCode);
+     
     }
 }

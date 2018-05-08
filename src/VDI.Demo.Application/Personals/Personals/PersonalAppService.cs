@@ -65,6 +65,9 @@ namespace VDI.Demo.Personals.Personals
         private readonly string entityCode;
         private readonly FilesHelper _filesHelper;
         private readonly IRepository<LK_Country, string> _lkCountryRepo;
+        private readonly IRepository<MS_Province, string> _msProvinceRepo;
+        private readonly IRepository<MS_City, string> _msCityRepo;
+        private readonly IRepository<MS_PostCode, string> _msPostCodeRepo;
         private readonly IRepository<MS_Schema, string> _msSchemaRepo;
         private readonly IRepository<PERSONALS_MEMBER, string> _personalMemberRepo;
         private readonly DemoDbContext _contextDemo;
@@ -101,6 +104,9 @@ namespace VDI.Demo.Personals.Personals
                 UserManager userManager,
                 FilesHelper filesHelper,
                 IRepository<LK_Country, string> lkCountryRepo,
+                IRepository<MS_Province, string> msProvinceRepo,
+                IRepository<MS_City, string> msCityRepo,
+                IRepository<MS_PostCode, string> msPostCodeRepo,
                 IRepository<MS_Schema, string> msSchemaRepo,
                 IRepository<PERSONALS_MEMBER, string> personalMemberRepo,
                 DemoDbContext contextDemo,
@@ -136,6 +142,9 @@ namespace VDI.Demo.Personals.Personals
             entityCode = "1";
             _filesHelper = filesHelper;
             _lkCountryRepo = lkCountryRepo;
+            _msProvinceRepo = msProvinceRepo;
+            _msCityRepo = msCityRepo;
+            _msPostCodeRepo = msPostCodeRepo;
             _msSchemaRepo = msSchemaRepo;
             _personalMemberRepo = personalMemberRepo;
             _contextDemo = contextDemo;
@@ -1554,6 +1563,8 @@ namespace VDI.Demo.Personals.Personals
         {
             var getCompany = (from x in _companyRepo.GetAll()
                               where x.psCode.Equals(psCode)
+                              join y in _msCityRepo.GetAll() on x.coCity equals y.cityName
+                              join z in _msProvinceRepo.GetAll() on y.provinceCode equals z.provinceCode
                               orderby x.refID ascending
                               select new
                               {
@@ -1562,8 +1573,11 @@ namespace VDI.Demo.Personals.Personals
                                   coName = x.coName,
                                   coAddress = x.coAddress,
                                   coCity = x.coCity,
+                                  cityCode = y.cityCode,
                                   coPostCode = x.coPostCode,
                                   coCountry = x.coCountry,
+                                  coProvince = z.provinceName,
+                                  provinceCode = z.provinceCode,
                                   coType = x.coType,
                                   jobTitle = x.jobTitle,
                                   LastModificationTime = x.LastModificationTime,
@@ -1578,7 +1592,10 @@ namespace VDI.Demo.Personals.Personals
                 coName = x.coName,
                 coAddress = x.coAddress,
                 coCity = x.coCity,
+                cityCode = x.cityCode,
                 coPostCode = x.coPostCode,
+                coProvince = x.coProvince,
+                provinceCode = x.provinceCode,
                 coCountry = x.coCountry,
                 coType = x.coType,
                 jobTitle = x.jobTitle,

@@ -23,20 +23,19 @@ namespace VDI.Demo.Personals.MS_Cities
             _msProvinceRepo = msProvinceRepo;
         }
 
-        public List<GetCityListDto> GetCityListByProvinceCode(string provinceName, string country)
+        public List<GetCityListDto> GetCityListByProvinceCode(string provinceCode, string country)
         {
             List<GetCityListDto> cityList = new List<GetCityListDto>();
           
-            if(provinceName != null)
+            if(provinceCode != null)
             {
-                cityList = (from x in _msProvinceRepo.GetAll()
-                            where x.provinceName == provinceName
-                            join y in _msCityRepo.GetAll() on x.provinceCode equals y.provinceCode
+                cityList = (from x in _msCityRepo.GetAll()
+                            where x.provinceCode == provinceCode
                             select new GetCityListDto
                             {                              
-                                cityCode = y.cityCode,
-                                cityName = y.cityName,
-                                cityAbbreviation = y.cityAbbreviation
+                                cityCode = x.cityCode,
+                                cityName = x.cityName,
+                                cityAbbreviation = x.cityAbbreviation
                             }).ToList();              
             }
             else
