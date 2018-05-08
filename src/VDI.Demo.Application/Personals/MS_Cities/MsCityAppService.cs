@@ -14,25 +14,27 @@ namespace VDI.Demo.Personals.MS_Cities
     public class MsCityAppService : DemoAppServiceBase, IMsCityAppService
     {
         private readonly IRepository<MS_City, string> _msCityRepo;
+        private readonly IRepository<MS_Province, string> _msProvinceRepo;
 
         public MsCityAppService(IRepository<MS_City, string> msCityRepo)
         {
             _msCityRepo = msCityRepo;
         }
 
-        public List<GetCityListDto> GetCityListByProvinceCode(string provinceCode, string country)
+        public List<GetCityListDto> GetCityListByProvinceCode(string provinceName, string country)
         {
             List<GetCityListDto> cityList = new List<GetCityListDto>();
           
-            if(provinceCode != null)
+            if(provinceName != null)
             {
-                cityList = (from x in _msCityRepo.GetAll()
-                            where x.provinceCode == provinceCode
+                cityList = (from x in _msProvinceRepo.GetAll()
+                            where x.provinceName == provinceName
+                            join y in _msCityRepo.GetAll() on x.provinceCode equals y.provinceCode
                             select new GetCityListDto
                             {                              
-                                cityCode = x.cityCode,
-                                cityName = x.cityName,
-                                cityAbbreviation = x.cityAbbreviation
+                                cityCode = y.cityCode,
+                                cityName = y.cityName,
+                                cityAbbreviation = y.cityAbbreviation
                             }).ToList();              
             }
             else
