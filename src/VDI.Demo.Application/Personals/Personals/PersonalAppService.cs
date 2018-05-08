@@ -1489,6 +1489,8 @@ namespace VDI.Demo.Personals.Personals
             var result = (from x in _addressRepo.GetAll()
                           join y in _lkAddrTypeRepo.GetAll() on x.addrType equals y.addrType
                           where x.psCode.Equals(psCode)
+                          join z in _msProvinceRepo.GetAll() on x.province equals z.provinceName
+                          join a in _msCityRepo.GetAll() on x.city equals a.cityName
                           orderby x.refID ascending
                           select new GetAddressDto
                           {
@@ -1500,10 +1502,12 @@ namespace VDI.Demo.Personals.Personals
                               address = x.address == "-" ? " " : x.address,
                               postCode = x.postCode,
                               city = x.city == "-" ? " " : x.city,
+                              cityCode = a.cityCode,
                               country = x.country,
                               Kelurahan = x.Kelurahan,
                               Kecamatan = x.Kecamatan,
                               province = x.province != null ? x.province : null,
+                              provinceCode = z.provinceCode,
                               CreationTime = x.CreationTime.ToString(),
                               CreatorUserId = x.CreatorUserId,
                               LastModificationTime = x.LastModificationTime != null ? x.LastModificationTime.ToString() : null,
