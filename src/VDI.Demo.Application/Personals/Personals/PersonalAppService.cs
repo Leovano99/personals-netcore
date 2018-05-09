@@ -990,6 +990,10 @@ namespace VDI.Demo.Personals.Personals
                         getListUpdateInfo.Add(keyPeopleDate);
                     }
                 }
+                else
+                {
+                    Logger.Info("Key People with pscode: " + psCode + "is null");
+                }
                 #endregion
                 #region GetContactByPsCode
                 var contact = GetContactByPsCode(psCode);
@@ -1023,6 +1027,10 @@ namespace VDI.Demo.Personals.Personals
                             getListUpdateInfo.Add(getEmail);
                         }
                     }
+                    else
+                    {
+                        Logger.Info("contact.getEmail with pscode: " + psCode + "is null");
+                    }
                     #endregion
                     #region contact.getPhone
                     if (contact.getPhone.Any())
@@ -1052,7 +1060,15 @@ namespace VDI.Demo.Personals.Personals
                             getListUpdateInfo.Add(getPhone);
                         }
                     }
+                    else
+                    {
+                        Logger.Info("contact.getPhone with pscode: " + psCode + "is null");
+                    }
                     #endregion
+                }
+                else
+                {
+                    Logger.Info("contact with pscode: " + psCode + "is null");
                 }
                 #endregion
                 #region GetAddressByPsCode
@@ -1084,6 +1100,10 @@ namespace VDI.Demo.Personals.Personals
                         getListUpdateInfo.Add(getAddress);
                     }
                 }
+                else
+                {
+                    Logger.Info("address with pscode: " + psCode + "is null");
+                }
                 #endregion
                 #region GetBankAccountByPsCode
                 var bankAccount = GetBankAccountByPsCode(psCode);
@@ -1110,6 +1130,10 @@ namespace VDI.Demo.Personals.Personals
 
                         getListUpdateInfo.Add(getBankAccount);
                     }
+                }
+                else
+                {
+                    Logger.Info("bankAccount with pscode: " + psCode + "is null");
                 }
                 #endregion
                 #region GetCompanyByPsCode
@@ -1138,6 +1162,10 @@ namespace VDI.Demo.Personals.Personals
                         getListUpdateInfo.Add(getCompany);
                     }
                 }
+                else
+                {
+                    Logger.Info("company with pscode: " + psCode + "is null");
+                }
                 #endregion
                 #region GetDocumentByPsCode
                 var document = GetDocumentByPsCode(psCode);
@@ -1164,6 +1192,10 @@ namespace VDI.Demo.Personals.Personals
 
                         getListUpdateInfo.Add(getDocument);
                     }
+                }
+                else
+                {
+                    Logger.Info("document with pscode: " + psCode + "is null");
                 }
                 #endregion
                 #region GetIDNumberByPsCode
@@ -1192,6 +1224,10 @@ namespace VDI.Demo.Personals.Personals
                         getListUpdateInfo.Add(getIdNumber);
                     }
                 }
+                else
+                {
+                    Logger.Info("idNumber with pscode: " + psCode + "is null");
+                }
                 #endregion
                 #region GetFamilyByPsCode
                 var family = GetFamilyByPsCode(psCode);
@@ -1219,6 +1255,10 @@ namespace VDI.Demo.Personals.Personals
                         getListUpdateInfo.Add(getFamily);
                     }
                 }
+                else
+                {
+                    Logger.Info("family with pscode: " + psCode + "is null");
+                }
                 #endregion
                 #region GetMemberByPsCode
                 var member = GetMemberByPsCode(psCode);
@@ -1244,6 +1284,10 @@ namespace VDI.Demo.Personals.Personals
                             getListUpdateInfo.Add(updateInfo);
                         }
                     }
+                }
+                else
+                {
+                    Logger.Info("member with pscode: " + psCode + "is null");
                 }
                 #endregion
 
@@ -1274,10 +1318,10 @@ namespace VDI.Demo.Personals.Personals
                 SendConsole("" + e.Message + " " + e.StackTrace);
             }
 
-            if (result == null)
-            {
-                throw new UserFriendlyException("No Result !");
-            }
+            //if (result == null)
+            //{
+            //    throw new UserFriendlyException("No Result !");
+            //}
             return result;
         }
 
