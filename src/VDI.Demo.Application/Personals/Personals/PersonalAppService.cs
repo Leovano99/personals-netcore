@@ -2835,6 +2835,7 @@ namespace VDI.Demo.Personals.Personals
 
             var webRoot = _hostingEnvironment.WebRootPath;
             var file = System.IO.Path.Combine(webRoot, "EmailTemplate/AktivasiMember.html");
+            var lippoImg = System.IO.Path.Combine(webRoot, "Assets/lippohomes.jpg");
             string body = string.Empty;
             using (StreamReader reader = new StreamReader(file))
             {
