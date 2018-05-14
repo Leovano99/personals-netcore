@@ -45,7 +45,6 @@ namespace VDI.Demo.Personals.TR_Documents
         #endregion
 
         [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_TrDocument_Edit)]
-        [HttpPost]
         public void UpdateDocument(UpdateDocumentDto input)
         {
             var getGetDoc = (from document in _documentRepo.GetAll()
