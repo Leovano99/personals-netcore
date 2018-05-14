@@ -192,8 +192,7 @@ namespace VDI.Demo.Personals.Personals
                               {
                                   y.psCode,
                                   y.name,
-                                  y.birthDate,
-                                  y.email,
+                                  y.birthDate,                               
                                   y.isInstitute
                               })
                               .Select(x => new GetPersonalsByKeywordList
@@ -201,8 +200,7 @@ namespace VDI.Demo.Personals.Personals
                                   birthDate = x.Key.birthDate.ToString(),
                                   psCode = x.Key.psCode,
                                   isInstitute = x.Key.isInstitute,
-                                  name = x.Key.name,
-                                  email = x.Key.email
+                                  name = x.Key.name                               
                               }).ToList();
 
             return getAllData;
@@ -1679,8 +1677,8 @@ namespace VDI.Demo.Personals.Personals
                 psCode = x.psCode,
                 documentType = x.documentType,
                 documentTypeName = x.documentTypeName,
-                documentBinary = (x != null && x.documentBinary != null) ? getAbsoluteUriWithoutTail() + GetURLWithoutHost(x.documentBinary) : null, //TODO link + ip host
-                filename = (x != null && x.documentBinary != null) ? GetFileNameFromUrl(x.documentBinary) : null,
+                documentBinary = x.documentBinary, //TODO link + ip host
+                //filename = (x != null && x.documentBinary != null) ? GetFileNameFromUrl(x.documentBinary) : null,
                 LastModificationTime = x.LastModificationTime == null ? (x.CreationTime == null ? null : x.CreationTime.ToString("dd/MM/yyyy")) : Setting_variabel.ToString(x.LastModificationTime, "dd/MM/yyyy"),
                 LastModifierUserId = x.LastModifierUserId == null ? (x.CreatorUserId == null ? null : GetIdName(x.CreatorUserId)) : GetIdName(x.LastModifierUserId),
                 CreationTime = x.CreationTime == null ? null : x.CreationTime.ToString("dd/MM/yyyy"),

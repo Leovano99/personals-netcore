@@ -16,6 +16,7 @@ using VDI.Demo.Authorization;
 using Abp.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using System.Text.RegularExpressions;
+using Microsoft.AspNetCore.Mvc;
 
 namespace VDI.Demo.Personals.TR_Documents
 {
@@ -44,6 +45,7 @@ namespace VDI.Demo.Personals.TR_Documents
         #endregion
 
         [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_TrDocument_Edit)]
+        [HttpPost]
         public void UpdateDocument(UpdateDocumentDto input)
         {
             var getGetDoc = (from document in _documentRepo.GetAll()
