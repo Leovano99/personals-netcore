@@ -970,7 +970,7 @@
     <text name="SaveKeyPeople">Save Key People</text>
     <text name="AreYouSureAddNewPersonal">Are You Sure Add New Personal?</text>
     <text name="NoDataExistPleaseMakeNewData">
-      <![CDATA[No Data Exist!<br>Please Make New Data]]>
+      <![CDATA[No Data Exist! <br> Please Make New Data]]>
     </text>
     <text name="Kelurahan">Kelurahan</text>
     <text name="Kecamatan">Kecamatan</text>
