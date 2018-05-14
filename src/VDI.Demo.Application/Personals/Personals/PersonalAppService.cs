@@ -31,6 +31,7 @@ using Newtonsoft.Json;
 using VDI.Demo.EntityFrameworkCore;
 using System.Net.Mail;
 using Microsoft.AspNetCore.Hosting;
+using System.Text;
 
 namespace VDI.Demo.Personals.Personals
 {
@@ -883,6 +884,7 @@ namespace VDI.Demo.Personals.Personals
                     _contextPers.PERSONALS_MEMBER.Add(member);
                     _contextPers.SaveChanges();
 
+                    sendEmailActivationMember(member.psCode, member.memberCode);
                     obj.Add("message", "Member Successfully Saved");
                     Logger.DebugFormat("CreateMember() - Ended insert Member.");
                 }
@@ -2832,16 +2834,17 @@ namespace VDI.Demo.Personals.Personals
                                    }).FirstOrDefault();
 
 
-
             var webRoot = _hostingEnvironment.WebRootPath;
             var file = System.IO.Path.Combine(webRoot, "EmailTemplate/AktivasiMember.html");
-            var lippoImg = System.IO.Path.Combine(webRoot, "Assets/lippohomes.jpg");
+            var appsettingsjson = JObject.Parse(File.ReadAllText("appsettings.json"));
+            var webConfigApp = (JObject)appsettingsjson["App"];
+            var lippoImg = webConfigApp.Property("ImageLippo").Value.ToString();
             string body = string.Empty;
             using (StreamReader reader = new StreamReader(file))
             {
                 body = reader.ReadToEnd();
             }
-            //body = body.Replace("{logoLippo}", input.projectImage);
+            body = body.Replace("{{lippoImage}}", lippoImg);
             body = body.Replace("{{personalName}}", getEmailAddress.personalName);
             body = body.Replace("{{memberCode}}", memberCode);
             body = body.Replace("{{email}}", getEmailAddress.personalEmail);
