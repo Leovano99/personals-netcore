@@ -58,15 +58,6 @@ namespace VDI.Demo.Personals.TR_Documents
 
             if (input.documentBinary == "updated")
             {
-                var fileToDelete = getGetDoc.documentBinary;
-
-                if (fileToDelete != null && fileToDelete != "")
-                {
-                    DeleteFile(fileToDelete);
-                }
-
-                //var imageUrl = UploadFile(input.documentBinaryNew);
-                //GetURLWithoutHost(imageUrl, out imageUrl);
                 update.documentBinary = input.documentBinaryNew;
 
             }
@@ -103,12 +94,12 @@ namespace VDI.Demo.Personals.TR_Documents
 
             if (getGetDoc != null)
             {
-                var fileToDelete = getGetDoc.documentBinary;
+                //var fileToDelete = getGetDoc.documentBinary;
 
-                if (fileToDelete != null && fileToDelete != "")
-                {
-                    DeleteFile(fileToDelete);
-                }
+                //if (fileToDelete != null && fileToDelete != "")
+                //{
+                //    DeleteFile(fileToDelete);
+                //}
 
                 try
                 {
