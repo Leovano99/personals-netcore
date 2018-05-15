@@ -1698,7 +1698,7 @@ namespace VDI.Demo.Personals.Personals
             {
                 var getIdNumber = (from x in _idRepo.GetAll()
                                    join y in _lkIDTypeRepo.GetAll() on x.idType equals y.idType
-                                   where x.psCode.Equals(psCode)
+                                   where x.psCode.Equals(psCode) && x.entityCode == "1"
                                    orderby x.refID ascending
                                    select new
                                    {
@@ -1711,11 +1711,13 @@ namespace VDI.Demo.Personals.Personals
                                        LastModificationTime = x.LastModificationTime,
                                        LastModifierUserId = x.LastModifierUserId,
                                        CreationTime = x.CreationTime,
-                                       CreatorUserId = x.CreatorUserId
+                                       CreatorUserId = x.CreatorUserId,
+                                       entityCode = x.entityCode
                                    }).ToList();
                 
                 result = getIdNumber.Select(x => new GetIDNumberDto
                 {
+                    entityCode = x.entityCode,
                     psCode = x.psCode,
                     refID = x.refID,
                     idType = x.idType,
