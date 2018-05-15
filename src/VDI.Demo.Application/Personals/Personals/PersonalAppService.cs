@@ -1391,6 +1391,24 @@ namespace VDI.Demo.Personals.Personals
             return user;
         }
 
+        private GetDetailCityDto GetDetailCity(string cityName)
+        {
+            var getData = (from x in _msCityRepo.GetAll()
+                           where x.cityName == cityName
+                           join y in _msProvinceRepo.GetAll() on x.provinceCode equals y.provinceCode
+                           join z in _msPostCodeRepo.GetAll() on x.cityCode equals z.cityCode
+                           select new GetDetailCityDto
+                           {
+                               country = x.country,
+                               provinceName = y.provinceName,
+                               provinceCode = x.provinceCode,
+                               cityName = cityName,
+                               cityCode = x.cityCode,
+                               postCode = z.postCode,                               
+                           }).FirstOrDefault();
+            return getData;
+        }
+
 
         #region function get : getPersonal, getKeyPeople, getContact, getBankAccount, getCompany, getDocument, getIDNumber, getFamily, getMember
         [UnitOfWork(isTransactional: false)]
@@ -1406,10 +1424,9 @@ namespace VDI.Demo.Personals.Personals
                                    from z in nat.DefaultIfEmpty()
                                    join a in _lkCountryRepo.GetAll() on x.nationID equals a.urut.ToString() into con
                                    from a in con.DefaultIfEmpty()
-
                                    where x.psCode.Equals(psCode)
                                    select new
-                                   {                                      
+                                   {
                                        psCode = x.psCode,
                                        name = x.name,
                                        sex = x.sex,
@@ -1436,7 +1453,7 @@ namespace VDI.Demo.Personals.Personals
                                        registeredBy = x.CreatorUserId,
                                        registerTime = x.CreationTime,
                                        urutCountry = a == null ? 0 : a.urut,
-                                       country = a == null ? null : a.country
+                                       country = a == null ? null : a.country,
                                    }).ToList();
 
                 result = getPersonal.Select(x => new GetPersonalDto
@@ -1463,7 +1480,8 @@ namespace VDI.Demo.Personals.Personals
                     updatedBy = x.updatedBy == null ? GetUserNameByUserIdTabPersonal(x.psCode, x.remarks, "creation") : GetUserNameByUserIdTabPersonal(x.psCode, x.remarks, "modification"),
                     updateTime = x.updateTime == null ? x.registerTime.ToString("dd/MM/yyyy") : x.updateTime?.ToString("dd/MM/yyyy"),
                     registeredBy = GetUserNameByUserIdTabPersonal(x.psCode, x.remarks, "creation"),
-                    registerTime = x.registerTime.ToString("dd/MM/yyyy")
+                    registerTime = x.registerTime.ToString("dd/MM/yyyy"),
+                    detailCity = GetDetailCity(x.birthPlace)
                 }).FirstOrDefault();
             }
             catch (Exception e)

@@ -33,5 +33,6 @@ namespace VDI.Demo.Personals.Personals.Dto
         public string updatedBy { get; set; }
         public string updateTime { get; set; }
         public long? updateId { get; set; }
+        public GetDetailCityDto detailCity { get; set; }
     }
 }
