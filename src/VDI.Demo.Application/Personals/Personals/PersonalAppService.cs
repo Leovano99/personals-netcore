@@ -1397,9 +1397,11 @@ namespace VDI.Demo.Personals.Personals
                            where x.cityName == cityName
                            join y in _msProvinceRepo.GetAll() on x.provinceCode equals y.provinceCode
                            join z in _msPostCodeRepo.GetAll() on x.cityCode equals z.cityCode
+                           join a in _lkCountryRepo.GetAll() on x.country equals a.country 
                            select new GetDetailCityDto
                            {
                                country = x.country,
+                               countryUrut = a.urut,
                                provinceName = y.provinceName,
                                provinceCode = x.provinceCode,
                                cityName = cityName,
@@ -1454,7 +1456,7 @@ namespace VDI.Demo.Personals.Personals
                                        registerTime = x.CreationTime,
                                        urutCountry = a == null ? 0 : a.urut,
                                        country = a == null ? null : a.country,
-                                       countryUrut = a.urut
+                                       
                                    }).ToList();
 
                 result = getPersonal.Select(x => new GetPersonalDto
@@ -1483,7 +1485,7 @@ namespace VDI.Demo.Personals.Personals
                     registeredBy = GetUserNameByUserIdTabPersonal(x.psCode, x.remarks, "creation"),
                     registerTime = x.registerTime.ToString("dd/MM/yyyy"),
                     detailCity = GetDetailCity(x.birthPlace),
-                    countryUrut = x.countryUrut 
+                  
                 }).FirstOrDefault();
             }
             catch (Exception e)

@@ -12,5 +12,6 @@ namespace VDI.Demo.Personals.Personals.Dto
         public string cityCode { get; set; }
         public string cityName { get; set; }
         public string postCode { get; set; }
+        public int countryUrut { get; set; }
     }
 }
