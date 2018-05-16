@@ -1454,6 +1454,7 @@ namespace VDI.Demo.Personals.Personals
                                        registerTime = x.CreationTime,
                                        urutCountry = a == null ? 0 : a.urut,
                                        country = a == null ? null : a.country,
+                                       countryUrut = a.urut
                                    }).ToList();
 
                 result = getPersonal.Select(x => new GetPersonalDto
@@ -1481,7 +1482,8 @@ namespace VDI.Demo.Personals.Personals
                     updateTime = x.updateTime == null ? x.registerTime.ToString("dd/MM/yyyy") : x.updateTime?.ToString("dd/MM/yyyy"),
                     registeredBy = GetUserNameByUserIdTabPersonal(x.psCode, x.remarks, "creation"),
                     registerTime = x.registerTime.ToString("dd/MM/yyyy"),
-                    detailCity = GetDetailCity(x.birthPlace)
+                    detailCity = GetDetailCity(x.birthPlace),
+                    countryUrut = x.countryUrut 
                 }).FirstOrDefault();
             }
             catch (Exception e)
