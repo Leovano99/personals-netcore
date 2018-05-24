@@ -27,13 +27,6 @@
     <None Remove="wwwroot\TemplateEmail\**" />
   </ItemGroup>
   <ItemGroup>
-    <Content Remove="wwwroot\EmailTemplate\AfterReservedTemplate.html" />
-    <Content Remove="wwwroot\EmailTemplate\BookingSuccess.html" />
-    <Content Remove="wwwroot\EmailTemplate\Reminder2Jam.html" />
-    <Content Remove="wwwroot\EmailTemplate\TemplateCoba.html" />
-    <Content Remove="wwwroot\EmailTemplate\UnitExpired.html" />
-  </ItemGroup>
-  <ItemGroup>
     <None Remove="Properties\PublishProfiles\FolderProfile1.pubxml" />
   </ItemGroup>
   <ItemGroup>

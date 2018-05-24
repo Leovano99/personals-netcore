@@ -330,9 +330,7 @@ namespace VDI.Demo.Personals.Personals
                 grade = String.IsNullOrEmpty(input.grade) ? "0" : input.grade,
                 isActive = input.isActive,
                 remarks = input.remarks,
-                isInstitute = input.isInstitute,
-                CreatorUserId = input.creatorUserId,
-                LastModifierUserId = input.lastModifierUserId
+                isInstitute = input.isInstitute
             };
 
             try
@@ -357,8 +355,7 @@ namespace VDI.Demo.Personals.Personals
                         "isActive = {17}{0}" +
                         "remarks = {18}{0}" +
                         "mailGroup = {19}{0}" +
-                        "isInstitute = {20}{0}" +
-                                   "creatorUserId = {21}{0}"
+                        "isInstitute = {20}{0}"
                         , Environment.NewLine, entityCode, input.psCode, "", input.name
                         , input.sex, input.birthDate, input.birthPlace, input.marCode, input.relCode, input.bloodCode
                         , input.occID, input.nationID, input.familyStatus, input.npwp, input.FPTransCode, input.grade
@@ -1488,7 +1485,7 @@ namespace VDI.Demo.Personals.Personals
                     registeredBy = GetUserNameByUserIdTabPersonal(x.psCode, x.remarks, "creation"),
                     registerTime = x.registerTime.ToString("dd/MM/yyyy"),
                     detailCity = GetDetailCity(x.birthPlace),
-                  
+
                 }).FirstOrDefault();
             }
             catch (Exception e)
@@ -2150,7 +2147,6 @@ namespace VDI.Demo.Personals.Personals
             getPersonal.isActive = input.isActive;
             getPersonal.remarks = input.remarks;
             getPersonal.isInstitute = input.isInstitute;
-            getPersonal.LastModifierUserId = input.lastModifierUserId
             try
             {
                 Logger.DebugFormat("UpdatePersonal() - Start update Personal. Parameters sent:{0}" +

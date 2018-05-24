@@ -25,7 +25,5 @@ namespace VDI.Demo.Personals.Personals.Dto
         public bool isInstitute { get; set; }
         public string idNo { get; set; }
         public bool isKeyPeople { get; set; }
-        public long? lastModifierUserId { get; set; }
-        public long? creatorUserId { get; set; }
     }
 }
