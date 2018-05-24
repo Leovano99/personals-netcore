@@ -330,7 +330,9 @@ namespace VDI.Demo.Personals.Personals
                 grade = String.IsNullOrEmpty(input.grade) ? "0" : input.grade,
                 isActive = input.isActive,
                 remarks = input.remarks,
-                isInstitute = input.isInstitute
+                isInstitute = input.isInstitute,
+                CreatorUserId = input.creatorUserId,
+                LastModifierUserId = input.lastModifierUserId
             };
 
             try
@@ -355,11 +357,12 @@ namespace VDI.Demo.Personals.Personals
                         "isActive = {17}{0}" +
                         "remarks = {18}{0}" +
                         "mailGroup = {19}{0}" +
-                        "isInstitute = {20}{0}"
+                        "isInstitute = {20}{0}" +
+                                   "creatorUserId = {21}{0}"
                         , Environment.NewLine, entityCode, input.psCode, "", input.name
                         , input.sex, input.birthDate, input.birthPlace, input.marCode, input.relCode, input.bloodCode
                         , input.occID, input.nationID, input.familyStatus, input.npwp, input.FPTransCode, input.grade
-                        , input.isActive, input.remarks, "", input.isInstitute);
+                                   , input.isActive, input.remarks, "", input.isInstitute);
 
                 await _personalRepo.InsertAsync(personal);
                 var data = new List<CreateIDNumberDto>();
@@ -2147,7 +2150,7 @@ namespace VDI.Demo.Personals.Personals
             getPersonal.isActive = input.isActive;
             getPersonal.remarks = input.remarks;
             getPersonal.isInstitute = input.isInstitute;
-
+            getPersonal.LastModifierUserId = input.lastModifierUserId
             try
             {
                 Logger.DebugFormat("UpdatePersonal() - Start update Personal. Parameters sent:{0}" +
@@ -2167,7 +2170,7 @@ namespace VDI.Demo.Personals.Personals
                         "grade             = {14}{0}" +
                         "isActive          = {15}{0}" +
                         "remarks           = {16}{0}" +
-                        "isInstitute       = {17}{0}"
+                        "isInstitute       = {17}{0}" 
                         , Environment.NewLine, input.psCode, input.name
                         , input.sex, input.birthDate, input.birthPlace, input.marCode, input.relCode, input.bloodCode
                         , input.occID, input.npwp, input.nationID, input.familyStatus, input.FPTransCode, input.grade
