@@ -181,7 +181,7 @@ namespace VDI.Demo.Authorization
 
             unit.CreateChildPermission(AppPermissions.Pages_Tenant_MasterFacing, L("MasterFacing"), multiTenancySides: MultiTenancySides.Tenant);
 
-            var subCluster  = unit.CreateChildPermission(AppPermissions.Pages_Tenant_MasterCluster, L("MasterCluster"), multiTenancySides: MultiTenancySides.Tenant);
+            var subCluster = unit.CreateChildPermission(AppPermissions.Pages_Tenant_MasterCluster, L("MasterCluster"), multiTenancySides: MultiTenancySides.Tenant);
             subCluster.CreateChildPermission(AppPermissions.Pages_Tenant_MasterCluster_Create, L("CreateMasterCluster"), multiTenancySides: MultiTenancySides.Tenant);
             subCluster.CreateChildPermission(AppPermissions.Pages_Tenant_MasterCluster_Edit, L("EditMasterCluster"), multiTenancySides: MultiTenancySides.Tenant);
             subCluster.CreateChildPermission(AppPermissions.Pages_Tenant_MasterCluster_Delete, L("DeleteMasterCluster"), multiTenancySides: MultiTenancySides.Tenant);
@@ -343,11 +343,20 @@ namespace VDI.Demo.Authorization
             personals.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_MasterJobTitle, L("MasterJobTitle"), multiTenancySides: MultiTenancySides.Tenant);
             personals.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_MasterNational, L("MasterNational"), multiTenancySides: MultiTenancySides.Tenant);
             personals.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_MasterOccupation, L("MasterOccupation"), multiTenancySides: MultiTenancySides.Tenant);
+            personals.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Register, L("RegisterPersonal"), multiTenancySides: MultiTenancySides.Tenant);
+            personals.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Edit, L("EditPersonal"), multiTenancySides: MultiTenancySides.Tenant);
+            personals.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Individual, L("Individual"), multiTenancySides: MultiTenancySides.Tenant);
+            personals.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Institute, L("Institute"), multiTenancySides: MultiTenancySides.Tenant);
+            personals.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Detail, L("Detail"), multiTenancySides: MultiTenancySides.Tenant);
 
             var personalMember = personals.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_PersonalMember, L("PersonalMember"), multiTenancySides: MultiTenancySides.Tenant);
             personalMember.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_PersonalMember_Edit, L("EditPersonalMember"), multiTenancySides: MultiTenancySides.Tenant);
             personalMember.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_PersonalMember_Delete, L("DeletePersonalMember"), multiTenancySides: MultiTenancySides.Tenant);
-            
+
+            var personal = personals.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Personal, L("Personal"), multiTenancySides: MultiTenancySides.Tenant);
+            personal.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Personal_Edit, L("EditPersonal"), multiTenancySides: MultiTenancySides.Tenant);
+
+
             var TrAddress = personals.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_TrAddress, L("TrAddress"), multiTenancySides: MultiTenancySides.Tenant);
             TrAddress.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_TrAddress_Create, L("CreateTrAddress"), multiTenancySides: MultiTenancySides.Tenant);
             TrAddress.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_TrAddress_Edit, L("EditTrAddress"), multiTenancySides: MultiTenancySides.Tenant);
@@ -387,11 +396,39 @@ namespace VDI.Demo.Authorization
             TrPhone.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_TrPhone_Edit, L("EditTrPhone"), multiTenancySides: MultiTenancySides.Tenant);
             TrPhone.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_TrPhone_Delete, L("DeleteTrPhone"), multiTenancySides: MultiTenancySides.Tenant);
 
-            personals.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Register, L("RegisterPersonal"), multiTenancySides: MultiTenancySides.Tenant);
-            personals.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Edit, L("EditPersonal"), multiTenancySides: MultiTenancySides.Tenant);
-            personals.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Individual, L("Individual"), multiTenancySides: MultiTenancySides.Tenant);
-            personals.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Institute, L("Institute"), multiTenancySides: MultiTenancySides.Tenant);
-            personals.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Detail, L("Detail"), multiTenancySides: MultiTenancySides.Tenant);
+            var Person = personals.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person, L("Person"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_GetPersonalsByAdvanceSearch, L("GetPersonalsByAdvanceSearch"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_GetPersonalsByKeyword, L("GetPersonalsByKeyword"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_CreatePersonal, L("CreatePersonal"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_CreateKeyPeople, L("CreateKeyPeople"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_CreateBankAccount, L("CreateBankAccount"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_CreateCompany, L("CreateCompany"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_CreateDocument, L("CreateDocument"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_CreateIDNumber, L("CreateIDNumber"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_CreateFamily, L("CreateFamily"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_CreateMember, L("CreateMember"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_GetUniversalPersonal, L("GetUniversalPersonal"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_GetPersonalByPsCode, L("GetPersonalByPsCode"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_GetKeyPeopleByPsCode, L("GetKeyPeopleByPsCode"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_GetContactByPsCode, L("GetContactByPsCode"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_GetAddressByPsCode, L("GetAddressByPsCode"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_GetBankAccountByPsCode, L("GetBankAccountByPsCode"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_GetCompanyByPsCode, L("GetCompanyByPsCode"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_GetDocumentByPsCode, L("GetDocumentByPsCode"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_GetIDNumberByPsCode, L("GetIDNumberByPsCode"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_GetFamilyByPsCode, L("GetFamilyByPsCode"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_GetMemberByPsCode, L("GetMemberByPsCode"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_GetPhoneByPsCode, L("GetPhoneByPsCode"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_GetEmailByPsCode, L("GetEmailByPsCode"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_UpdatePersonal, L("UpdatePersonal"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_CreateOrUpdatePhone, L("CreateOrUpdatePhone"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_CreateOrUpdateEmail, L("CreateOrUpdateEmail"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_CreateOrUpdateAddress, L("CreateOrUpdateAddress"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_generatePsCode, L("generatePsCode"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_GetAllMsSchemaDropdown, L("GetAllMsSchemaDropdown"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_GetAvailableMemberSchemaByScmCodeAndPsCode, L("GetAvailableMemberSchemaByScmCodeAndPsCode"), multiTenancySides: MultiTenancySides.Tenant);
+            Person.CreateChildPermission(AppPermissions.Pages_Tenant_Personal_Person_sendEmailActivationMember, L("sendEmailActivationMember"), multiTenancySides: MultiTenancySides.Tenant);
+
 
 
             //PSAS
