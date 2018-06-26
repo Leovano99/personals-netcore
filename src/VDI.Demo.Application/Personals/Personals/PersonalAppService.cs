@@ -209,15 +209,20 @@ namespace VDI.Demo.Personals.Personals
 
         public async Task<PagedResultDto<GetPersonalsByKeywordList>> GetPersonalsByKeyword(GetPersonalsByKeywordInputDto input)
         {
-            var getAllData = (from x in _personalRepo.GetAll()
-                              where x.name.Contains(input.keyword) || x.psCode.Contains(input.keyword)
+            var getAllData = (from x in _contextPers.PERSONAL
+                              join y in _contextPers.TR_ID on x.psCode equals y.psCode into trId
+                              from y in trId.DefaultIfEmpty()
+                              //where x.name.Contains(input.keyword) || x.psCode.Contains(input.keyword)
+                              where x.name.Contains(input.keyword) || x.psCode == input.keyword  || y.idNo == input.keyword
+                              || x.birthDate.Value.ToString().Substring(0, 11) == input.keyword
                               select new GetPersonalsByKeywordList
                               {
                                   psCode = x.psCode,
                                   name = x.name,
                                   birthDate = x.birthDate == null ? null : x.birthDate.ToString().Substring(0, 11),
                                   modifTime = x.LastModificationTime == null ? null : x.LastModificationTime.ToString().Substring(0, 11),
-                                  isInstitute = x.isInstitute
+                                  isInstitute = x.isInstitute,
+                                  idNo = y.idNo
                               });
 
             var dataCount = await getAllData.AsQueryable().CountAsync();
@@ -1315,7 +1320,7 @@ namespace VDI.Demo.Personals.Personals
             }
             catch (Exception e)
             {
-                SendConsole("" + e.Message + " " + e.StackTrace);
+                throw new UserFriendlyException("" + e.Message + " " + e.StackTrace);
             }
 
             //if (result == null)
@@ -1351,9 +1356,9 @@ namespace VDI.Demo.Personals.Personals
                         CASE WHEN a.remarks = @remarks THEN b.Name
                         ELSE c.Name 
                         END as name
-                        FROM E3Personals..PERSONALS a
+                        FROM PERSONALS a
                         LEFT JOIN E3PropertySystemCore..Users b on a.inputUN = b.Id
-                        LEFT JOIN E3PersonalsCore..Users c on a.inputUN = c.Id
+                        LEFT JOIN E3Personals3TierCore..Users c on a.inputUN = c.Id
                         WHERE a.psCode = @psCode";
 
                 //user = (from p in getPersonal.ToList()
@@ -1372,9 +1377,9 @@ namespace VDI.Demo.Personals.Personals
                         CASE WHEN a.remarks = @remarks THEN b.Name
                         ELSE c.Name 
                         END as name
-                        FROM E3Personals..PERSONALS a
+                        FROM PERSONALS a
                         LEFT JOIN E3PropertySystemCore..Users b on a.modifUN = b.Id
-                        LEFT JOIN E3PersonalsCore..Users c on a.modifUN = c.Id
+                        LEFT JOIN E3Personals3TierCore..Users c on a.modifUN = c.Id
                         WHERE a.psCode = @psCode";
 
                 //user = (from p in getPersonal.ToList()
@@ -1459,7 +1464,8 @@ namespace VDI.Demo.Personals.Personals
                                        
                                    }).ToList();
 
-                result = getPersonal.Select(x => new GetPersonalDto
+                result = (from x in getPersonal
+                          select new GetPersonalDto
                 {
                     psCode = x.psCode,
                     name = x.name,
@@ -1490,7 +1496,7 @@ namespace VDI.Demo.Personals.Personals
             }
             catch (Exception e)
             {
-                SendConsole("" + e.Message + " " + e.StackTrace);
+                throw new UserFriendlyException("" + e.Message + " " + e.StackTrace);
             }
 
             return result;
