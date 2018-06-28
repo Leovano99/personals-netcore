@@ -21,6 +21,7 @@ namespace VDI.Demo.Personals.LK_Grades
             _lkGradeRepo = lkGradeRepo;
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_LkGrade_GetLkGradeDropdown)]
         public ListResultDto<GetLkGradeDropdownListDto> GetLkGradeDropdown()
         {
             var result = (from x in _lkGradeRepo.GetAll()

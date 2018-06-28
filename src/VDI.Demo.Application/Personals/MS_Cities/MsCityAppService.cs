@@ -11,6 +11,7 @@ using VDI.Demo.Personals.MS_Cities.Dto;
 
 namespace VDI.Demo.Personals.MS_Cities
 {
+    [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_MasterCities)]
     public class MsCityAppService : DemoAppServiceBase, IMsCityAppService
     {
         private readonly IRepository<MS_City, string> _msCityRepo;
@@ -23,6 +24,7 @@ namespace VDI.Demo.Personals.MS_Cities
             _msProvinceRepo = msProvinceRepo;
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_MasterCities_GetCityListByProvinceCode)]
         public List<GetCityListDto> GetCityListByProvinceCode(string provinceCode, string country)
         {
             List<GetCityListDto> cityList = new List<GetCityListDto>();

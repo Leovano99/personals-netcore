@@ -289,25 +289,58 @@
         public const string Pages_Tenant_Personal = "Pages.Tenant.Personal";
 
         public const string Pages_Tenant_Personal_LkAddrType = "Pages.Tenant.Personal.LkAddrType";
+        public const string Pages_Tenant_Personal_LkAddrType_GetLkAddrTypeDropdown = "Pages.Tenant.Personal.LkAddrType.GetLkAddrTypeDropdown";
         public const string Pages_Tenant_Personal_LkBankType = "Pages.Tenant.Personal.LkBankType";
+        public const string Pages_Tenant_Personal_LkBankType_GetAllLkBankTypeList = "Pages.Tenant.Personal.LkBankType.GetAllLkBankTypeList";
         public const string Pages_Tenant_Personal_LkBlood = "Pages.Tenant.Personal.LkBlood";
+        public const string Pages_Tenant_Personal_LkBlood_GetAllLkBloodList = "Pages.Tenant.Personal.LkBlood.GetAllLkBloodList";
         public const string Pages_Tenant_Personal_LkCountry = "Pages.Tenant.Personal.LkCountry";
+        public const string Pages_Tenant_Personal_LkCountry_GetAllLkCountryList = "Pages.Tenant.Personal.LkCountry.GetAllLkCountryList";
         public const string Pages_Tenant_Personal_LkFamilyStatus = "Pages.Tenant.Personal.LkFamilyStatus";
+        public const string Pages_Tenant_Personal_LkFamilyStatus_GetLkFamilyStatusDropdown = "Pages.Tenant.Personal.LkFamilyStatus.GetLkFamilyStatusDropdown";
         public const string Pages_Tenant_Personal_LkGrade = "Pages.Tenant.Personal.LkGrade";
+        public const string Pages_Tenant_Personal_LkGrade_GetLkGradeDropdown = "Pages.Tenant.Personal.LkGrade.GetLkGradeDropdown";
         public const string Pages_Tenant_Personal_LkIdType = "Pages.Tenant.Personal.LkIdType";
+        public const string Pages_Tenant_Personal_LkIdType_GetAllIDTypeList = "Pages.Tenant.Personal.LkIdType.GetAllIDTypeList";
         public const string Pages_Tenant_Personal_LkKeyPeople = "Pages.Tenant.Personal.LkKeyPeople";
+        public const string Pages_Tenant_Personal_LkKeyPeople_GetAllLkKeyPeopleDropdwon = "Pages.Tenant.Personal.LkKeyPeople.GetAllLkKeyPeopleDropdwon";
         public const string Pages_Tenant_Personal_LkMarStatus = "Pages.Tenant.Personal.LkMarStatus";
+        public const string Pages_Tenant_Personal_LkMarStatus_GetAllLkMarStatusList = "Pages.Tenant.Personal.LkMarStatus.GetAllLkMarStatusList";
+        public const string Pages_Tenant_Personal_LkPhoneTypes = "Pages.Tenant.Personal.LkPhoneTypes";
+        public const string Pages_Tenant_Personal_LkPhoneTypes_GetLkPhoneTypeDropdown = "Pages.Tenant.Personal.LkPhoneTypes.GetLkPhoneTypeDropdown";
         public const string Pages_Tenant_Personal_LkReligion = "Pages.Tenant.Personal.LkReligion";
+        public const string Pages_Tenant_Personal_LkReligion_GetAllLkReligionList = "Pages.Tenant.Personal.LkReligion.GetAllLkReligionList";
         public const string Pages_Tenant_Personal_LkSpec = "Pages.Tenant.Personal.LkSpec";
+        public const string Pages_Tenant_Personal_LkSpec_GetAllLkSpecList = "Pages.Tenant.Personal.LkSpec.GetAllLkSpecList";
         public const string Pages_Tenant_Personal_MasterBank = "Pages.Tenant.Personal.MasterBank";
+        public const string Pages_Tenant_Personal_MasterBank_GetAllMsBankList = "Pages.Tenant.Personal.MasterBank.GetAllMsBankList";
+        public const string Pages_Tenant_Personal_MasterCities = "Pages.Tenant.Personal.MasterCities";
+        public const string Pages_Tenant_Personal_MasterCities_GetCityListByProvinceCode = "Pages.Tenant.Personal.MasterCities.GetCityListByProvinceCode";
         public const string Pages_Tenant_Personal_MasterDocument = "Pages.Tenant.Personal.MasterDocument";
+        public const string Pages_Tenant_Personal_MasterDocument_GetAllMsDocumentList = "Pages.Tenant.Personal.MasterDocument.GetAllMsDocumentList";
         public const string Pages_Tenant_Personal_MasterFranchiseGroup = "Pages.Tenant.Personal.MasterFranchiseGroup";
+        public const string Pages_Tenant_Personal_MasterFranchiseGroup_GetFranchiseGroupDropdown = "Pages.Tenant.Personal.MasterFranchiseGroup.GetFranchiseGroupDropdown";
         public const string Pages_Tenant_Personal_MasterJobTitle = "Pages.Tenant.Personal.MasterJobTitle";
+        public const string Pages_Tenant_Personal_MasterJobTitle_GetAllMsJobTitleDropdown = "Pages.Tenant.Personal.MasterJobTitle.GetAllMsJobTitleDropdown";
         public const string Pages_Tenant_Personal_MasterNational = "Pages.Tenant.Personal.MasterNational";
+        public const string Pages_Tenant_Personal_MasterNational_GetMSNationDropdown = "Pages.Tenant.Personal.MasterNational.GetMSNationDropdown";
         public const string Pages_Tenant_Personal_MasterOccupation = "Pages.Tenant.Personal.MasterOccupation";
+        public const string Pages_Tenant_Personal_MasterOccupation_GetMsOccupationDropdown = "Pages.Tenant.Personal.MasterOccupation.GetMsOccupationDropdown";
+        public const string Pages_Tenant_Personal_MasterPostCode = "Pages.Tenant.Personal.MasterPostCode";
+        public const string Pages_Tenant_Personal_MasterPostCode_GetPostCodeByCity = "Pages.Tenant.Personal.MasterPostCode.GetPostCodeByCity";
+        public const string Pages_Tenant_Personal_MasterProvinces = "Pages.Tenant.Personal.MasterProvinces";
+        public const string Pages_Tenant_Personal_MasterProvinces_GetMsProvinceDropdown = "Pages.Tenant.Personal.MasterProvinces.GetMsProvinceDropdown";
+        public const string Pages_Tenant_Personal_MasterStatusMembers = "Pages.Tenant.Personal.MasterStatusMembers";
+        public const string Pages_Tenant_Personal_MasterStatusMembers_GetAllMsStatusMemberDropdown = "Pages.Tenant.Personal.MasterStatusMembers.GetAllMsStatusMemberDropdown";
         public const string Pages_Tenant_Personal_PersonalMember = "Pages.Tenant.Personal.PersonalMember";
+        public const string Pages_Tenant_Personal_PersonalMember_GetAllPersonalMemberList = "Pages.Tenant.Personal.PersonalMember.GetAllPersonalMemberList";
         public const string Pages_Tenant_Personal_PersonalMember_Edit = "Pages.Tenant.Personal.PersonalMember.Edit";
         public const string Pages_Tenant_Personal_PersonalMember_Delete = "Pages.Tenant.Personal.PersonalMember.Delete";
+        public const string Pages_Tenant_Personal_PersonalMember_GenerateMemberCode = "Pages.Tenant.Personal.PersonalMember.GenerateMemberCode";
+        public const string Pages_Tenant_Personal_PersonalMember_DeleteMember = "Pages.Tenant.Personal.PersonalMember.DeleteMember";
+        public const string Pages_Tenant_Personal_PersonalMember_DeleteSingleMember = "Pages.Tenant.Personal.DeleteSingleMember.DeleteMember";
+        public const string Pages_Tenant_Personal_Personal = "Pages.Tenant.Personal.Personal";
+        public const string Pages_Tenant_Personal_Personal_Edit = "Pages.Tenant.Personal.Personal.Edit";
         public const string Pages_Tenant_Personal_TrAddress = "Pages.Tenant.Personal.TrAddress";
         public const string Pages_Tenant_Personal_TrAddress_Create = "Pages.Tenant.Personal.TrAddress.Create";
         public const string Pages_Tenant_Personal_TrAddress_Edit = "Pages.Tenant.Personal.TrAddress.Edit";
@@ -315,6 +348,7 @@
         public const string Pages_Tenant_Personal_TrBankAccount = "Pages.Tenant.Personal.TrBankAccount";
         public const string Pages_Tenant_Personal_TrBankAccount_Edit = "Pages.Tenant.Personal.TrBankAccount.Edit";
         public const string Pages_Tenant_Personal_TrBankAccount_Delete = "Pages.Tenant.Personal.TrBankAccount.Delete";
+        public const string Pages_Tenant_Personal_TrBankAccount_GetAllMsBankListByPsCode = "Pages.Tenant.Personal.TrBankAccount.GetAllMsBankListByPsCode";
         public const string Pages_Tenant_Personal_TrCompany = "Pages.Tenant.Personal.TrCompany";
         public const string Pages_Tenant_Personal_TrCompany_Edit = "Pages.Tenant.Personal.TrCompany.Edit";
         public const string Pages_Tenant_Personal_TrCompany_Delete = "Pages.Tenant.Personal.TrCompany.Delete";
@@ -338,6 +372,41 @@
         public const string Pages_Tenant_Personal_TrPhone_Create = "Pages.Tenant.Personal.TrPhone.Create";
         public const string Pages_Tenant_Personal_TrPhone_Edit = "Pages.Tenant.Personal.TrPhone.Edit";
         public const string Pages_Tenant_Personal_TrPhone_Delete = "Pages.Tenant.Personal.TrPhone.Delete";
+
+
+        public const string Pages_Tenant_Personal_Person = "Pages.Tenant.Personal.Person";
+        public const string Pages_Tenant_Personal_Person_GetPersonalsByAdvanceSearch = "Pages.Tenant.Personal.Person.GetPersonalsByAdvanceSearch";
+        public const string Pages_Tenant_Personal_Person_GetPersonalsByKeyword = "Pages.Tenant.Personal.Person.GetPersonalsByKeyword";
+        public const string Pages_Tenant_Personal_Person_CreatePersonal = "Pages.Tenant.Personal.Person.CreatePersonal";
+        public const string Pages_Tenant_Personal_Person_CreateKeyPeople = "Pages.Tenant.Personal.Person.CreateKeyPeople";
+        public const string Pages_Tenant_Personal_Person_CreateBankAccount = "Pages.Tenant.Personal.Person.CreateBankAccount";
+        public const string Pages_Tenant_Personal_Person_CreateCompany = "Pages.Tenant.Personal.Person.CreateCompany";
+        public const string Pages_Tenant_Personal_Person_CreateDocument = "Pages.Tenant.Personal.Person.CreateDocument";
+        public const string Pages_Tenant_Personal_Person_CreateIDNumber = "Pages.Tenant.Personal.Person.CreateIDNumber";
+        public const string Pages_Tenant_Personal_Person_CreateFamily = "Pages.Tenant.Personal.Person.CreateFamily";
+        public const string Pages_Tenant_Personal_Person_CreateMember = "Pages.Tenant.Personal.Person.CreateMember";
+        public const string Pages_Tenant_Personal_Person_GetUniversalPersonal = "Pages.Tenant.Personal.Person.GetUniversalPersonal";
+        public const string Pages_Tenant_Personal_Person_GetPersonalByPsCode = "Pages.Tenant.Personal.Person.GetPersonalByPsCode";
+        public const string Pages_Tenant_Personal_Person_GetKeyPeopleByPsCode = "Pages.Tenant.Personal.Person.GetKeyPeopleByPsCode";
+        public const string Pages_Tenant_Personal_Person_GetContactByPsCode = "Pages.Tenant.Personal.Person.GetContactByPsCode";
+        public const string Pages_Tenant_Personal_Person_GetAddressByPsCode = "Pages.Tenant.Personal.Person.GetAddressByPsCode";
+        public const string Pages_Tenant_Personal_Person_GetBankAccountByPsCode = "Pages.Tenant.Personal.Person.GetBankAccountByPsCode";
+        public const string Pages_Tenant_Personal_Person_GetCompanyByPsCode = "Pages.Tenant.Personal.Person.GetCompanyByPsCode";
+        public const string Pages_Tenant_Personal_Person_GetDocumentByPsCode = "Pages.Tenant.Personal.Person.GetDocumentByPsCode";
+        public const string Pages_Tenant_Personal_Person_GetIDNumberByPsCode = "Pages.Tenant.Personal.Person.GetIDNumberByPsCode";
+        public const string Pages_Tenant_Personal_Person_GetFamilyByPsCode = "Pages.Tenant.Personal.Person.GetFamilyByPsCode";
+        public const string Pages_Tenant_Personal_Person_GetMemberByPsCode = "Pages.Tenant.Personal.Person.GetMemberByPsCode";
+        public const string Pages_Tenant_Personal_Person_GetPhoneByPsCode = "Pages.Tenant.Personal.Person.GetPhoneByPsCode";
+        public const string Pages_Tenant_Personal_Person_GetEmailByPsCode = "Pages.Tenant.Personal.Person.GetEmailByPsCode";
+        public const string Pages_Tenant_Personal_Person_UpdatePersonal = "Pages.Tenant.Personal.Person.UpdatePersonal";
+        public const string Pages_Tenant_Personal_Person_CreateOrUpdatePhone = "Pages.Tenant.Personal.Person.CreateOrUpdatePhone";
+        public const string Pages_Tenant_Personal_Person_CreateOrUpdateEmail = "Pages.Tenant.Personal.Person.CreateOrUpdateEmail";
+        public const string Pages_Tenant_Personal_Person_CreateOrUpdateAddress = "Pages.Tenant.Personal.Person.CreateOrUpdateAddress";
+        public const string Pages_Tenant_Personal_Person_generatePsCode = "Pages.Tenant.Personal.Person.generatePsCode";
+        public const string Pages_Tenant_Personal_Person_GetAllMsSchemaDropdown = "Pages.Tenant.Personal.Person.GetAllMsSchemaDropdown";
+        public const string Pages_Tenant_Personal_Person_GetAvailableMemberSchemaByScmCodeAndPsCode = "Pages.Tenant.Personal.Person.GetAvailableMemberSchemaByScmCodeAndPsCode";
+        public const string Pages_Tenant_Personal_Person_sendEmailActivationMember = "Pages.Tenant.Personal.Person.sendEmailActivationMember";
+
 
         public const string Pages_Tenant_Personal_Register = "Pages.Tenant.Personal.Register";
         public const string Pages_Tenant_Personal_Edit = "Pages.Tenant.Personal.Edit";
@@ -373,57 +442,57 @@
         public const string Pages_Tenant_PSAS_OtherPayment_Edit = "Pages.Tenant.PSAS.OtherPayment.Edit";
         public const string Pages_Tenant_PSAS_OtherPayment_Delete = "Pages.Tenant.PSAS.OtherPayment.Delete";
 
-                public const string Pages_Tenant_PSAS_Schedule = "Pages.Tenant.PSAS.Schedule";
-                    public const string Pages_Tenant_PSAS_Schedule_Create = "Pages.Tenant.PSAS.Schedule.Create";
-                    public const string Pages_Tenant_PSAS_Schedule_Edit = "Pages.Tenant.PSAS.Schedule.Edit";
-                    public const string Pages_Tenant_PSAS_Schedule_Delete = "Pages.Tenant.PSAS.Schedule.Delete";
+        public const string Pages_Tenant_PSAS_Schedule = "Pages.Tenant.PSAS.Schedule";
+        public const string Pages_Tenant_PSAS_Schedule_Create = "Pages.Tenant.PSAS.Schedule.Create";
+        public const string Pages_Tenant_PSAS_Schedule_Edit = "Pages.Tenant.PSAS.Schedule.Edit";
+        public const string Pages_Tenant_PSAS_Schedule_Delete = "Pages.Tenant.PSAS.Schedule.Delete";
         /*Legal Document*/
         public const string Pages_Tenant_PSAS_LegalDocument = "Pages.Tenant.PSAS.LegalDocument";
 
-            public const string Pages_Tenant_PSAS_LegalDocument_MasterKuasaDireksi = "Pages.Tenant.PSAS.LegalDocument.MasterKuasaDireksi";
-            public const string Pages_Tenant_PSAS_LegalDocument_MasterKuasaDireksi_View = "Pages.Tenant.PSAS.LegalDocument.MasterKuasaDireksi.View";
-            public const string Pages_Tenant_PSAS_LegalDocument_MasterKuasaDireksi_Create = "Pages.Tenant.PSAS.LegalDocument.MasterKuasaDireksi.Create";
-            public const string Pages_Tenant_PSAS_LegalDocument_MasterKuasaDireksi_Delete = "Pages.Tenant.PSAS.LegalDocument.MasterKuasaDireksi.Delete";
+        public const string Pages_Tenant_PSAS_LegalDocument_MasterKuasaDireksi = "Pages.Tenant.PSAS.LegalDocument.MasterKuasaDireksi";
+        public const string Pages_Tenant_PSAS_LegalDocument_MasterKuasaDireksi_View = "Pages.Tenant.PSAS.LegalDocument.MasterKuasaDireksi.View";
+        public const string Pages_Tenant_PSAS_LegalDocument_MasterKuasaDireksi_Create = "Pages.Tenant.PSAS.LegalDocument.MasterKuasaDireksi.Create";
+        public const string Pages_Tenant_PSAS_LegalDocument_MasterKuasaDireksi_Delete = "Pages.Tenant.PSAS.LegalDocument.MasterKuasaDireksi.Delete";
 
-            public const string Pages_Tenant_PSAS_LegalDocument_MasterTemplate = "Pages.Tenant.PSAS.LegalDocument.MasterTemplate";
-            public const string Pages_Tenant_PSAS_LegalDocument_MasterTemplate_View = "Pages.Tenant.PSAS.LegalDocument.MasterTemplate.View";
+        public const string Pages_Tenant_PSAS_LegalDocument_MasterTemplate = "Pages.Tenant.PSAS.LegalDocument.MasterTemplate";
+        public const string Pages_Tenant_PSAS_LegalDocument_MasterTemplate_View = "Pages.Tenant.PSAS.LegalDocument.MasterTemplate.View";
 
-            public const string Pages_Tenant_PSAS_LegalDocument_MappingTemplate = "Pages.Tenant.PSAS.LegalDocument.MappingTemplate";
-            public const string Pages_Tenant_PSAS_LegalDocument_MappingTemplate_View = "Pages.Tenant.PSAS.LegalDocument.MappingTemplate.View";
-            public const string Pages_Tenant_PSAS_LegalDocument_MappingTemplate_Create = "Pages.Tenant.PSAS.LegalDocument.MappingTemplate.Create";
-            public const string Pages_Tenant_PSAS_LegalDocument_MappingTemplate_Edit = "Pages.Tenant.PSAS.LegalDocument.MappingTemplate.Edit";
-            public const string Pages_Tenant_PSAS_LegalDocument_MappingTemplate_Delete = "Pages.Tenant.PSAS.LegalDocument.MappingTemplate.Delete";
+        public const string Pages_Tenant_PSAS_LegalDocument_MappingTemplate = "Pages.Tenant.PSAS.LegalDocument.MappingTemplate";
+        public const string Pages_Tenant_PSAS_LegalDocument_MappingTemplate_View = "Pages.Tenant.PSAS.LegalDocument.MappingTemplate.View";
+        public const string Pages_Tenant_PSAS_LegalDocument_MappingTemplate_Create = "Pages.Tenant.PSAS.LegalDocument.MappingTemplate.Create";
+        public const string Pages_Tenant_PSAS_LegalDocument_MappingTemplate_Edit = "Pages.Tenant.PSAS.LegalDocument.MappingTemplate.Edit";
+        public const string Pages_Tenant_PSAS_LegalDocument_MappingTemplate_Delete = "Pages.Tenant.PSAS.LegalDocument.MappingTemplate.Delete";
 
-            public const string Pages_Tenant_PSAS_LegalDocument_BookingDocument = "Pages.Tenant.PSAS.LegalDocument.BookingDocument";
-            public const string Pages_Tenant_PSAS_LegalDocument_BookingDocument_View = "Pages.Tenant.PSAS.LegalDocument.BookingDocument.View";
-            public const string Pages_Tenant_PSAS_LegalDocument_BookingDocument_Create = "Pages.Tenant.PSAS.LegalDocument.BookingDocument.Create";
+        public const string Pages_Tenant_PSAS_LegalDocument_BookingDocument = "Pages.Tenant.PSAS.LegalDocument.BookingDocument";
+        public const string Pages_Tenant_PSAS_LegalDocument_BookingDocument_View = "Pages.Tenant.PSAS.LegalDocument.BookingDocument.View";
+        public const string Pages_Tenant_PSAS_LegalDocument_BookingDocument_Create = "Pages.Tenant.PSAS.LegalDocument.BookingDocument.Create";
 
         /* Payment */
         public const string Pages_Tenant_Payment = "Pages.Tenant.Payment";
 
         public const string Pages_Tenant_Payment_MasterPayFor = "Pages.Tenant.Payment.MasterPayFor";
-            public const string Pages_Tenant_Payment_MasterPayFor_Create = "Pages.Tenant.Payment.MasterPayFor.Create";
-            public const string Pages_Tenant_Payment_MasterPayFor_Edit = "Pages.Tenant.Payment.MasterPayFor.Edit";
-            public const string Pages_Tenant_Payment_MasterPayFor_Delete = "Pages.Tenant.Payment.MasterPayFor.Delete";
+        public const string Pages_Tenant_Payment_MasterPayFor_Create = "Pages.Tenant.Payment.MasterPayFor.Create";
+        public const string Pages_Tenant_Payment_MasterPayFor_Edit = "Pages.Tenant.Payment.MasterPayFor.Edit";
+        public const string Pages_Tenant_Payment_MasterPayFor_Delete = "Pages.Tenant.Payment.MasterPayFor.Delete";
 
         public const string Pages_Tenant_Payment_MasterPayType = "Pages.Tenant.Payment.MasterPayType";
-            public const string Pages_Tenant_Payment_MasterPayType_Create = "Pages.Tenant.Payment.MasterPayType.Create";
-            public const string Pages_Tenant_Payment_MasterPayType_Edit = "Pages.Tenant.Payment.MasterPayType.Edit";
-            public const string Pages_Tenant_Payment_MasterPayType_Delete = "Pages.Tenant.Payment.MasterPayType.Delete";
+        public const string Pages_Tenant_Payment_MasterPayType_Create = "Pages.Tenant.Payment.MasterPayType.Create";
+        public const string Pages_Tenant_Payment_MasterPayType_Edit = "Pages.Tenant.Payment.MasterPayType.Edit";
+        public const string Pages_Tenant_Payment_MasterPayType_Delete = "Pages.Tenant.Payment.MasterPayType.Delete";
 
         public const string Pages_Tenant_Payment_MasterOthersType = "Pages.Tenant.Payment.MasterOthersType";
-            public const string Pages_Tenant_Payment_MasterOthersType_Create = "Pages.Tenant.Payment.MasterOthersType.Create";
-            public const string Pages_Tenant_Payment_MasterOthersType_Edit = "Pages.Tenant.Payment.MasterOthersType.Edit";
-            public const string Pages_Tenant_Payment_MasterOthersType_Delete = "Pages.Tenant.Payment.MasterOthersType.Delete";
+        public const string Pages_Tenant_Payment_MasterOthersType_Create = "Pages.Tenant.Payment.MasterOthersType.Create";
+        public const string Pages_Tenant_Payment_MasterOthersType_Edit = "Pages.Tenant.Payment.MasterOthersType.Edit";
+        public const string Pages_Tenant_Payment_MasterOthersType_Delete = "Pages.Tenant.Payment.MasterOthersType.Delete";
 
         public const string Pages_Tenant_Payment_MasterAllocation = "Pages.Tenant.Payment.MasterAllocation";
-            public const string Pages_Tenant_Payment_MasterAllocation_Create = "Pages.Tenant.Payment.MasterAllocation.Create";
-            public const string Pages_Tenant_Payment_MasterAllocation_Edit = "Pages.Tenant.Payment.MasterAllocation.Edit";
-            public const string Pages_Tenant_Payment_MasterAllocation_Delete = "Pages.Tenant.Payment.MasterAllocation.Delete";
+        public const string Pages_Tenant_Payment_MasterAllocation_Create = "Pages.Tenant.Payment.MasterAllocation.Create";
+        public const string Pages_Tenant_Payment_MasterAllocation_Edit = "Pages.Tenant.Payment.MasterAllocation.Edit";
+        public const string Pages_Tenant_Payment_MasterAllocation_Delete = "Pages.Tenant.Payment.MasterAllocation.Delete";
 
         public const string Pages_Tenant_Payment_MasterAccount = "Pages.Tenant.Payment.MasterAccount";
-            public const string Pages_Tenant_Payment_MasterAccount_Edit = "Pages.Tenant.Payment.MasterAccount.Edit";
-            public const string Pages_Tenant_Payment_MasterAccount_Delete = "Pages.Tenant.Payment.MasterAccount.Delete";
+        public const string Pages_Tenant_Payment_MasterAccount_Edit = "Pages.Tenant.Payment.MasterAccount.Edit";
+        public const string Pages_Tenant_Payment_MasterAccount_Delete = "Pages.Tenant.Payment.MasterAccount.Delete";
 
         public const string Pages_Tenant_Payment_Transaction_SinglePayment = "Pages.Tenant.Payment.Transaction.SinglePayment";
         public const string Pages_Tenant_Payment_Transaction_BulkPayment = "Pages.Tenant.Payment.Transaction.BulkPayment";

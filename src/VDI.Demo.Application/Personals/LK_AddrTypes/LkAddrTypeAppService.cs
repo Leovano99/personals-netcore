@@ -21,6 +21,7 @@ namespace VDI.Demo.Personals.LK_AddrTypes
             _lkAddrTypeRepo = lkAddrTypeRepo;
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_LkAddrType_GetLkAddrTypeDropdown)]
         public ListResultDto<GetLkAddrTypeDropdownListDto> GetLkAddrTypeDropdown()
         {
             var result = (from x in _lkAddrTypeRepo.GetAll()

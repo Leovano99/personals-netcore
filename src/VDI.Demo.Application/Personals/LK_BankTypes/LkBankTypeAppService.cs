@@ -23,6 +23,7 @@ namespace VDI.Demo.Personals.LK_BankTypes
             _lkBankTypeRepo = lkBankTypeRepo;
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_LkBankType_GetAllLkBankTypeList)]
         public ListResultDto<GetAllBankTypeListDto> GetAllLkBankTypeList()
         {
             var getAllData = (from A in _lkBankTypeRepo.GetAll()

@@ -23,6 +23,7 @@ namespace VDI.Demo.Personals.LK_Religions
             _lkReligionRepo = lkReligionRepo;
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_LkReligion_GetAllLkReligionList)]
         public ListResultDto<GetAllReligionListDto> GetAllLkReligionList()
         {
             var getAllData = (from A in _lkReligionRepo.GetAll()

@@ -23,6 +23,7 @@ namespace VDI.Demo.Personals.MS_FranchiseGroups
             _msFranchiseGroupRepo = msFranchiseGroupRepo;
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_MasterFranchiseGroup_GetFranchiseGroupDropdown)]
         public ListResultDto<GetFranchiseGroupDropdownListDto> GetFranchiseGroupDropdown()
         {
             var getAllData = (from A in _msFranchiseGroupRepo.GetAll()

@@ -35,7 +35,7 @@ using System.Text;
 
 namespace VDI.Demo.Personals.Personals
 {
-    //[AbpAuthorize(AppPermissions.Pages_Tenant_Personal)]
+    [AbpAuthorize(AppPermissions.Pages_Tenant_Personal)]
     public class PersonalAppService : DemoAppServiceBase, IPersonalAppService
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
@@ -154,6 +154,7 @@ namespace VDI.Demo.Personals.Personals
         }
         #endregion
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_GetPersonalsByAdvanceSearch)]
         public List<GetPersonalsByKeywordList> GetPersonalsByAdvanceSearch(GetPersonalsByAdvanceSearchInputDto input)
         {
             DateTime inputBirthDate;
@@ -206,6 +207,8 @@ namespace VDI.Demo.Personals.Personals
 
             return getAllData;
         }
+
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_GetPersonalsByKeyword)]
 
         public async Task<PagedResultDto<GetPersonalsByKeywordList>> GetPersonalsByKeyword(GetPersonalsByKeywordInputDto input)
         {
@@ -311,6 +314,8 @@ namespace VDI.Demo.Personals.Personals
             Logger.Info("CreatePersonal() - Finished.");
         }
         */
+
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_CreatePersonal)]
         public async Task CreatePersonal(CreatePersonalDto input)
         {
             Logger.Info("CreatePersonal() - Started.");
@@ -420,6 +425,7 @@ namespace VDI.Demo.Personals.Personals
             Logger.Info("CreatePersonal() - Finished.");
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_CreateKeyPeople)]
         public async Task CreateKeyPeople(List<CreateKeyPeopleDto> inputs)
         {
             Logger.Info("CreateKeyPeople() - Started.");
@@ -464,7 +470,7 @@ namespace VDI.Demo.Personals.Personals
             }
             Logger.Info("CreateKeyPeople() - Finished.");
         }
-        
+
         /*
         public async Task CreateBankAccount0(List<CreateBankAccountDto> inputs)
         {
@@ -525,6 +531,7 @@ namespace VDI.Demo.Personals.Personals
         }
         */
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_CreateBankAccount)]
         public async Task CreateBankAccount(List<CreateBankAccountDto> inputs)
         {
             Logger.Info("CreateBankAccount() - Started.");
@@ -589,6 +596,7 @@ namespace VDI.Demo.Personals.Personals
             Logger.Info("CreateBankAccount() - Finished.");
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_CreateCompany)]
         public async Task CreateCompany(List<CreateCompanyDto> inputs)
         {
             Logger.Info("CreateCompany() - Started.");
@@ -640,6 +648,7 @@ namespace VDI.Demo.Personals.Personals
             Logger.Info("CreateCompany() - Finished.");
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_CreateDocument)]
         public async Task CreateDocument(List<CreateDocumentDto> inputs)
         {
             Logger.Info("CreateDocument() - Started.");
@@ -684,6 +693,7 @@ namespace VDI.Demo.Personals.Personals
             Logger.Info("CreateDocument() - Finished.");
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_CreateIDNumber)]
         public async Task CreateIDNumber(List<CreateIDNumberDto> inputs)
         {
             Logger.Info("CreateIDNumber() - Started.");
@@ -748,6 +758,7 @@ namespace VDI.Demo.Personals.Personals
             Logger.Info("CreateIDNumber() - Finished.");
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_CreateFamily)]
         public async Task CreateFamily(List<CreateFamilyDto> inputs)
         {
             Logger.Info("CreateFamily() - Started.");
@@ -792,6 +803,7 @@ namespace VDI.Demo.Personals.Personals
             Logger.Info("CreateFamily() - Finished.");
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_CreateMember)]
         [UnitOfWork(isTransactional: false)]
         public JObject CreateMember(CreateMemberDto input)
         {
@@ -916,6 +928,7 @@ namespace VDI.Demo.Personals.Personals
         }
         #endregion
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_GetUniversalPersonal)]
         [UnitOfWork(isTransactional: false)]
         public GetUniversalPersonalDto GetUniversalPersonal(string psCode)
         {
@@ -1418,6 +1431,7 @@ namespace VDI.Demo.Personals.Personals
 
 
         #region function get : getPersonal, getKeyPeople, getContact, getBankAccount, getCompany, getDocument, getIDNumber, getFamily, getMember
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_GetPersonalByPsCode)]
         [UnitOfWork(isTransactional: false)]
         public GetPersonalDto GetPersonalByPsCode(string psCode)
         {
@@ -1502,6 +1516,7 @@ namespace VDI.Demo.Personals.Personals
             return result;
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_GetKeyPeopleByPsCode)]
         [UnitOfWork(isTransactional: false)]
         public List<GetKeyPeopleDto> GetKeyPeopleByPsCode(string psCode)
         {
@@ -1543,6 +1558,7 @@ namespace VDI.Demo.Personals.Personals
             return new List<GetKeyPeopleDto>(result);
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_GetContactByPsCode)]
         [UnitOfWork(isTransactional: false)]
         public GetContactDto GetContactByPsCode(string psCode)
         {
@@ -1555,6 +1571,7 @@ namespace VDI.Demo.Personals.Personals
             return result;
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_GetAddressByPsCode)]
         [UnitOfWork(isTransactional: false)]
         public List<GetAddressDto> GetAddressByPsCode(string psCode)
         {
@@ -1588,6 +1605,7 @@ namespace VDI.Demo.Personals.Personals
             return new List<GetAddressDto>(result);
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_GetBankAccountByPsCode)]
         [UnitOfWork(isTransactional: false)]
         public List<GetBankAccountDto> GetBankAccountByPsCode(string psCode)
         {
@@ -1634,6 +1652,7 @@ namespace VDI.Demo.Personals.Personals
             return getName;
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_GetCompanyByPsCode)]
         [UnitOfWork(isTransactional: false)]
         public List<GetCompanyDto> GetCompanyByPsCode(string psCode)
         {
@@ -1684,6 +1703,7 @@ namespace VDI.Demo.Personals.Personals
             return new List<GetCompanyDto>(result);
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_GetDocumentByPsCode)]
         [UnitOfWork(isTransactional: false)]
         public List<GetDocumentDto> GetDocumentByPsCode(string psCode)
         {
@@ -1718,6 +1738,7 @@ namespace VDI.Demo.Personals.Personals
             return new List<GetDocumentDto>(result);
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_GetIDNumberByPsCode)]
         [UnitOfWork(isTransactional: false)]
         public List<GetIDNumberDto> GetIDNumberByPsCode(string psCode)
         {
@@ -1765,6 +1786,7 @@ namespace VDI.Demo.Personals.Personals
             return new List<GetIDNumberDto>(result);
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_GetFamilyByPsCode)]
         [UnitOfWork(isTransactional: false)]
         public List<GetFamilyDto> GetFamilyByPsCode(string psCode)
         {
@@ -1806,6 +1828,7 @@ namespace VDI.Demo.Personals.Personals
             return new List<GetFamilyDto>(result);
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_GetMemberByPsCode)]
         [UnitOfWork(isTransactional: false)]
         public List<GetMemberDto> GetMemberByPsCode(string psCode)
         {
@@ -2058,6 +2081,7 @@ namespace VDI.Demo.Personals.Personals
         #endregion
 
         #region function getContact : getPhone, getEmail, getAddress
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_GetPhoneByPsCode)]
         public List<GetPhoneDto> GetPhoneByPsCode(string psCode)
         {
             var result = (from x in _phoneRepo.GetAll()
@@ -2079,6 +2103,7 @@ namespace VDI.Demo.Personals.Personals
             return new List<GetPhoneDto>(result);
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_GetEmailByPsCode)]
         public List<GetEmailDto> GetEmailByPsCode(string psCode)
         {
             var validEmail = (from x in _emailRepo.GetAll()
@@ -2121,6 +2146,7 @@ namespace VDI.Demo.Personals.Personals
         #endregion
 
         #region function Update Personal
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_UpdatePersonal)]
         public async Task UpdatePersonal(CreatePersonalDto input)
         {
             Logger.Info("UpdatePersonal() - Started.");
@@ -2198,7 +2224,7 @@ namespace VDI.Demo.Personals.Personals
         #endregion
 
         #region function Create Or Update Contact : CreateOrUpdatePhone, CreateOrUpdateEmail, CreateOrUpdateAddress        
-
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_CreateOrUpdatePhone)]
         public async Task CreateOrUpdatePhone(List<CreatePhoneDto> inputs)
         {
             Logger.Info("CreateOrUpdatePhone() - Started.");
@@ -2316,6 +2342,7 @@ namespace VDI.Demo.Personals.Personals
             Logger.Info("CreateOrUpdatePhone() - Finished.");
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_CreateOrUpdateEmail)]
         public async Task CreateOrUpdateEmail(List<CreateEmailDto> inputs)
         {
             Logger.Info("CreateOrUpdateEmail() - Started.");
@@ -2543,6 +2570,7 @@ namespace VDI.Demo.Personals.Personals
             Logger.Info("CreateOrUpdateEmail() - Finished.");
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_CreateOrUpdateAddress)]
         public async Task CreateOrUpdateAddress(List<CreateAddressDto> inputs)
         {
             Logger.Info("CreateOrUpdateAddress() - Started.");
@@ -2657,6 +2685,7 @@ namespace VDI.Demo.Personals.Personals
 
         #region function helper : generatePsCode, UploadImage
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_generatePsCode)]
         public JObject generatePsCode()
         {
             JObject obj = new JObject();
@@ -2695,6 +2724,7 @@ namespace VDI.Demo.Personals.Personals
         }
 
         #region msschema
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_GetAllMsSchemaDropdown)]
         public ListResultDto<GetAllMsSchemaDropdownList> GetAllMsSchemaDropdown()
         {
             var result = (from x in _msSchemaRepo.GetAll()
@@ -2708,6 +2738,7 @@ namespace VDI.Demo.Personals.Personals
             return new ListResultDto<GetAllMsSchemaDropdownList>(result);
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_GetAvailableMemberSchemaByScmCodeAndPsCode)]
         public GetAvailableMemberSchemaByScmCodeAndPsCode GetAvailableMemberSchemaByScmCodeAndPsCode(GetAvailableMemberSchemaByScmCodeAndPsCode input)
         {
             var getMember = (from x in _personalMemberRepo.GetAll()
@@ -2851,6 +2882,7 @@ namespace VDI.Demo.Personals.Personals
         }
         #endregion
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_Person_sendEmailActivationMember)]
         public string sendEmailActivationMember(string psCode, string memberCode)
         {
             var getEmailAddress = (from x in _personalRepo.GetAll()

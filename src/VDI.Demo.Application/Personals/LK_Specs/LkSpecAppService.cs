@@ -23,6 +23,7 @@ namespace VDI.Demo.Personals.LK_Specs
             _lkSpecRepo = lkSpecRepo;
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_LkSpec_GetAllLkSpecList)]
         public ListResultDto<GetAllSpecListDto> GetAllLkSpecList()
         {
             var getAllData = (from A in _lkSpecRepo.GetAll()
