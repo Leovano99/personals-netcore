@@ -23,6 +23,7 @@ namespace VDI.Demo.Personals.MS_Documents
             _msDocumentRepo = msDocumentRepo;
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_MasterDocument_GetAllMsDocumentList)]
         public ListResultDto<GetAllDocumentListDto> GetAllMsDocumentList()
         {
             var getAllData = (from A in _msDocumentRepo.GetAll()

@@ -21,6 +21,7 @@ namespace VDI.Demo.Personals.MS_Nationals
             _msNationepo = msNationepo;
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_MasterNational_GetMSNationDropdown)]
         public ListResultDto<GetMSNationDropdownListDto> GetMSNationDropdown()
         {
             var result = (from x in _msNationepo.GetAll()

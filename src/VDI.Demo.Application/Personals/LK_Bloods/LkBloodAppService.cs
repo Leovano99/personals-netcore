@@ -23,6 +23,7 @@ namespace VDI.Demo.Personals.LK_Bloods
             _lkBloodRepo = lkBloodRepo;
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_LkBlood_GetAllLkBloodList)]
         public ListResultDto<GetAllBloodListDto> GetAllLkBloodList()
         {
             var getAllData = (from A in _lkBloodRepo.GetAll()

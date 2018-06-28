@@ -182,6 +182,7 @@ namespace VDI.Demo.Personals.TR_BankAccounts
             }
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_TrBankAccount_GetAllMsBankListByPsCode)]
         public ListResultDto<GetAllBankPersonalsListDto> GetAllMsBankListByPsCode(string psCode)
         {
             var getAllData = (from mb in _msBankRepo.GetAll()

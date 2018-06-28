@@ -23,6 +23,7 @@ namespace VDI.Demo.Personals.LK_MarStatuses
             _lkMarStatusRepo = lkMarStatusRepo;
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_LkMarStatus_GetAllLkMarStatusList)]
         public ListResultDto<GetAllMarStatusListDto> GetAllLkMarStatusList()
         {
             var getAllData = (from A in _lkMarStatusRepo.GetAll()

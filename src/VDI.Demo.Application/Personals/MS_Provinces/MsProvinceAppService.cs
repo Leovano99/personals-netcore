@@ -11,6 +11,7 @@ using System.Linq;
 
 namespace VDI.Demo.Personals.MS_Provinces
 {
+    [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_MasterProvinces)]
     public class MsProvinceAppService : DemoAppServiceBase, IMsProvinceAppService
     {
         private readonly IRepository<MS_Province, string> _msProvinceRepo;
@@ -21,6 +22,7 @@ namespace VDI.Demo.Personals.MS_Provinces
             _msProvinceRepo = msProvinceRepo;
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_MasterProvinces_GetMsProvinceDropdown)]
         public List<GetMsProvinceListDto> GetMsProvinceDropdown(string country)
         {
             var result = (from x in _msProvinceRepo.GetAll()

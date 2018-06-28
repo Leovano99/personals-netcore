@@ -23,6 +23,7 @@ namespace VDI.Demo.Personals.LK_IDTypes
             _idTypeRepo = idTypeRepo;
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_LkIdType_GetAllIDTypeList)]
         public ListResultDto<GetAllIDTypeListDto> GetAllIDTypeList()
         {
             var getAllData = (from A in _idTypeRepo.GetAll()

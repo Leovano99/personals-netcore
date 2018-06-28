@@ -21,6 +21,7 @@ namespace VDI.Demo.Personals.MS_JobTItles
             _msJobTitleRepo = msJobTitleRepo;
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_MasterJobTitle_GetAllMsJobTitleDropdown)]
         public ListResultDto<GetAllMsJobTitleDropdownList> GetAllMsJobTitleDropdown()
         {
             var result = (from x in _msJobTitleRepo.GetAll()

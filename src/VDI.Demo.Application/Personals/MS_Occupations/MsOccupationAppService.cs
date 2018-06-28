@@ -21,6 +21,7 @@ namespace VDI.Demo.Personals.MS_Occupations
             _MsOccupationRepo = MsOccupationRepo;
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_MasterOccupation_GetMsOccupationDropdown)]
         public ListResultDto<GetMsOccupationDropdownListDto> GetMsOccupationDropdown()
         {
             var result = (from x in _MsOccupationRepo.GetAll()

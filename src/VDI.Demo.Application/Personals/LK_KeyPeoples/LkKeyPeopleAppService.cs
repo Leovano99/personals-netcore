@@ -21,6 +21,7 @@ namespace VDI.Demo.Personals.LK_KeyPeoples
             _lkKeyPeopleRepo = lkKeyPeopleRepo;
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_LkKeyPeople_GetAllLkKeyPeopleDropdwon)]
         public ListResultDto<GetAllLkKeyPeopleDropdwonListDto> GetAllLkKeyPeopleDropdwon()
         {
             var result = (from x in _lkKeyPeopleRepo.GetAll()

@@ -23,6 +23,7 @@ namespace VDI.Demo.Personals.MS_Banks
             _msBankRepo = msBankRepo;
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_MasterBank_GetAllMsBankList)]
         public ListResultDto<GetAllBankPersonalsListDto> GetAllMsBankList()
         {
             var getAllData = (from A in _msBankRepo.GetAll()

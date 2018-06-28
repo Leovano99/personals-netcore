@@ -21,6 +21,7 @@ namespace VDI.Demo.Personals.LK_FamilyStatuses
             _lkFamilyStatusRepo = lkFamilyStatusRepo;
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_LkFamilyStatus_GetLkFamilyStatusDropdown)]
         public ListResultDto<GetLkFamilyStatusDropdownListDto> GetLkFamilyStatusDropdown()
         {
             var result = (from x in _lkFamilyStatusRepo.GetAll()

@@ -23,6 +23,7 @@ namespace VDI.Demo.Personals.LK_Countries
             _lkCountryRepo = lkCountryRepo;
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_LkCountry_GetAllLkCountryList)]
         public ListResultDto<GetAllCountryListDto> GetAllLkCountryList()
         {
             var getAllData = (from A in _lkCountryRepo.GetAll()

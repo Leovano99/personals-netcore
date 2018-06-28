@@ -34,6 +34,7 @@ namespace VDI.Demo.Personals.Personal_Members
             _sqlExecuter = sqlExecuter;
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_PersonalMember_GetAllPersonalMemberList)]
         public ListResultDto<GetAllPersonalMemberDto> GetAllPersonalMemberList(string keyword, string scmCode)
         {
             var getAllData = (from A in _personalRepo.GetAll()
@@ -61,6 +62,7 @@ namespace VDI.Demo.Personals.Personal_Members
             //    listDtos);
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_PersonalMember_GenerateMemberCode)]
         public string GenerateMemberCode(string scmCode, bool isInstitute)
         {
             Logger.Info("GenerateMemberCode() - Started.");
@@ -400,6 +402,8 @@ namespace VDI.Demo.Personals.Personal_Members
             return obj;
         }
         */
+
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_PersonalMember_DeleteMember)]
         public void DeleteMember(GetDeleteInputDto input)
         {
             Logger.Info("DeleteMember() - Started.");
@@ -452,6 +456,7 @@ namespace VDI.Demo.Personals.Personal_Members
             Logger.Info("DeleteMember() - Finished.");
         }
 
+        [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_PersonalMember_DeleteSingleMember)]
         public void DeleteSingleMember(GetDeleteInputDto input)
         {
             Logger.Info("DeleteSingleMember() - Started.");
