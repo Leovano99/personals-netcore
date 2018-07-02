@@ -42,5 +42,7 @@ namespace VDI.Demo.PersonalsDB
         public override long? CreatorUserId { get; set; }
 
         public virtual ICollection<MS_City> MS_City { get; set; }
+
+        public virtual ICollection<MS_County> MS_County { get; set; }
     }
 }

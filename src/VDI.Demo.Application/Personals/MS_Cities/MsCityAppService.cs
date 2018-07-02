@@ -8,6 +8,7 @@ using VDI.Demo.Authorization;
 using VDI.Demo.EntityFrameworkCore;
 using System.Linq;
 using VDI.Demo.Personals.MS_Cities.Dto;
+using Abp.UI;
 
 namespace VDI.Demo.Personals.MS_Cities
 {
@@ -25,33 +26,50 @@ namespace VDI.Demo.Personals.MS_Cities
         }
 
         [AbpAuthorize(AppPermissions.Pages_Tenant_Personal_MasterCities_GetCityListByProvinceCode)]
-        public List<GetCityListDto> GetCityListByProvinceCode(string provinceCode, string country)
+        public List<GetCityListDto> GetCityListByProvinceCode(string countyCode)
         {
-            List<GetCityListDto> cityList = new List<GetCityListDto>();
-          
-            if(provinceCode != null)
+            //List<GetCityListDto> cityList = new List<GetCityListDto>();
+
+            //if(provinceCode != null)
+            //{
+            //    cityList = (from x in _msCityRepo.GetAll()
+            //                where x.provinceCode == provinceCode
+            //                select new GetCityListDto
+            //                {                              
+            //                    cityCode = x.cityCode,
+            //                    cityName = x.cityName,
+            //                    cityAbbreviation = x.cityAbbreviation
+            //                }).ToList();              
+            //}
+            //else
+            //{
+            //    cityList = (from x in _msCityRepo.GetAll()
+            //                where x.country == country
+            //                select new GetCityListDto
+            //                {
+            //                    cityCode = x.cityCode,
+            //                    cityName = x.cityName,
+            //                    cityAbbreviation = x.cityAbbreviation
+            //                }).ToList();
+            //}
+
+            //return cityList;
+
+            if(countyCode == null || countyCode == string.Empty)
             {
-                cityList = (from x in _msCityRepo.GetAll()
-                            where x.provinceCode == provinceCode
-                            select new GetCityListDto
-                            {                              
-                                cityCode = x.cityCode,
-                                cityName = x.cityName,
-                                cityAbbreviation = x.cityAbbreviation
-                            }).ToList();              
+                throw new UserFriendlyException("Parameter is empty");
             }
-            else
-            {
-                cityList = (from x in _msCityRepo.GetAll()
-                            where x.country == country
-                            select new GetCityListDto
-                            {
-                                cityCode = x.cityCode,
-                                cityName = x.cityName,
-                                cityAbbreviation = x.cityAbbreviation
-                            }).ToList();
-            }
-            return cityList;
+
+            var getCity = (from a in _msCityRepo.GetAll()
+                           where a.countyCode == countyCode
+                           select new GetCityListDto
+                           {
+                               cityAbbreviation = a.cityAbbreviation,
+                               cityCode = a.cityCode,
+                               cityName = a.cityName
+                           }).Distinct().ToList();
+
+            return getCity;
         }
     }
 }

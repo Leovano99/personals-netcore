@@ -42,5 +42,12 @@ namespace VDI.Demo.PersonalsDB
 
         [Column("inputUN")]
         public override long? CreatorUserId { get; set; }
+
+        //public virtual ICollection<MS_City> MS_City { get; set; }
+
+        [Required]
+        [StringLength(100)]
+        public string country { get; set; }
+        public virtual LK_Country LK_Country { get; set; }
     }
 }
