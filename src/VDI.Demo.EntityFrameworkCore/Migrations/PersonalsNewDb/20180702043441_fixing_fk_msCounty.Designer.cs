@@ -11,9 +11,10 @@ using VDI.Demo.EntityFrameworkCore;
 namespace VDI.Demo.Migrations.PersonalsNewDb
 {
     [DbContext(typeof(PersonalsNewDbContext))]
-    partial class PersonalsNewDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180702043441_fixing_fk_msCounty")]
+    partial class fixing_fk_msCounty
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -473,6 +474,7 @@ namespace VDI.Demo.Migrations.PersonalsNewDb
                         .HasMaxLength(100);
 
                     b.Property<string>("countyCode")
+                        .IsRequired()
                         .HasMaxLength(5);
 
                     b.Property<string>("provinceCode")
@@ -508,6 +510,7 @@ namespace VDI.Demo.Migrations.PersonalsNewDb
                         .HasColumnName("modifUN");
 
                     b.Property<string>("provinceCode")
+                        .IsRequired()
                         .HasMaxLength(5);
 
                     b.HasKey("countyCode", "countyDesc");
@@ -1745,7 +1748,8 @@ namespace VDI.Demo.Migrations.PersonalsNewDb
                 {
                     b.HasOne("VDI.Demo.PersonalsDB.MS_Province", "MS_Province")
                         .WithMany("MS_County")
-                        .HasForeignKey("provinceCode");
+                        .HasForeignKey("provinceCode")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("VDI.Demo.PersonalsDB.MS_PostCode", b =>

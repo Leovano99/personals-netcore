@@ -58,10 +58,10 @@ namespace VDI.Demo.PersonalsDB
         public override long? CreatorUserId { get; set; }
 
         public virtual LK_Country LK_Country { get; set; }
-
-        [Required]
+        
         [StringLength(5)]
         public string countyCode { get; set; }
+
         //public virtual MS_County MS_County { get; set; }
 
         //public virtual MS_Province MS_Province { get; set; }

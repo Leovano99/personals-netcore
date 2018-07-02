@@ -32,10 +32,6 @@ namespace VDI.Demo.PersonalsDB
         [StringLength(3)]
         public string ppatkProvinceCode { get; set; }
 
-        [Required]
-        [StringLength(100)]
-        public string country { get; set; }
-
         [Column("modifTime")]
         public override DateTime? LastModificationTime { get; set; }
 
@@ -48,6 +44,11 @@ namespace VDI.Demo.PersonalsDB
         [Column("inputUN")]
         public override long? CreatorUserId { get; set; }
 
-        //public virtual ICollection<MS_City> MS_City { get; set; }
+        [Required]
+        [StringLength(100)]
+        public string country { get; set; }
+        public virtual LK_Country LK_Country { get; set; }
+
+        public virtual ICollection<MS_County> MS_County { get; set; }
     }
 }

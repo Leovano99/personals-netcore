@@ -20,15 +20,15 @@ namespace VDI.Demo.Personals.MS_Counties
             _msCountyRepo = msCountyRepo;
         }
 
-        public List<GetListMsCountyResultDto> GetListMsCounty(string country)
+        public List<GetListMsCountyResultDto> GetListMsCounty(string provinceCode)
         {
-            if(country == null || country == string.Empty)
+            if(provinceCode == null || provinceCode == string.Empty)
             {
                 throw new UserFriendlyException("Parameter is empty");
             }
 
             var getCounty = (from a in _msCountyRepo.GetAll()
-                             where a.country == country
+                             where a.provinceCode == provinceCode
                              select new GetListMsCountyResultDto
                              {
                                  countyCode = a.countyCode,
